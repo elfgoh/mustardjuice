@@ -1,195 +1,234 @@
 (dp0
-S'tables'
+S'page_contract_type_update'
 p1
-(lp2
-S'auth_user'
-p3
-aS'membership_contract'
-p4
-aS'payment'
-p5
-asS'name'
-p6
-S'mustardjuice'
-p7
-sS'page_payment_create'
-p8
-S'## Create payment'
-p9
-sS'page_membership_contract_select'
-p10
-S'## Select membership_contract'
-p11
-sS'page_payment_read'
-p12
-S'## Read payment'
-p13
-sS'table_membership_contract'
-p14
-(lp15
-S'member auth_user'
-p16
-aS'start_date date'
-p17
-aS'end_date date'
-p18
-aS'contract_type contract_type'
-p19
-asS'page_payment_select'
-p20
-S'## Select payment'
-p21
-sS'page_membership_contract_read'
-p22
-S'## Read membership_contract'
-p23
-sS'page_index'
-p24
-S'# Welcome to my new app'
-p25
+S'## Update contract_type'
+p2
 sS'page_membership_contract_create'
-p26
+p3
 S'## Create membership_contract'
-p27
-sS'page_error'
-p28
-S'# Error: the document does not exist'
-p29
-sS'params'
-p30
-(lp31
-(S'title'
-p32
-S'Mustardjuice club membership fees management system'
-p33
-tp34
-a(S'subtitle'
-p35
-S'powered by web2py'
-p36
-tp37
-a(S'author'
-p38
-S'elfgoh'
-p39
-tp40
-a(S'author_email'
-p41
-S'elfgoh@yahoo.com'
-p42
-tp43
-a(S'keywords'
-p44
-S''
-p45
-tp46
-a(S'description'
-p47
-S"Manage your club's memberhship fees."
-p48
-tp49
-a(S'layout_theme'
-p50
-S'Default'
-p51
-tp52
-a(S'database_uri'
-p53
-S'sqlite://storage.sqlite'
-p54
-tp55
-a(S'security_key'
-p56
-S'3d9993b8-c012-4db8-9377-1c2c4fc65e2b'
-p57
-tp58
-a(S'email_server'
-p59
-S'localhost'
-p60
-tp61
-a(S'email_sender'
-p62
-S'you@example.com'
-p63
-tp64
-a(S'email_login'
-p65
-S'elfgoh@yahoo.com'
-p66
-tp67
-a(S'login_method'
-p68
-S'local'
-p69
-tp70
-a(S'login_config'
-p71
-g45
-tp72
-asS'page_membership_contract_update'
-p73
-S'## Update membership_contract'
-p74
-sS'table_payment'
-p75
-(lp76
-S'contract membership_contract'
-p77
-aS'member auth_user'
-p78
-aS'amount integer'
-p79
-asS'page_membership_contract_search'
-p80
-S'## Search membership_contract'
-p81
-sS'page_payment_update'
-p82
-S'## Update payment'
-p83
-sS'pages'
-p84
-(lp85
-S'index'
-p86
-aS'error'
-p87
-aS'membership_contract_create'
-p88
-aS'membership_contract_read'
-p89
-aS'membership_contract_update'
-p90
-aS'membership_contract_select'
-p91
-aS'membership_contract_search'
-p92
-aS'payment_create'
-p93
-aS'payment_read'
-p94
-aS'payment_update'
-p95
-aS'payment_select'
-p96
-aS'payment_search'
-p97
-asS'page_payment_search'
-p98
-S'## Search payment'
-p99
+p4
 sS'table_auth_user'
-p100
-(lp101
+p5
+(lp6
 S'username'
-p102
+p7
 aS'first_name'
-p103
+p8
 aS'last_name'
-p104
+p9
 aS'email'
-p105
+p10
 aS'password'
+p11
+asS'tables'
+p12
+(lp13
+S'auth_user'
+p14
+aS'membership_contract'
+p15
+aS'payment'
+p16
+aS'contract_type'
+p17
+asS'page_payment_update'
+p18
+S'## Update payment'
+p19
+sS'page_payment_read'
+p20
+S'## Read payment'
+p21
+sS'table_contract_type'
+p22
+(lp23
+S'name'
+p24
+aS'fee integer'
+p25
+asS'page_payment_select'
+p26
+S'## Select payment'
+p27
+sS'page_membership_contract_read'
+p28
+S'## Read membership_contract'
+p29
+sS'page_membership_contract_update'
+p30
+S'## Update membership_contract'
+p31
+sS'params'
+p32
+(lp33
+(S'title'
+p34
+S'Mustardjuice club membership fees management system'
+p35
+tp36
+a(S'subtitle'
+p37
+S'powered by web2py'
+p38
+tp39
+a(S'author'
+p40
+S'elfgoh'
+p41
+tp42
+a(S'author_email'
+p43
+S'elfgoh@yahoo.com'
+p44
+tp45
+a(S'keywords'
+p46
+S''
+p47
+tp48
+a(S'description'
+p49
+S"Manage your club's memberhship fees."
+p50
+tp51
+a(S'layout_theme'
+p52
+S'Default'
+p53
+tp54
+a(S'database_uri'
+p55
+S'sqlite://storage.sqlite'
+p56
+tp57
+a(S'security_key'
+p58
+S'3d9993b8-c012-4db8-9377-1c2c4fc65e2b'
+p59
+tp60
+a(S'email_server'
+p61
+S'localhost'
+p62
+tp63
+a(S'email_sender'
+p64
+S'you@example.com'
+p65
+tp66
+a(S'email_login'
+p67
+S'elfgoh@yahoo.com'
+p68
+tp69
+a(S'login_method'
+p70
+S'local'
+p71
+tp72
+a(S'login_config'
+p73
+g47
+tp74
+asS'page_payment_create'
+p75
+S'## Create payment'
+p76
+sS'page_contract_type_select'
+p77
+S'## Select contract_type'
+p78
+sS'page_membership_contract_search'
+p79
+S'## Search membership_contract'
+p80
+sS'pages'
+p81
+(lp82
+S'index'
+p83
+aS'error'
+p84
+aS'membership_contract_create'
+p85
+aS'membership_contract_read'
+p86
+aS'membership_contract_update'
+p87
+aS'membership_contract_select'
+p88
+aS'membership_contract_search'
+p89
+aS'payment_create'
+p90
+aS'payment_read'
+p91
+aS'payment_update'
+p92
+aS'payment_select'
+p93
+aS'payment_search'
+p94
+aS'contract_type_create'
+p95
+aS'contract_type_read'
+p96
+aS'contract_type_update'
+p97
+aS'contract_type_select'
+p98
+aS'contract_type_search'
+p99
+asS'page_contract_type_create'
+p100
+S'## Create contract_type'
+p101
+sS'page_error'
+p102
+S'# Error: the document does not exist'
+p103
+sS'name'
+p104
+S'mustardjuice'
+p105
+sS'page_membership_contract_select'
 p106
-as.
+S'## Select membership_contract'
+p107
+sS'page_contract_type_search'
+p108
+S'## Search contract_type'
+p109
+sS'table_membership_contract'
+p110
+(lp111
+S'member auth_user'
+p112
+aS'start_date date'
+p113
+aS'end_date date'
+p114
+aS'contract_type contract_type'
+p115
+asS'page_index'
+p116
+S'# Welcome to my new app'
+p117
+sS'page_contract_type_read'
+p118
+S'## Read contract_type'
+p119
+sS'table_payment'
+p120
+(lp121
+S'contract membership_contract'
+p122
+aS'member auth_user'
+p123
+aS'amount integer'
+p124
+asS'page_payment_search'
+p125
+S'## Search payment'
+p126
+s.
