@@ -7,7 +7,7 @@ def call():
     return service()
 ### end requires
 def index():
-    return dict()
+    return dict(user=auth.user.username)
 
 def error():
     return dict()
