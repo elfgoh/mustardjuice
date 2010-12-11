@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+
+<h2>Select member</h2>
+{{if request.args:}}<h3>{{=T('For %s #%s' % (request.args(0)[2:],request.args(1)))}}</h3>{{pass}}
+
+{{=A(T('create new member'),_href=URL('member_create'))}}
+<br/>
+
+{{=A(T('search member'),_href=URL('member_search'))}}
+<br/>
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.auth_user)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}
