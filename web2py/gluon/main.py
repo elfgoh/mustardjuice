@@ -33,7 +33,7 @@ from settings import global_settings
 #  calling script has inserted path to script directory into sys.path
 #  applications_parent (path to applications/, site-packages/ etc) defaults to that directory
 #  set sys.path to ("", gluon_parent/site-packages, gluon_parent, ...)
-#
+# 
 #  this is wrong:
 #  web2py_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #  because we do not want the path to this file which may be Library.zip
@@ -336,7 +336,7 @@ def wsgibase(environ, responder):
         try:
             try:
                 # ##################################################
-                # handle fcgi missing path_info and query_string
+                # handle fcgi missing path_info and query_string 
                 # select rewrite parameters
                 # rewrite incoming URL
                 # parse rewritten header variables
@@ -362,11 +362,11 @@ def wsgibase(environ, responder):
                     if request.env.get('query_string', '')[:10] == 'attachment':
                         response.headers['Content-Disposition'] = 'attachment'
                     response.stream(static_file, request=request)
-
+    
                 # ##################################################
                 # build missing folder
                 # ##################################################
-
+    
                 if not request.env.web2py_runtime_gae:
                     for subfolder in ['models','views','controllers', 'databases',
                                       'modules','cron','errors','sessions',
@@ -374,88 +374,88 @@ def wsgibase(environ, responder):
                         path =  os.path.join(request.folder,subfolder)
                         if not os.path.exists(path):
                             os.mkdir(path)
-
+    
                 # ##################################################
                 # get the GET and POST data
                 # ##################################################
-
+    
                 parse_get_post_vars(request, environ)
-
+    
                 # ##################################################
                 # expose wsgi hooks for convenience
                 # ##################################################
-
+    
                 request.wsgi.environ = environ_aux(environ,request)
                 request.wsgi.start_response = lambda status='200', headers=[], \
                     exec_info=None, response=response: \
                     start_response_aux(status, headers, exec_info, response)
                 request.wsgi.middleware = lambda *a: middleware_aux(request,response,*a)
-
+    
                 # ##################################################
                 # load cookies
                 # ##################################################
-
+    
                 if request.env.http_cookie:
                     try:
                         request.cookies.load(request.env.http_cookie)
                     except Cookie.CookieError, e:
                         pass # invalid cookies
-
+    
                 # ##################################################
                 # try load session or create new session file
                 # ##################################################
-
+    
                 session.connect(request, response)
-
+    
                 # ##################################################
                 # set no-cache headers
                 # ##################################################
-
+    
                 response.headers['Content-Type'] = contenttype('.'+request.extension)
                 response.headers['Cache-Control'] = \
                     'no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
                 response.headers['Expires'] = \
                     time.strftime('%a, %d %b %Y %H:%M:%S GMT', time.gmtime())
                 response.headers['Pragma'] = 'no-cache'
-
+    
                 # ##################################################
                 # run controller
                 # ##################################################
-
+    
                 serve_controller(request, response, session)
-
+    
             except HTTP, http_response:
                 if static_file:
                     return http_response.to(responder)
-
+    
                 if request.body:
                     request.body.close()
-
+    
                 # ##################################################
                 # on success, try store session in database
                 # ##################################################
                 session._try_store_in_db(request, response)
-
+    
                 # ##################################################
                 # on success, commit database
                 # ##################################################
-
+    
                 if response._custom_commit:
                     response._custom_commit()
                 else:
                     BaseAdapter.close_all_instances(BaseAdapter.commit)
-
+    
                 # ##################################################
                 # if session not in db try store session on filesystem
                 # this must be done after trying to commit database!
                 # ##################################################
-
+    
                 session._try_store_on_disk(request, response)
-
+    
                 # ##################################################
                 # store cookies in headers
                 # ##################################################
-
+                
                 if request.cid:
                     if response.flash and not 'web2py-component-flash' in http_response.headers:
                         http_response.headers['web2py-component-flash'] = \
@@ -466,41 +466,41 @@ def wsgibase(environ, responder):
                 if session._forget:
                     del response.cookies[response.session_id_name]
                 elif session._secure:
-                    response.cookies[response.session_id_name]['secure'] = True
+                    response.cookies[response.session_id_name]['secure'] = True            
                 if len(response.cookies)>0:
                     http_response.headers['Set-Cookie'] = \
                         [str(cookie)[11:] for cookie in response.cookies.values()]
                 ticket=None
-
+    
             except RestrictedError, e:
-
+    
                 if request.body:
                     request.body.close()
-
+    
                 # ##################################################
                 # on application error, rollback database
                 # ##################################################
-
+    
                 ticket = e.log(request) or 'unknown'
                 if response._custom_rollback:
                     response._custom_rollback()
                 else:
                     BaseAdapter.close_all_instances(BaseAdapter.rollback)
-
+    
                 http_response = \
                     HTTP(500,
                          rewrite.thread.routes.error_message_ticket % dict(ticket=ticket),
                          web2py_error='ticket %s' % ticket)
-
+                
         except:
-
+    
             if request.body:
                 request.body.close()
-
+    
             # ##################################################
             # on application error, rollback database
             # ##################################################
-
+    
             try:
                 if response._custom_rollback:
                     response._custom_rollback()
@@ -650,14 +650,13 @@ class HttpServer(object):
         profiler_filename=None,
         ssl_certificate=None,
         ssl_private_key=None,
-        min_threads=None,
-        max_threads=None,
+        numthreads=10,
         server_name=None,
         request_queue_size=5,
         timeout=10,
         shutdown_timeout=None, # Rocket does not use a shutdown timeout
         path=None,
-        interfaces=None # Rocket is able to use several interfaces - must be list of socket-tuples as string
+        interfaces=None # Rocket is able to use several interfaces - must be list of socket-tuples as string 
         ):
         """
         starts the web server.
@@ -672,11 +671,11 @@ class HttpServer(object):
          	    if not isinstance(i,types.TupleType):
          	    	raise "Wrong format for rocket interfaces parameter - see http://packages.python.org/rocket/"
             else:
-      	        raise "Wrong format for rocket interfaces parameter - see http://packages.python.org/rocket/"
+      	    	raise "Wrong format for rocket interfaces parameter - see http://packages.python.org/rocket/"
 
         if path:
             # if a path is specified change the global variables so that web2py
-            # runs from there instead of cwd or os.environ['web2py_path']
+            # runs from there instead of cwd or os.environ['web2py_path'] 
             global web2py_path
             path = os.path.normpath(path)
             web2py_path = path
@@ -725,15 +724,24 @@ class HttpServer(object):
                                            log_filename,
                                            profiler_filename) }
 
-        self.server = rocket.Rocket(interfaces or tuple(sock_list),
-                                    method='wsgi',
-                                    app_info=app_info,
-                                    min_threads=min_threads,
-                                    max_threads=max_threads,
-                                    queue_size=int(request_queue_size),
-                                    timeout=int(timeout),
-                                    handle_signals=False,
-                                    )
+        if not interfaces:
+            self.server = rocket.Rocket(tuple(sock_list),
+                                        'wsgi',
+                                        app_info,
+                                        min_threads=int(numthreads),
+                                        queue_size=int(request_queue_size),
+                                        timeout=int(timeout),
+                                        no_sigterm=True,
+                                        )
+        else:
+            self.server = rocket.Rocket(interfaces,
+                                        'wsgi',
+                                        app_info,
+                                        min_threads=int(numthreads),
+                                        queue_size=int(request_queue_size),
+                                        timeout=int(timeout),
+                                        no_sigterm=True,
+                                        )
 
 
     def start(self):

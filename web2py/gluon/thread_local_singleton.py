@@ -2,7 +2,7 @@ import threading
 
 class Singleton(dict):
     """
-    This class makes a thread local Singleton
+    This class makes a thread local Singleton 
     (i.e. every threads sees a differnt singleton)
     It also makes a different singleton for each derived class.
     The objects behave like dictionaries and attributes/values
@@ -28,14 +28,14 @@ class Singleton(dict):
     thread = threading.local()
     def __init__(self):
         if not hasattr(Singleton.thread,str(self.__class__)):
-            setattr(Singleton.thread,str(self.__class__),{})
+            setattr(Singleton.thread,str(self.__class__),{})        
     def __getitem__(self,key):
         return getattr(Singleton.thread,str(self.__class__))[key]
     def __setitem__(self,key,value):
         getattr(Singleton.thread,str(self.__class__))[key]=value
     def __setattr__(self,key,value):
         getattr(Singleton.thread,str(self.__class__))[key]=value
-    def __delattr__(self,key):
+    def __delattr__(self,key):        
         del getattr(Singleton.thread,str(self.__class__))[key]
     def get(self,key,value):
         return getattr(Singleton.thread,str(self.__class__)).get(key,value)

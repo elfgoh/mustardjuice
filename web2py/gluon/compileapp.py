@@ -90,7 +90,7 @@ class LoadFactory:
     def __init__(self,environment):
         self.environment = environment
     def __call__(self, c=None, f='index', args=[], vars={},
-                 extension=None, target=None,ajax=False,ajax_trap=False,
+                 extension=None, target=None,ajax=False,ajax_trap=False, 
                  url=None):
         import globals
         target = target or 'c'+str(random.random())[2:]
@@ -213,11 +213,11 @@ def build_environment(request, response, session):
     environment = {}
     for key in html.__all__:
         environment[key] = getattr(html, key)
-
+        
     # Overwrite the URL function with a proxy
     # url function which contains this request.
     environment['URL'] = html._gURL(request)
-
+        
     for key in validators.__all__:
         environment[key] = getattr(validators, key)
     if not request.env:
@@ -344,7 +344,7 @@ def run_models_in(environment):
         for model in models:
             layer = model
             if is_gae:
-                code = getcfs(model, model,
+                code = getcfs(model, model, 
                               lambda: compile2(open(model, 'r').read(),layer))
             else:
                 code = getcfs(model, model, None)

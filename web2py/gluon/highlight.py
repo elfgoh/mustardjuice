@@ -287,7 +287,7 @@ def highlight(
         linehighlight_style = "background-color: #EBDDE2;"
     else:
         linehighlight_style = styles['LINEHIGHLIGHT']
-
+    
     if language and language.upper() in ['PYTHON', 'C', 'CPP', 'HTML',
             'WEB2PY']:
         code = Highlighter(language, link, styles).highlight(code)
@@ -311,7 +311,7 @@ def highlight(
         if lineno<len(lines):
             lines[lineno] = '<div style="%s">%s</div>' % (linehighlight_style, lines[lineno])
             linenumbers[lineno] = '<div style="%s">%s</div>' % (linehighlight_style, linenumbers[lineno])
-
+        
     code = '<br/>'.join(lines)
     numbers = '<br/>'.join(linenumbers)
 

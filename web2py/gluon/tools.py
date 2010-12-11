@@ -821,7 +821,7 @@ class Auth(object):
         self.settings.allow_basic_login_only = False
         self.settings.on_failed_authorization = \
             self.url('user',args='not_authorized')
-
+        
         self.settings.on_failed_authentication = lambda x: redirect(x)
 
         self.settings.formstyle = 'table3cols'
@@ -871,7 +871,6 @@ class Auth(object):
         self.settings.profile_next = self.url('index')
         self.settings.profile_onvalidation = []
         self.settings.profile_onaccept = []
-        self.settings.profile_fields = None
         self.settings.retrieve_username_next = self.url('index')
         self.settings.retrieve_password_next = self.url('index')
         self.settings.request_reset_password_next = self.url('user', args='login')
@@ -1053,8 +1052,6 @@ class Auth(object):
     def navbar(self,prefix='Welcome',action=None):
         request = self.environment.request
         T = self.environment.T
-        if isinstance(prefix,str):
-            prefix = T(prefix)
         if not action:
             action=URL(request.application,request.controller,'user')
         if prefix:
@@ -1100,7 +1097,7 @@ class Auth(object):
         else:
             return True
 
-    def define_tables(self, username=False, migrate=True, fake_migrate=False):
+    def define_tables(self, username=False, migrate=True):
         """
         to be called unless tables are defined manually
 
@@ -1142,7 +1139,6 @@ class Auth(object):
                           label=self.messages.label_registration_id),
                     migrate=\
                         self.__get_migrate(self.settings.table_user_name, migrate),
-                    fake_migrate=fake_migrate,
                     format='%(username)s')
                 table.username.requires = IS_NOT_IN_DB(db, table.username)
             else:
@@ -1164,7 +1160,6 @@ class Auth(object):
                           label=self.messages.label_reset_password_key),
                     migrate=\
                         self.__get_migrate(self.settings.table_user_name, migrate),
-                    fake_migrate=fake_migrate,
                     format='%(first_name)s %(last_name)s (%(id)s)')
             table.first_name.requires = \
                 IS_NOT_EMPTY(error_message=self.messages.is_empty)
@@ -1185,7 +1180,6 @@ class Auth(object):
                         label=self.messages.label_description),
                 migrate=self.__get_migrate(
                     self.settings.table_group_name, migrate),
-                fake_migrate=fake_migrate,
                 format = '%(role)s (%(id)s)')
             table.role.requires = IS_NOT_IN_DB(db, '%s.role'
                  % self.settings.table_group_name)
@@ -1198,8 +1192,7 @@ class Auth(object):
                 Field('group_id', self.settings.table_group,
                         label=self.messages.label_group_id),
                 migrate=self.__get_migrate(
-                    self.settings.table_membership_name, migrate),
-                fake_migrate=fake_migrate)
+                    self.settings.table_membership_name, migrate))
             table.user_id.requires = IS_IN_DB(db, '%s.id' %
                     self.settings.table_user_name,
                     '%(first_name)s %(last_name)s (%(id)s)')
@@ -1219,8 +1212,7 @@ class Auth(object):
                 Field('record_id', 'integer',
                         label=self.messages.label_record_id),
                 migrate=self.__get_migrate(
-                    self.settings.table_permission_name, migrate),
-                fake_migrate=fake_migrate)
+                    self.settings.table_permission_name, migrate))
             table.group_id.requires = IS_IN_DB(db, '%s.id' %
                     self.settings.table_group_name,
                     '%(role)s (%(id)s)')
@@ -1244,8 +1236,7 @@ class Auth(object):
                 Field('description', 'text', default='',
                         label=self.messages.label_description),
                 migrate=self.__get_migrate(
-                    self.settings.table_event_name, migrate),
-                fake_migrate=fake_migrate)
+                    self.settings.table_event_name, migrate))
             table.user_id.requires = IS_IN_DB(db, '%s.id' %
                     self.settings.table_user_name,
                     '%(first_name)s %(last_name)s (%(id)s)')
@@ -2136,7 +2127,7 @@ class Auth(object):
         form = SQLFORM(
             table_user,
             self.user.id,
-            fields = self.settings.profile_fields,
+            fields = self.settings.register_fields,
             hidden = dict(_next=next),
             showid = self.settings.showid,
             submit_button = self.messages.submit_button,
@@ -2166,8 +2157,8 @@ class Auth(object):
 
     def impersonate(self, user_id=DEFAULT):
         """
-        usage: POST TO http://..../impersonate request.post_vars.user_id=<id>
-        set request.post_vars.user_id to 0 to restore original user.
+        usage: http://..../impersonate/[user_id]
+        or:    http://..../impersonate/0 to restore impersonator
 
         requires impersonator is logged in and
         has_permission('impersonate', 'auth_user', user_id)
@@ -2175,10 +2166,10 @@ class Auth(object):
         request = self.environment.request
         session = self.environment.session
         auth = session.auth
-        if not self.is_logged_in() or not self.environment.request.post_vars:
+        if not self.is_logged_in():
             raise HTTP(401, "Not Authorized")
-        if user_id == DEFAULT:
-            user_id = self.environment.request.post_vars.user_id
+        if user_id == DEFAULT and self.environment.request.args:
+            user_id = self.environment.request.args[1]
         if user_id and user_id != self.user.id and user_id != '0':
             if not self.has_permission('impersonate',
                                        self.settings.table_user_name,
@@ -2247,7 +2238,7 @@ class Auth(object):
                         return call_or_redirect(self.settings.on_failed_authentication,
                                                 self.settings.login_url + \
                                                     '?_next='+urllib.quote(next))
-                    else:
+                    else:                                                
                         self.environment.session.flash = \
                             self.messages.access_denied
                         return call_or_redirect(self.settings.on_failed_authorization)
@@ -2646,7 +2637,7 @@ class Crud(object):
         elif args[0] == 'create':
             return self.create(args(1))
         elif args[0] == 'select':
-            return self.select(args(1),linkto=self.url('read'))
+            return self.select(args(1))
         elif args[0] == 'read':
             return self.read(args(1), args(2))
         elif args[0] == 'update':
@@ -2824,8 +2815,8 @@ class Crud(object):
         keepvalues = self.settings.keepvalues
         if request.vars.delete_this_record:
             keepvalues = False
-        if isinstance(onvalidation,StorageList):
-            onvalidation=onvalidation.get(table._tablename, [])
+        if isinstance(onvalidation,dict):
+            onvalidation=onvalidation.get(table._tablename,[])
         if form.accepts(request, _session, formname=_formname,
                         onvalidation=onvalidation, keepvalues=keepvalues,
                         hideerror=self.settings.hideerror,
@@ -2972,6 +2963,8 @@ class Crud(object):
                                                      limitby=limitby))
         if not rows:
             return None # Nicer than an empty table.
+        if not 'linkto' in attr:
+            attr['linkto'] = self.url(args='read')
         if not 'upload' in attr:
             attr['upload'] = self.url('download')
         if not request.extension in ('html','load'):

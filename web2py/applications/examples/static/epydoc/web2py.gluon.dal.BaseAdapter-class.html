@@ -73,7 +73,6 @@
 
 <dl><dt>Known Subclasses:</dt>
 <dd>
-    <a href="web2py.gluon.dal.NoSQLAdapter-class.html">NoSQLAdapter</a>,
     <a href="web2py.gluon.dal.DB2Adapter-class.html">DB2Adapter</a>,
     <a href="web2py.gluon.dal.FireBirdAdapter-class.html">FireBirdAdapter</a>,
     <a href="web2py.gluon.dal.InformixAdapter-class.html">InformixAdapter</a>,
@@ -109,87 +108,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="file_exists"></a><span class="summary-sig-name">file_exists</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>)</span><br />
-      to be used ONLY for files that on GAE may not be on filesystem</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.file_exists">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="file_open"></a><span class="summary-sig-name">file_open</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">rb</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">True</span>)</span><br />
-      to be used ONLY for files that on GAE may not be on filesystem</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.file_open">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="file_close"></a><span class="summary-sig-name">file_close</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">fileobj</span>,
-        <span class="summary-sig-arg">unlock</span>=<span class="summary-sig-default">True</span>)</span><br />
-      to be used ONLY for files that on GAE may not be on filesystem</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.file_close">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="file_delete"></a><span class="summary-sig-name">file_delete</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.file_delete">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="web2py.gluon.dal.BaseAdapter-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">db</span>,
         <span class="summary-sig-arg">uri</span>,
         <span class="summary-sig-arg">pool_size</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">folder</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">credential_decoder</span>=<span class="summary-sig-default">&lt;function &lt;lambda&gt; at 0x2a40a28&gt;</span>)</span><br />
+        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for 
       signature</td>
           <td align="right" valign="top">
@@ -208,7 +132,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="sequence_name"></a><span class="summary-sig-name">sequence_name</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>)</span></td>
+        <span class="summary-sig-arg">table</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.sequence_name">source&nbsp;code</a></span>
             
@@ -225,51 +149,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="trigger_name"></a><span class="summary-sig-name">trigger_name</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>)</span></td>
+        <span class="summary-sig-arg">table</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.trigger_name">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="create_table"></a><span class="summary-sig-name">create_table</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">migrate</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">fake_migrate</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">polymodel</span>=<span class="summary-sig-default">1</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.create_table">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="migrate_table"></a><span class="summary-sig-name">migrate_table</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">sql_fields</span>,
-        <span class="summary-sig-arg">sql_fields_old</span>,
-        <span class="summary-sig-arg">sql_fields_aux</span>,
-        <span class="summary-sig-arg">logfile</span>,
-        <span class="summary-sig-arg">fake_migrate</span>=<span class="summary-sig-default">True</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.migrate_table">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -432,17 +314,17 @@
       
     </td>
   </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="_drop"></a><span class="summary-sig-name">_drop</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="DROP"></a><span class="summary-sig-name">DROP</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">table</span>,
         <span class="summary-sig-arg">mode</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._drop">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.DROP">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -456,65 +338,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="drop"></a><span class="summary-sig-name">drop</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.drop">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="_insert"></a><span class="summary-sig-name">_insert</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="INSERT"></a><span class="summary-sig-name">INSERT</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">table</span>,
         <span class="summary-sig-arg">fields</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._insert">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="insert"></a><span class="summary-sig-name">insert</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">fields</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.insert">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="bulk_insert"></a><span class="summary-sig-name">bulk_insert</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">items</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.bulk_insert">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.INSERT">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -604,60 +432,6 @@
         <span class="summary-sig-arg">second</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.LIKE">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="STARTSWITH"></a><span class="summary-sig-name">STARTSWITH</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">first</span>,
-        <span class="summary-sig-arg">second</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.STARTSWITH">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="ENDSWITH"></a><span class="summary-sig-name">ENDSWITH</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">first</span>,
-        <span class="summary-sig-arg">second</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.ENDSWITH">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="CONTAINS"></a><span class="summary-sig-name">CONTAINS</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">first</span>,
-        <span class="summary-sig-arg">second</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.CONTAINS">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -887,10 +661,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="INVERT"></a><span class="summary-sig-name">INVERT</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="DESC"></a><span class="summary-sig-name">DESC</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">first</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.INVERT">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.DESC">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -909,6 +683,23 @@
         <span class="summary-sig-arg">second</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.COMMA">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="VERBATIM"></a><span class="summary-sig-name">VERBATIM</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">first</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.VERBATIM">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -954,17 +745,17 @@
       
     </td>
   </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="_truncate"></a><span class="summary-sig-name">_truncate</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="TRUNCATE"></a><span class="summary-sig-name">TRUNCATE</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">table</span>,
         <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._truncate">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.TRUNCATE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -978,30 +769,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="truncate"></a><span class="summary-sig-name">truncate</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"> </code><code class="variable-quote">'</code></span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.truncate">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="_update"></a><span class="summary-sig-name">_update</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>,
+          <td><span class="summary-sig"><a name="UPDATE"></a><span class="summary-sig-name">UPDATE</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">tablename</span>,
         <span class="summary-sig-arg">fields</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._update">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.UPDATE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1015,30 +788,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="update"></a><span class="summary-sig-name">update</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>,
+          <td><span class="summary-sig"><a name="DELETE"></a><span class="summary-sig-name">DELETE</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">query</span>,
-        <span class="summary-sig-arg">fields</span>)</span></td>
+        <span class="summary-sig-arg">tablename</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.update">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="_delete"></a><span class="summary-sig-name">_delete</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>,
-        <span class="summary-sig-arg">query</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._delete">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.DELETE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1052,47 +806,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="delete"></a><span class="summary-sig-name">delete</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tablename</span>,
-        <span class="summary-sig-arg">query</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.delete">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="get_table"></a><span class="summary-sig-name">get_table</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">query</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.get_table">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="_select"></a><span class="summary-sig-name">_select</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="COUNT"></a><span class="summary-sig-name">COUNT</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">query</span>,
-        <span class="summary-sig-arg">fields</span>,
-        <span class="summary-sig-arg">attributes</span>)</span></td>
+        <span class="summary-sig-arg">tablenames</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._select">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.COUNT">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1106,7 +824,44 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="select_limitby"></a><span class="summary-sig-name">select_limitby</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="count"></a><span class="summary-sig-name">count</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">tablenames</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.count">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="SELECT"></a><span class="summary-sig-name">SELECT</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">*fields</span>,
+        <span class="summary-sig-arg">**attributes</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.SELECT">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="SELECT_LIMITBY"></a><span class="summary-sig-name">SELECT_LIMITBY</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">sql_s</span>,
         <span class="summary-sig-arg">sql_f</span>,
         <span class="summary-sig-arg">sql_t</span>,
@@ -1114,7 +869,7 @@
         <span class="summary-sig-arg">sql_o</span>,
         <span class="summary-sig-arg">limitby</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.select_limitby">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.SELECT_LIMITBY">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1130,45 +885,11 @@
         <tr>
           <td><span class="summary-sig"><a name="select"></a><span class="summary-sig-name">select</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">query</span>,
-        <span class="summary-sig-arg">fields</span>,
-        <span class="summary-sig-arg">attributes</span>)</span><br />
+        <span class="summary-sig-arg">*fields</span>,
+        <span class="summary-sig-arg">**attributes</span>)</span><br />
       Always returns a Rows object, even if it may be empty</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.select">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="_count"></a><span class="summary-sig-name">_count</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">query</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter._count">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="count"></a><span class="summary-sig-name">count</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">query</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.count">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1218,6 +939,22 @@
           <td><span class="summary-sig"><a name="rollback"></a><span class="summary-sig-name">rollback</span>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.rollback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="support_distributed_transaction"></a><span class="summary-sig-name">support_distributed_transaction</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.support_distributed_transaction">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1353,6 +1090,22 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a name="commit_on_alter_table"></a><span class="summary-sig-name">commit_on_alter_table</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.commit_on_alter_table">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="log_execute"></a><span class="summary-sig-name">log_execute</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">*a</span>,
         <span class="summary-sig-arg">**b</span>)</span></td>
@@ -1462,8 +1215,8 @@
         <span class="summary-sig-arg">rows</span>,
         <span class="summary-sig-arg">minimum</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">maximum</span>=<span class="summary-sig-default">1</span>)</span><br />
-      by default this function does nothing, overload when db does not 
-      do slicing</td>
+      by default this function does nothing, oreload when db does no do 
+      slicing</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#BaseAdapter.rowslice">source&nbsp;code</a></span>
             
@@ -1555,47 +1308,13 @@
     </table>
   </td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="commit_on_alter_table"></a><span class="summary-name">commit_on_alter_table</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="support_distributed_transaction"></a><span class="summary-name">support_distributed_transaction</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="uploads_in_blob"></a><span class="summary-name">uploads_in_blob</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.dal.BaseAdapter-class.html#types" class="summary-name">types</a> = <code title="{'blob': 'BLOB',
- 'boolean': 'CHAR(1)',
- 'date': 'DATE',
- 'datetime': 'TIMESTAMP',
- 'decimal': 'DOUBLE',
- 'double': 'DOUBLE',
- 'id': 'INTEGER PRIMARY KEY AUTOINCREMENT',
- 'integer': 'INTEGER',
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">blob</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">BLOB</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">boolean</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">CHAR(1)</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">date</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DATE</code><code class="variable-quote">'</code><code class="variable-op">,</code><code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.ConnectionPool-class.html">ConnectionPool</a></code></b>:
-      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#pools">pools</a></code>
-      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.ConnectionPool-class.html">ConnectionPool</a></code></b> (private):
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_connection_pools">_connection_pools</a></code>,
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_folders">_folders</a></code>,
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_instances">_instances</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -1654,8 +1373,7 @@
         <span class="sig-arg">uri</span>,
         <span class="sig-arg">pool_size</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">folder</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">db_codec</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">credential_decoder</span>=<span class="sig-default">&lt;function &lt;lambda&gt; at 0x2a40a28&gt;</span>)</span>
+        <span class="sig-arg">db_codec</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -1670,51 +1388,6 @@
       object.__init__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="types"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">types</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">blob</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">BLOB</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">boolean</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">CHAR(1)</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">date</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DATE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">datetime</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">TIMESTAMP</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">decimal</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DOUBLE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">double</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DOUBLE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">id</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">INTEGER PRIMARY KEY AUTOINCREMENT</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">integer</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">INTEGER</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-<code class="variable-ellipsis">...</code>
-</pre></td></tr></table>
-</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1750,7 +1423,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:56 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:45 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

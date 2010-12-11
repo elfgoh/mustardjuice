@@ -42,7 +42,7 @@ class OAuthAccount(object):
         .
         .
         .
-
+    
         CLIENT_ID=\"<put your fb application id here>\"
         CLIENT_SECRET=\"<put your fb application secret here>\"
         AUTH_URL="http://..."
@@ -90,7 +90,7 @@ class OAuthAccount(object):
 
         If token is already in the session that one will be used.
         Otherwise the token is fetched from the auth server.
-
+        
         """
         if self.session.token and self.session.token.has_key('expires'):
             expires = self.session.token['expires']
@@ -128,8 +128,8 @@ class OAuthAccount(object):
 
                 return self.session.token['access_token']
 
-
-
+        
+                
         self.session.token = None
         return None
 
@@ -142,7 +142,7 @@ class OAuthAccount(object):
         self.auth_url = auth_url
         self.token_url = token_url
         self.args = args
-
+        
     def login_url(self, next="/"):
         self.__oauth_login(next)
         return next
@@ -157,7 +157,7 @@ class OAuthAccount(object):
         raise NotImplementedError, "Must override get_user()"
         if not self.accessToken():
             return None
-
+        
         if not self.graph:
             self.graph = GraphAPI((self.accessToken()))
 

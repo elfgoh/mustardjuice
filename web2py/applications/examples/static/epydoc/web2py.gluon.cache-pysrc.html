@@ -87,16 +87,14 @@
 <a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">time</tt> </tt>
 <a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module web2py.gluon.portalocker=web2py.gluon.portalocker-module.html"><a title="web2py.gluon.portalocker" class="py-name" href="#" onclick="return doclink('link-0', 'portalocker', 'link-0');">portalocker</a></tt> </tt>
 <a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">shelve</tt> </tt>
-<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Variable web2py.gluon.dal.thread=web2py.gluon.dal-module.html#thread,Variable web2py.gluon.rewrite.thread=web2py.gluon.rewrite-module.html#thread,Variable web2py.gluon.sql.thread=web2py.gluon.sql-module.html#thread,Variable web2py.gluon.sql_old.thread=web2py.gluon.sql_old-module.html#thread,Variable web2py.gluon.thread_local_singleton.Singleton.thread=web2py.gluon.thread_local_singleton.Singleton-class.html#thread"><a title="web2py.gluon.dal.thread
-web2py.gluon.rewrite.thread
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Variable web2py.gluon.rewrite.thread=web2py.gluon.rewrite-module.html#thread,Variable web2py.gluon.sql.thread=web2py.gluon.sql-module.html#thread,Variable web2py.gluon.thread_local_singleton.Singleton.thread=web2py.gluon.thread_local_singleton.Singleton-class.html#thread"><a title="web2py.gluon.rewrite.thread
 web2py.gluon.sql.thread
-web2py.gluon.sql_old.thread
 web2py.gluon.thread_local_singleton.Singleton.thread" class="py-name" href="#" onclick="return doclink('link-1', 'thread', 'link-1');">thread</a></tt> </tt>
 <a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
 <a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> </tt>
 <a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
 <a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
-<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.sql_old.logger=web2py.gluon.sql_old-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
 web2py.gluon.compileapp.logger
 web2py.gluon.dal.logger
 web2py.gluon.main.logger
@@ -106,7 +104,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-2', 'logger', 'link-2');">logger</a></tt> <tt class="py-op">=</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">getLogger</tt><tt class="py-op">(</tt><tt class="py-string">"web2py.cache"</tt><tt class="py-op">)</tt> </tt>
 <a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
@@ -204,10 +201,8 @@ web2py.gluon.thread_local_singleton.Singleton.items" class="py-name" href="#" on
 <a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">    A mutex-lock mechanism avoid conflicts.</tt> </tt>
 <a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
 <a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
-<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Variable web2py.gluon.cache.CacheInRam.locker=web2py.gluon.cache.CacheInRam-class.html#locker"><a title="web2py.gluon.cache.CacheInRam.locker" class="py-name" href="#" onclick="return doclink('link-10', 'locker', 'link-10');">locker</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="web2py.gluon.dal.thread
-web2py.gluon.rewrite.thread
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Variable web2py.gluon.cache.CacheInRam.locker=web2py.gluon.cache.CacheInRam-class.html#locker"><a title="web2py.gluon.cache.CacheInRam.locker" class="py-name" href="#" onclick="return doclink('link-10', 'locker', 'link-10');">locker</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="web2py.gluon.rewrite.thread
 web2py.gluon.sql.thread
-web2py.gluon.sql_old.thread
 web2py.gluon.thread_local_singleton.Singleton.thread" class="py-name" href="#" onclick="return doclink('link-11', 'thread', 'link-1');">thread</a></tt><tt class="py-op">.</tt><tt class="py-name">allocate_lock</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable web2py.gluon.cache.CacheInRam.meta_storage=web2py.gluon.cache.CacheInRam-class.html#meta_storage"><a title="web2py.gluon.cache.CacheInRam.meta_storage" class="py-name" href="#" onclick="return doclink('link-12', 'meta_storage', 'link-12');">meta_storage</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
 <a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
@@ -354,7 +349,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-91', 'logger', 'link-2');">logger</a></tt><tt class="py-op">.</tt><tt id="link-92" class="py-name" targets="Method web2py.gluon.tools.Service.error()=web2py.gluon.tools.Service-class.html#error,Method web2py.gluon.widget.web2pyDialog.error()=web2py.gluon.widget.web2pyDialog-class.html#error"><a title="web2py.gluon.tools.Service.error
 web2py.gluon.widget.web2pyDialog.error" class="py-name" href="#" onclick="return doclink('link-92', 'error', 'link-92');">error</a></tt><tt class="py-op">(</tt><tt class="py-string">'corrupted file: %s'</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">shelve_name</tt><tt class="py-op">)</tt> </tt>
@@ -492,7 +486,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-199', 'logger', 'link-2');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt><tt class="py-string">'no cache.disk (IOError)'</tt><tt class="py-op">)</tt> </tt>
 <a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-name">AttributeError</tt><tt class="py-op">:</tt> </tt>
@@ -508,7 +501,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-200', 'logger', 'link-2');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt><tt class="py-string">'no cache.disk (AttributeError)'</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L372"></a><tt class="py-lineno">372</tt>  <tt class="py-line"> </tt>
@@ -592,7 +584,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:20:07 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:54 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

@@ -1,5 +1,5 @@
 from gluon.contrib.memcache.memcache import Client
-from gluon.cache import CacheAbstract
+from gluon.cache import CacheAbstract 
 import time
 
 """

@@ -14,7 +14,7 @@ import urllib
 from utils import web2py_uuid
 from shutil import rmtree
 from fileutils import w2p_pack, w2p_unpack, w2p_pack_plugin, w2p_unpack_plugin
-from fileutils import up, listdir, fix_newlines, abspath, recursive_unlink
+from fileutils import up, listdir, fix_newlines, abspath
 from restricted import RestrictedError
 
 def apath(path='', r=None):
@@ -85,6 +85,7 @@ def app_pack_compiled(app, request):
     except Exception:
         return None
 
+
 def app_cleanup(app, request):
     """
     Removes session, cache and error files
@@ -99,27 +100,27 @@ def app_cleanup(app, request):
     r = True
 
     # Remove error files
-    path = apath('%s/errors/' % app, request)
-    for f in os.listdir(path):
+    files = listdir(apath('%s/errors/' % app, request), '^\d.*$', 0)
+    for f in files:
         try:
-            os.unlink(os.path.join(path,f))
-        except IOError:
+            os.unlink(f)
+        except:
             r = False
 
     # Remove session files
-    path = apath('%s/sessions/' % app, request)
-    for f in os.listdir(path):
+    files = listdir(apath('%s/sessions/' % app, request), '^\d.*$', 0)
+    for f in files:
         try:
-            recursive_unlink(os.path.join(path,f))
-        except IOError:
+            os.unlink(f)
+        except:
             r = False
 
     # Remove cache files
-    path = apath('%s/sessions/' % app, request)
-    for f in os.listdir(path):
+    files = listdir(apath('%s/cache/' % app, request), '^cache.*$', 0)
+    for file in files:
         try:
-            os.unlink(os.path.join(path,f))
-        except IOError:
+            os.unlink(file)
+        except:
             r = False
 
     return r

@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# coding: utf8
+#!/usr/bin/env python 
+# coding: utf8 
 
 """
 ExtendedLoginForm is used to extend normal login form in web2py with one more login method.

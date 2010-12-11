@@ -24,7 +24,7 @@ class List(list):
     Like a regular python list but a[i] if i is out of bounds return None
     instead of IndexOutOfBounds
     """
-
+    
     def __call__(self, i, default=None):
         if 0<=i<len(self):
             return self[i]
@@ -79,13 +79,13 @@ class Storage(dict):
     def __setstate__(self, value):
         for (k, v) in value.items():
             self[k] = v
-
+            
     def getlist(self, obj):
         """Returns a list given a request.vars style object attribute.
-
+    
         If object is list it will be returned as is.  If object is None, an empty
         list will be returned.  Otherwise, [object] will be returned.
-
+    
         Simulated output with a query string of ?x=abc&y=abc&y=def
         >>> request.vars.x = 'abc'
         >>> request.vars.y = ['abc', 'def']
@@ -95,7 +95,7 @@ class Storage(dict):
         ['abc', 'def']
         >>> request.vars.getlist('z')
         []
-
+    
         """
         value = self.get(obj, None)
         if isinstance(value, list):
@@ -103,13 +103,13 @@ class Storage(dict):
         elif value is None:
             return []
         return [value]
-
+    
     def getfirst(self, obj):
         """Returns a single value when given a request.vars style object attribute.
-
+    
         If object is list, the first item will be returned, otherwise, object
         will be returned as is.
-
+    
         Simulated output with a query string of ?x=abc&y=abc&y=def
         >>> request.vars.x = 'abc'
         >>> request.vars.y = ['abc', 'def']
@@ -119,19 +119,19 @@ class Storage(dict):
         'abc'
         >>> request.vars.getfirst('z')
         None
-
+    
         """
         value = self.getlist(obj)
         if len(value):
             return value[0]
-        return None
-
+        return None 
+    
     def getlast(self, obj):
         """Returns a single value when given a request.vars style object attribute.
-
+    
         If object is list, the last item will be returned, otherwise, object
         will be returned as is.
-
+    
         Simulated output with a query string of ?x=abc&y=abc&y=def
         >>> request.vars.x = 'abc'
         >>> request.vars.y = ['abc', 'def']
@@ -141,7 +141,7 @@ class Storage(dict):
         'def'
         >>> request.vars.getlast('z')
         None
-
+    
         """
         value = self.getlist(obj)
         if len(value):

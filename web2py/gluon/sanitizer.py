@@ -151,12 +151,11 @@ class XssCleaner(HTMLParser):
 
     def url_is_acceptable(self, url):
         """
-        Accepts relative and absolute urls
+        Requires all URLs to be \"absolute.\"
         """
 
         parsed = urlparse(url)
-        return (parsed[0] in self.allowed_schemes and '.' in parsed[1]) \
-            or (parsed[0] == '' and parsed[2].startswith('/'))
+        return parsed[0] in self.allowed_schemes and '.' in parsed[1]
 
     def strip(self, rawstring, escape=True):
         """

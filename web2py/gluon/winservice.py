@@ -88,7 +88,7 @@ class Web2pyService(Service):
             os.chdir(dir)
             return True
         except:
-            self.log("Can't change to web2py working path; server is stopped")
+            self.log("Can't change to web2py working path, server is stopped")
             return False
 
     def start(self):
@@ -100,11 +100,6 @@ class Web2pyService(Service):
         else:
             opt_mod = self._exe_args_
         options = __import__(opt_mod, [], [], '')
-        if True: # legacy support for old options files, which have only (deprecated) numthreads
-            if hasattr(options, 'numthreads') and not hasattr(options, 'minthreads'):
-                options.minthreads = options.numthreads
-            if not hasattr(options, 'minthreads'): options.minthreads = None
-            if not hasattr(options, 'maxthreads'): options.maxthreads = None
         import main
         self.server = main.HttpServer(
             ip=options.ip,
@@ -115,8 +110,7 @@ class Web2pyService(Service):
             profiler_filename=options.profiler_filename,
             ssl_certificate=options.ssl_certificate,
             ssl_private_key=options.ssl_private_key,
-            min_threads=options.minthreads,
-            max_threads=options.maxthreads,
+            numthreads=options.numthreads,
             server_name=options.server_name,
             request_queue_size=options.request_queue_size,
             timeout=options.timeout,

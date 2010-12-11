@@ -96,7 +96,7 @@ class OpenIDAuth(object):
 
         self.table_alt_logins_name = "alt_logins"
         if not auth.settings.table_user:
-            raise
+            raise 
         self.table_user = self.auth.settings.table_user
         self.openid_expiration = 15 #minutes
 
@@ -225,12 +225,12 @@ class OpenIDAuth(object):
                 elif 'email' in self.table_user.fields():
                     username = 'email'
                 return {username: user[username]} if user else None # login success (almost)
-
+ 
         return None # just start to login
 
     def _find_matched_openid(self, db, oid, type_='openid'):
         """
-        Get the matched OpenID for given
+        Get the matched OpenID for given 
         """
         query = ((db.alt_logins.username == oid) & (db.alt_logins.type == type_))
         alt_login = db(query).select().first() # Get the OpenID record
@@ -459,7 +459,7 @@ class ConsumerHelper(object):
 
     def process_response(self, request_vars, return_to_url):
         """
-        Complete the process and
+        Complete the process and 
         """
         resp = self.consumer.complete(request_vars, return_to_url)
         if resp:
@@ -526,7 +526,7 @@ class Web2pyStore(OpenIDStore):
                            )
 
     def storeAssociation(self, server_url, association):
-        """
+        """ 
         Store associations. If there already is one with the same
         server_url and handle in the table replace it.
         """
@@ -542,7 +542,7 @@ class Web2pyStore(OpenIDStore):
                                    assoc_type = association.assoc_type), 'insert '*10
 
     def getAssociation(self, server_url, handle=None):
-        """
+        """ 
         Return the association for server_url and handle. If handle is
         not None return the latests associations for that server_url.
         Return None if no association can be found.
@@ -570,7 +570,7 @@ class Web2pyStore(OpenIDStore):
         return db(query).delete() != None
 
     def useNonce(self, server_url, timestamp, salt):
-        """
+        """ 
         This method returns Falase if a nonce has been used before or its
         timestamp is not current.
         """
@@ -588,10 +588,10 @@ class Web2pyStore(OpenIDStore):
            return True
 
     def _removeExpiredAssocations(self, rows):
-        """
+        """ 
         This helper function is not part of the interface. Given a list of
-        association rows it checks which associations have expired and
-        deletes them from the db. It returns a tuple of the form
+        association rows it checks which associations have expired and 
+        deletes them from the db. It returns a tuple of the form 
         ([valid_assoc], no_of_expired_assoc_deleted).
         """
 
@@ -609,9 +609,9 @@ class Web2pyStore(OpenIDStore):
         return (keep_assoc, len(remove_assoc)) # return tuple (list of valid associations, number of deleted associations)
 
     def cleanupNonces(self):
-        """
+        """ 
         Remove expired nonce entries from DB and return the number
-        of entries deleted.
+        of entries deleted. 
         """
 
         db = self.database
@@ -619,7 +619,7 @@ class Web2pyStore(OpenIDStore):
         return db(query).delete()
 
     def cleanupAssociations(self):
-        """
+        """ 
         Remove expired associations from db and return the number
         of entries deleted.
         """
@@ -629,7 +629,7 @@ class Web2pyStore(OpenIDStore):
         return self._removeExpiredAssocations(db(query).select())[1] #return number of assoc removed
 
     def cleanup(self):
-        """
+        """ 
         This method should be run periodically to free the db from
         expired nonce and association entries.
         """

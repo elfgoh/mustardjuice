@@ -104,8 +104,7 @@
         <span class="summary-sig-arg">uri</span>,
         <span class="summary-sig-arg">pool_size</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">folder</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">credential_decoder</span>=<span class="summary-sig-default">&lt;function &lt;lambda&gt; at 0x2a46c08&gt;</span>)</span></td>
+        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.dal-pysrc.html#JDBCPostgreSQLAdapter.__init__">source&nbsp;code</a></span>
             
@@ -124,7 +123,8 @@
       <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#lastrowid">lastrowid</a></code>,
       <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#prepare">prepare</a></code>,
       <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#rollback_prepared">rollback_prepared</a></code>,
-      <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#sequence_name">sequence_name</a></code>
+      <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#sequence_name">sequence_name</a></code>,
+      <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#support_distributed_transaction">support_distributed_transaction</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.BaseAdapter-class.html">BaseAdapter</a></code></b>:
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#ADD">ADD</a></code>,
@@ -133,14 +133,16 @@
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#AS">AS</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#BELONGS">BELONGS</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#COMMA">COMMA</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#CONTAINS">CONTAINS</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#COUNT">COUNT</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#DELETE">DELETE</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#DESC">DESC</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#DIV">DIV</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#ENDSWITH">ENDSWITH</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#DROP">DROP</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#EQ">EQ</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#EXTRACT">EXTRACT</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#GE">GE</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#GT">GT</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#INVERT">INVERT</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#INSERT">INSERT</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#LE">LE</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#LEFT_JOIN">LEFT_JOIN</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#LIKE">LIKE</a></code>,
@@ -153,52 +155,34 @@
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#ON">ON</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#OR">OR</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#PRIMARY_KEY">PRIMARY_KEY</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#STARTSWITH">STARTSWITH</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#SELECT">SELECT</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#SELECT_LIMITBY">SELECT_LIMITBY</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#SUB">SUB</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#SUBSTRING">SUBSTRING</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#TRUNCATE">TRUNCATE</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#UPDATE">UPDATE</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#UPPER">UPPER</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#VERBATIM">VERBATIM</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#alias">alias</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#bulk_insert">bulk_insert</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#commit">commit</a></code>,
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#commit_on_alter_table">commit_on_alter_table</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#concat_add">concat_add</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#constraint_name">constraint_name</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#count">count</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#create_sequence_and_triggers">create_sequence_and_triggers</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#create_table">create_table</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#delete">delete</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#drop">drop</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#execute">execute</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#expand">expand</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#file_close">file_close</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#file_delete">file_delete</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#file_exists">file_exists</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#file_open">file_open</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#get_table">get_table</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#insert">insert</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#integrity_error_class">integrity_error_class</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#log_execute">log_execute</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#migrate_table">migrate_table</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#parse">parse</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#represent">represent</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#represent_exceptions">represent_exceptions</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#rollback">rollback</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#rowslice">rowslice</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#select">select</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#select_limitby">select_limitby</a></code>,
       <code><a href="web2py.gluon.dal.BaseAdapter-class.html#tables">tables</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#trigger_name">trigger_name</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#truncate">truncate</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#update">update</a></code>
+      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#trigger_name">trigger_name</a></code>
       </p>
-    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.BaseAdapter-class.html">BaseAdapter</a></code></b> (private):
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_count">_count</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_delete">_delete</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_drop">_drop</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_insert">_insert</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_select">_select</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_truncate">_truncate</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#_update">_update</a></code>
-      </p></div>
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.ConnectionPool-class.html">ConnectionPool</a></code></b>:
       <code><a href="web2py.gluon.dal.ConnectionPool-class.html#find_or_make_work_folder">find_or_make_work_folder</a></code>,
       <code><a href="web2py.gluon.dal.ConnectionPool-class.html#pool_connection">pool_connection</a></code>
@@ -263,16 +247,13 @@
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html">PostgreSQLAdapter</a></code></b>:
-      <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#support_distributed_transaction">support_distributed_transaction</a></code>,
       <code><a href="web2py.gluon.dal.PostgreSQLAdapter-class.html#types">types</a></code>
       </p>
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.BaseAdapter-class.html">BaseAdapter</a></code></b>:
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#commit_on_alter_table">commit_on_alter_table</a></code>,
-      <code><a href="web2py.gluon.dal.BaseAdapter-class.html#uploads_in_blob">uploads_in_blob</a></code>
-      </p>
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.ConnectionPool-class.html">ConnectionPool</a></code></b>:
-      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#pools">pools</a></code>
-      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="web2py.gluon.dal.ConnectionPool-class.html">ConnectionPool</a></code></b> (private):
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_connection_pools">_connection_pools</a></code>,
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_folders">_folders</a></code>,
+      <code><a href="web2py.gluon.dal.ConnectionPool-class.html#_instances">_instances</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -331,8 +312,7 @@
         <span class="sig-arg">uri</span>,
         <span class="sig-arg">pool_size</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">folder</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">db_codec</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">credential_decoder</span>=<span class="sig-default">&lt;function &lt;lambda&gt; at 0x2a46c08&gt;</span>)</span>
+        <span class="sig-arg">db_codec</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -380,7 +360,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:56 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:45 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

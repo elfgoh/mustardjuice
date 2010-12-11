@@ -73,94 +73,10 @@ Thanks to
     * Marcel Leuthi &lt;mluethi@mlsystems.ch&gt; for Oracle support
     * Denes
     * Chris Clark
-    * clach05
-    * Denes Lengyel
-    * and many others who have contributed to current and previous versions
 
 This file contains the DAL support for many relational databases,
-including SQLite, MySQL, Postgres, Oracle, MS SQL, DB2, Interbase, Ingres
-
-Completely refactored by MDP on Dec, 2010
-
-TODO:
-- create more functions in adapters to abstract more
-- fix insert, create, migrate
-- move startswith, endswith, contains into adapters
-- handle _lastsql (where?)
-
-Example of usage:
-
-&gt;&gt;&gt; # from dal import DAL, Field
-
-### create DAL connection (and create DB if not exists)
-&gt;&gt;&gt; db=DAL(('mysql://a:b@locahost/x','sqlite://storage.sqlite'),folder=None)
-
-### define a table 'person' (create/aster as necessary)
-&gt;&gt;&gt; person = db.define_table('person',Field('name','string'))
-
-### insert a record
-&gt;&gt;&gt; id = person.insert(name='James')
-
-### retrieve it by id
-&gt;&gt;&gt; james = person(id)
-
-### retrieve it by name
-&gt;&gt;&gt; james = person(name='James')
-
-### retrieve it by arbitrary query
-&gt;&gt;&gt; query = (person.name=='James')&amp;(person.name.startswith('J'))
-&gt;&gt;&gt; james = db(query).select(person.ALL)[0]
-
-### update one record
-&gt;&gt;&gt; james.update_record(name='Jim')
-
-### update multiple records by query
-&gt;&gt;&gt; db(person.name.like('J%')).update(name='James')
-1
-
-### delete records by query
-&gt;&gt;&gt; db(person.name.lower()=='jim').delete()
-0
-
-### retrieve multiple records (rows)
-&gt;&gt;&gt; people = db(person).select(orderby=person.name,groupby=person.name,limitby=(0,100))
-
-### further filter them
-&gt;&gt;&gt; james = people.find(lambda row: row.name=='James').first()
-&gt;&gt;&gt; print james.id, james.name
-1 James
-
-### delete one record
-&gt;&gt;&gt; james.delete_record()
-1
-
-### delete (drop) entire database table
-&gt;&gt;&gt; person.drop()
-
-Supported field types:
-id string text boolean integer double decimal password upload blob time date datetime,
-
-Supported DAL URI strings:
-'sqlite://test.db'
-'sqlite:memory'
-'jdbc:sqlite://test.db'
-'mysql://root:none@localhost/test'
-'postgres://mdipierro:none@localhost/test'
-'jdbc:postgres://mdipierro:none@localhost/test'
-'mssql://web2py:none@A64X2/web2py_test'
-'mssql2://web2py:none@A64X2/web2py_test' # alternate mappings
-'oracle://username:password@database'
-'firebird://user:password@server:3050/database'
-'db2://DSN=dsn;UID=user;PWD=pass'
-'firebird://username:password@hostname/database'
-'firebird_embedded://username:password@c://path'
-'informix://user:password@server:3050/database'
-'informixu://user:password@server:3050/database' # unicode informix
-'gae' # for google app engine (work in progress)
-
-For more info:
-help(DAL)
-help(Field)
+including SQLite, MySQL, Postgres, Oracle, MS SQL, DB2, Interbase.
+Adding Ingres - clach04
 
 </pre><br /><br />
 
@@ -185,153 +101,6 @@ help(Field)
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="web2py.gluon.sql.ConnectionPool-class.html" class="summary-name">ConnectionPool</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.BaseAdapter-class.html" class="summary-name">BaseAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.SQLiteAdapter-class.html" class="summary-name">SQLiteAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.JDBCSQLiteAdapter-class.html" class="summary-name">JDBCSQLiteAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.MySQLAdapter-class.html" class="summary-name">MySQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.PostgreSQLAdapter-class.html" class="summary-name">PostgreSQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.JDBCPostgreSQLAdapter-class.html" class="summary-name">JDBCPostgreSQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.OracleAdapter-class.html" class="summary-name">OracleAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.MSSQLAdapter-class.html" class="summary-name">MSSQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.MSSQL2Adapter-class.html" class="summary-name">MSSQL2Adapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.FireBirdAdapter-class.html" class="summary-name">FireBirdAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.FireBirdEmbeddedAdapter-class.html" class="summary-name">FireBirdEmbeddedAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.InformixAdapter-class.html" class="summary-name">InformixAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.DB2Adapter-class.html" class="summary-name">DB2Adapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.IngresAdapter-class.html" class="summary-name">IngresAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.IngresUnicodeAdapter-class.html" class="summary-name">IngresUnicodeAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.NoSQLAdapter-class.html" class="summary-name">NoSQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.GAEF-class.html" class="summary-name">GAEF</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.GAENoSQLAdapter-class.html" class="summary-name">GAENoSQLAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.CouchDBAdapter-class.html" class="summary-name">CouchDBAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.MongoDBAdapter-class.html" class="summary-name">MongoDBAdapter</a>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
         <a href="web2py.gluon.sql.Row-class.html" class="summary-name">Row</a><br />
       a dictionary that lets you do d['a'] as well as d.a this is only
         used to store a Row
@@ -344,11 +113,11 @@ help(Field)
         <a href="web2py.gluon.sql.SQLCallableList-class.html" class="summary-name">SQLCallableList</a>
     </td>
   </tr>
-<tr>
+<tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="web2py.gluon.sql.DAL-class.html" class="summary-name">DAL</a><br />
+        <a href="web2py.gluon.sql.SQLDB-class.html" class="summary-name">SQLDB</a><br />
       an instance of this class represents a database connection
     </td>
   </tr>
@@ -365,6 +134,15 @@ help(Field)
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
+        <a href="web2py.gluon.sql.SQLJoin-class.html" class="summary-name">SQLJoin</a><br />
+      Helper class providing the join statement between the given 
+        tables/queries.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
         <a href="web2py.gluon.sql.Reference-class.html" class="summary-name">Reference</a>
     </td>
   </tr>
@@ -374,6 +152,14 @@ help(Field)
     </td><td class="summary">
         <a href="web2py.gluon.sql.Table-class.html" class="summary-name">Table</a><br />
       an instance of this class represents a database table
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="web2py.gluon.sql.KeyedTable-class.html" class="summary-name">KeyedTable</a><br />
+      an instance of this class represents a database keyed table
     </td>
   </tr>
 <tr class="private">
@@ -413,7 +199,7 @@ help(Field)
     </td><td class="summary">
         <a href="web2py.gluon.sql.Set-class.html" class="summary-name">Set</a><br />
       a Set represents a set of records in the database,
-the records are identified by the query=Query(...) object.
+the records are identified by the where=Query(...) object.
     </td>
   </tr>
 <tr class="private">
@@ -461,7 +247,7 @@ the records are identified by the query=Query(...) object.
     </td><td class="summary">
         <a href="web2py.gluon.sql.Set-class.html" class="summary-name">SQLSet</a><br />
       a Set represents a set of records in the database,
-the records are identified by the query=Query(...) object.
+the records are identified by the where=Query(...) object.
     </td>
   </tr>
 <tr class="private">
@@ -485,15 +271,7 @@ the records are identified by the query=Query(...) object.
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="web2py.gluon.sql.DAL-class.html" class="summary-name">SQLDB</a><br />
-      an instance of this class represents a database connection
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="web2py.gluon.sql.DAL-class.html" class="summary-name">GQLDB</a><br />
+        <a href="web2py.gluon.sql.SQLDB-class.html" class="summary-name">BaseAdapter</a><br />
       an instance of this class represents a database connection
     </td>
   </tr>
@@ -537,43 +315,10 @@ the records are identified by the query=Query(...) object.
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="uuid2int"></a><span class="summary-sig-name">uuid2int</span>(<span class="summary-sig-arg">uuid</span>)</span></td>
+          <td><span class="summary-sig"><a name="gen_ingres_sequencename"></a><span class="summary-sig-name">gen_ingres_sequencename</span>(<span class="summary-sig-arg">table_name</span>)</span><br />
+      Generate Ingres specific sequencename, pass in self._tablename</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#uuid2int">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="int2uuid"></a><span class="summary-sig-name">int2uuid</span>(<span class="summary-sig-arg">n</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#int2uuid">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="cleanup"></a><span class="summary-sig-name">cleanup</span>(<span class="summary-sig-arg">text</span>)</span><br />
-      validates that the given text is clean: only contains 
-      [0-9a-zA-Z_]</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#cleanup">source&nbsp;code</a></span>
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#gen_ingres_sequencename">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -668,6 +413,94 @@ the records are identified by the query=Query(...) object.
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a name="sql_represent"></a><span class="summary-sig-name">sql_represent</span>(<span class="summary-sig-arg">obj</span>,
+        <span class="summary-sig-arg">fieldtype</span>,
+        <span class="summary-sig-arg">dbname</span>,
+        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#sql_represent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="cleanup"></a><span class="summary-sig-name">cleanup</span>(<span class="summary-sig-arg">text</span>)</span><br />
+      validates that the given text is clean: only contains 
+      [0-9a-zA-Z_]</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#cleanup">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sqlite3_web2py_extract"></a><span class="summary-sig-name">sqlite3_web2py_extract</span>(<span class="summary-sig-arg">lookup</span>,
+        <span class="summary-sig-arg">s</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#sqlite3_web2py_extract">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="oracle_fix_execute"></a><span class="summary-sig-name">oracle_fix_execute</span>(<span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">execute</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#oracle_fix_execute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="autofields"></a><span class="summary-sig-name">autofields</span>(<span class="summary-sig-arg">db</span>,
+        <span class="summary-sig-arg">text</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#autofields">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="Row_unpickler"></a><span class="summary-sig-name">Row_unpickler</span>(<span class="summary-sig-arg">data</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#Row_unpickler">source&nbsp;code</a></span>
@@ -719,6 +552,22 @@ the records are identified by the query=Query(...) object.
           <td><span class="summary-sig"><a name="Reference_pickler"></a><span class="summary-sig-name">Reference_pickler</span>(<span class="summary-sig-arg">data</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#Reference_pickler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="parse_tablenames"></a><span class="summary-sig-name">parse_tablenames</span>(<span class="summary-sig-arg">text</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#parse_tablenames">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -798,9 +647,32 @@ the records are identified by the query=Query(...) object.
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="web2py.gluon.sql-module.html#test_all" class="summary-sig-name">test_all</a>()</span><br />
-      &gt;&gt;&gt; if len(sys.argv)&lt;2: db = DAL(&quot;sqlite://test.db&quot;)...</td>
+      Create a table with all possible field types...</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#test_all">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="DAL"></a><span class="summary-sig-name">DAL</span>(<span class="summary-sig-arg">uri</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">sqlite:memory:</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">pool_size</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">folder</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">db_codec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">UTF-8</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">check_reserved</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">migrate</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">fake_migrate</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">decode_credentials</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="web2py.gluon.sql-pysrc.html#DAL">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -830,49 +702,7 @@ the records are identified by the query=Query(...) object.
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="have_portalocker"></a><span class="summary-name">have_portalocker</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="have_serializers"></a><span class="summary-name">have_serializers</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="have_validators"></a><span class="summary-name">have_validators</span> = <code title="True">True</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="logger"></a><span class="summary-name">logger</span> = <code title="logging.getLogger(&quot;web2py.dal&quot;)">logging.getLogger(&quot;web2py.dal&quot;)</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="sql_locker"></a><span class="summary-name">sql_locker</span> = <code title="&lt;_RLock(None, 0)&gt;">&lt;_RLock(None, 0)&gt;</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="thread"></a><span class="summary-name">thread</span> = <code title="threading.local()">threading.local()</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="regex_dbname"></a><span class="summary-name">regex_dbname</span> = <code title="re.compile(r'^(\w+)(:\w+)*')">re.compile(r'^<code class="re-group">(</code>\w<code class="re-op">+</code><code class="re-group">)</code><code class="re-group">(</code>:\w<code class="re-op">+</code><code class="re-group">)</code><code class="re-op">*</code>')</code>
+        <a name="logger"></a><span class="summary-name">logger</span> = <code title="logging.getLogger(&quot;web2py.sql&quot;)">logging.getLogger(&quot;web2py.sql&quot;)</code>
     </td>
   </tr>
 <tr class="private">
@@ -880,6 +710,14 @@ the records are identified by the query=Query(...) object.
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="table_field"></a><span class="summary-name">table_field</span> = <code title="re.compile(r'[\w_]+\.[\w_]+')">re.compile(r'<code class="re-group">[</code>\w_<code class="re-group">]</code><code class="re-op">+</code>\.<code class="re-group">[</code>\w_<code class="re-group">]</code><code class="re-op">+</code>')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="web2py.gluon.sql-module.html#oracle_fix" class="summary-name">oracle_fix</a> = <code title="re.compile(r'[^\']*(\'[^\']*\'[^\']*)*:(?P&lt;clob&gt;CLOB\(\'([^\']+|\'\')*\
+\'\))')">re.compile(r'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(</code>\'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code>\'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">)</code><code class="re-op">*</code>:<code class="re-group">(?P&lt;</code><code class="re-ref">clob</code><code class="re-group">&gt;</code>C<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -908,14 +746,28 @@ the records are identified by the query=Query(...) object.
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="drivers"></a><span class="summary-name">drivers</span> = <code title="['SQLite3', 'pymysql', 'PostgreSQL']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">SQLite3</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">pymysql</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">PostgreSQL</code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
+        <a name="drivers"></a><span class="summary-name">drivers</span> = <code title="['SQLite3', 'PostgreSQL']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">SQLite3</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">PostgreSQL</code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="is_jdbc"></a><span class="summary-name">is_jdbc</span> = <code title="True">True</code>
+        <a name="is_jdbc"></a><span class="summary-name">is_jdbc</span> = <code title="False">False</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="sql_locker"></a><span class="summary-name">sql_locker</span> = <code title="&lt;_RLock(None, 0)&gt;">&lt;_RLock(None, 0)&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="thread"></a><span class="summary-name">thread</span> = <code title="threading.local()">threading.local()</code>
     </td>
   </tr>
 <tr class="private">
@@ -929,15 +781,29 @@ the records are identified by the query=Query(...) object.
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="web2py.gluon.sql-module.html#ADAPTERS" class="summary-name">ADAPTERS</a> = <code title="{'couchdb': &lt;class 'web2py.gluon.sql.CouchDBAdapter'&gt;,
- 'db2': &lt;class 'web2py.gluon.sql.DB2Adapter'&gt;,
- 'firebird': &lt;class 'web2py.gluon.sql.FireBirdAdapter'&gt;,
- 'firebird_embedded': &lt;class 'web2py.gluon.sql.FireBirdAdapter'&gt;,
- 'gae': &lt;class 'web2py.gluon.sql.GAENoSQLAdapter'&gt;,
- 'informix': &lt;class 'web2py.gluon.sql.InformixAdapter'&gt;,
- 'ingres': &lt;class 'web2py.gluon.sql.IngresAdapter'&gt;,
- 'ingresu': &lt;class 'web2py.gluon.sql.IngresUnicodeAdapter'&gt;,
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">couchdb</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.CouchDBAdapter<code class="variable-ellipsis">...</code></code>
+        <a href="web2py.gluon.sql-module.html#SQL_DIALECTS" class="summary-name">SQL_DIALECTS</a> = <code title="{'db2': {'blob': 'BLOB',
+         'boolean': 'CHAR(1)',
+         'date': 'DATE',
+         'datetime': 'TIMESTAMP',
+         'decimal': 'NUMERIC(%(precision)s,%(scale)s)',
+         'double': 'DOUBLE',
+         'extract': 'EXTRACT(%(name)s FROM %(field)s)',
+         'id': 'INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT N\
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">db2</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">blob</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">BLOB</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">boolean</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">CHAR(1)</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="INGRES_USE_UNICODE_STRING_TYPES"></a><span class="summary-name">INGRES_USE_UNICODE_STRING_TYPES</span> = <code title="True">True</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="regex_tables"></a><span class="summary-name">regex_tables</span> = <code title="re.compile(r'(?P&lt;table&gt;[a-zA-Z]\w*)\.')">re.compile(r'<code class="re-group">(?P&lt;</code><code class="re-ref">table</code><code class="re-group">&gt;</code><code class="re-group">[</code>a<code class="re-op">-</code>zA<code class="re-op">-</code>Z<code class="re-group">]</code>\w<code class="re-op">*</code><code class="re-group">)</code>\.')</code>
     </td>
   </tr>
 <tr class="private">
@@ -945,6 +811,13 @@ the records are identified by the query=Query(...) object.
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="regex_quotes"></a><span class="summary-name">regex_quotes</span> = <code title="re.compile(r'\'[^\']*\'')">re.compile(r'\'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code>\'')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="x"></a><span class="summary-name">x</span> = <code title="'text'"><code class="variable-quote">'</code><code class="variable-string">text</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -1004,9 +877,21 @@ the records are identified by the query=Query(...) object.
   <pre class="literalblock">
 
 
- &gt;&gt;&gt; if len(sys.argv)&lt;2: db = DAL(&quot;sqlite://test.db&quot;)
- &gt;&gt;&gt; if len(sys.argv)&gt;1: db = DAL(sys.argv[1])
- &gt;&gt;&gt; tmp = db.define_table('users',              Field('stringf', 'string', length=32, required=True),              Field('booleanf', 'boolean', default=False),              Field('passwordf', 'password', notnull=True),              Field('uploadf', 'upload'),              Field('blobf', 'blob'),              Field('integerf', 'integer', unique=True),              Field('doublef', 'double', unique=True,notnull=True),              Field('datef', 'date', default=datetime.date.today()),              Field('timef', 'time'),              Field('datetimef', 'datetime'),              migrate='test_user.table')
+ Create a table with all possible field types
+ 'sqlite://test.db'
+ 'mysql://root:none@localhost/test'
+ 'postgres://mdipierro:none@localhost/test'
+ 'mssql://web2py:none@A64X2/web2py_test'
+ 'oracle://username:password@database'
+ 'firebird://user:password@server:3050/database'
+ 'db2://DSN=dsn;UID=user;PWD=pass'
+ 'firebird_embedded://username:password@c://path')
+ 'informix://user:password@server:3050/database'
+ 'gae' # for google app engine
+
+ &gt;&gt;&gt; if len(sys.argv)&lt;2: db = SQLDB(&quot;sqlite://test.db&quot;)
+ &gt;&gt;&gt; if len(sys.argv)&gt;1: db = SQLDB(sys.argv[1])
+ &gt;&gt;&gt; tmp = db.define_table('users',              Field('stringf', 'string', length=32, required=True),              Field('booleanf', 'boolean', default=False),              Field('passwordf', 'password', notnull=True),              Field('blobf', 'blob'),              Field('uploadf', 'upload'),              Field('integerf', 'integer', unique=True),              Field('doublef', 'double', unique=True,notnull=True),              Field('datef', 'date', default=datetime.date.today()),              Field('timef', 'time'),              Field('datetimef', 'datetime'),              migrate='test_user.table')
 
 Insert a field
 
@@ -1022,16 +907,14 @@ Insert a field
  &gt;&gt;&gt; tmp = db.define_table('person',              Field('name'),              Field('birth','date'),              migrate='test_person.table')
  &gt;&gt;&gt; person_id = db.person.insert(name=&quot;Marco&quot;,birth='2005-06-22')
  &gt;&gt;&gt; person_id = db.person.insert(name=&quot;Massimo&quot;,birth='1971-12-21')
-
- commented len(db().select(db.person.ALL))
- commented 2
-
+ &gt;&gt;&gt; len(db().select(db.person.ALL))
+ 2
  &gt;&gt;&gt; me = db(db.person.id==person_id).select()[0] # test select
  &gt;&gt;&gt; me.name
  'Massimo'
  &gt;&gt;&gt; db(db.person.name=='Massimo').update(name='massimo') # test update
  1
- &gt;&gt;&gt; db(db.person.name=='Marco').select().first().delete_record() # test delete
+ &gt;&gt;&gt; db(db.person.name=='Marco').delete() # test delete
  1
 
  Update a single record
@@ -1066,7 +949,7 @@ Insert a field
  &gt;&gt;&gt; len(db(db.person.birth!=None).select()) ### test NULL
  1
 
- Examples of search conditions using lower, upper, and like
+ Examples of search consitions using lower, upper, and like
 
  &gt;&gt;&gt; len(db(db.person.name.upper()=='MAX').select())
  1
@@ -1142,10 +1025,9 @@ Insert a field
  &gt;&gt;&gt; db(mynumber.id&gt;0).delete()
  0
  &gt;&gt;&gt; for i in range(10): tmp = mynumber.insert(x=i)
- &gt;&gt;&gt; db(mynumber.id&gt;0).select(mynumber.x.sum())[0](mynumber.x.sum())
+ &gt;&gt;&gt; db(mynumber.id&gt;0).select(mynumber.x.sum())[0]._extra[mynumber.x.sum()]
  45
-
- &gt;&gt;&gt; db(mynumber.x+2==5).select(mynumber.x + 2)[0](mynumber.x + 2)
+ &gt;&gt;&gt; db(mynumber.x+2==5).select(mynumber.x + 2)[0]._extra[mynumber.x + 2]
  5
 
  Output in csv
@@ -1156,7 +1038,7 @@ Insert a field
 
  Delete all leftover tables
 
- &gt;&gt;&gt; DAL.distributed_transaction_commit(db)
+ # &gt;&gt;&gt; SQLDB.distributed_transaction_commit(db)
 
  &gt;&gt;&gt; db.mynumber.drop()
  &gt;&gt;&gt; db.authorship.drop()
@@ -1188,6 +1070,25 @@ Insert a field
   </td>
 </tr>
 </table>
+<a name="oracle_fix"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">oracle_fix</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(</code>\'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code>\'<code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">)</code><code class="re-op">*</code>:<code class="re-group">(?P&lt;</code><code class="re-ref">clob</code><code class="re-group">&gt;</code>CLOB\(\'<code class="re-group">(</code><code class="re-group">[^</code>\'<code class="re-group">]</code><code class="re-op">+</code><code class="re-op">|</code>\'\'<code class="re-group">)</code><code class="re-op">*</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+\'\)<code class="re-group">)</code>')
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="regex_content"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -1207,26 +1108,26 @@ re.compile(r'<code class="re-group">(?P&lt;</code><code class="re-ref">table</co
   </dl>
 </td></tr></table>
 </div>
-<a name="ADAPTERS"></a>
+<a name="SQL_DIALECTS"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">ADAPTERS</h3>
+  <h3 class="epydoc">SQL_DIALECTS</h3>
   
   <dl class="fields">
   </dl>
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">couchdb</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.CouchDBAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">db2</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.DB2Adapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">firebird</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.FireBirdAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">firebird_embedded</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.FireBirdAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">gae</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.GAENoSQLAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">informix</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.InformixAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">ingres</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.IngresAdapter'&gt;<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">ingresu</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;class 'web2py.gluon.sql.IngresUnicodeAdapter'&gt;<code class="variable-op">,</code>
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">db2</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">blob</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">BLOB</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">boolean</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">CHAR(1)</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">date</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DATE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">datetime</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">TIMESTAMP</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">decimal</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">NUMERIC(%(precision)s,%(scale)s)</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">double</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">DOUBLE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">extract</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">EXTRACT(%(name)s FROM %(field)s)</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+         <code class="variable-quote">'</code><code class="variable-string">id</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT N</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
@@ -1265,7 +1166,7 @@ re.compile(r'<code class="re-group">(?P&lt;</code><code class="re-ref">table</co
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:56 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:45 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

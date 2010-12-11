@@ -10,7 +10,7 @@ Modifed by Massimo Di Pierro
 - ported from Python 3.x run on Python 2.4+
 - fixed a couple of bugs
 - merged with test so single file
-- namedtuple from http://code.activestate.com/recipes/500261/
+- namedtuple from http://code.activestate.com/recipes/500261/ 
 
 """
 
@@ -53,7 +53,7 @@ def namedtuple(typename, fieldnames):
     (None, None, 'pads with nones')
     >>> tpl(b='pads with nones')
     (None, 'pads with nones', None)
-    >>>
+    >>> 
     """
     # Split up a string, some people do this
     if isinstance(fieldnames, basestring):
@@ -204,7 +204,7 @@ def test():
     invoice = str(time())[4:10] # get a random invoice number
 
     try:
-        payment = AIM('cnpdev4289', 'SR2P8g4jdEn7vFLQ', True)
+        payment = AIM('cnpdev4289', 'SR2P8g4jdEn7vFLQ', True)    
         payment.setTransaction(creditcard, expiration, total, cvv, tax, invoice)
         payment.setParameter('x_duplicate_window', 180) # three minutes duplicate windows
         payment.setParameter('x_cust_id', '1324')       # customer ID

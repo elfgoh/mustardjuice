@@ -74,34 +74,17 @@
 <a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
 <a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cPickle</tt> </tt>
 <a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">traceback</tt> </tt>
-<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Variable web2py.gluon.dal.BaseAdapter.types=web2py.gluon.dal.BaseAdapter-class.html#types,Variable web2py.gluon.dal.CouchDBAdapter.types=web2py.gluon.dal.CouchDBAdapter-class.html#types,Variable web2py.gluon.dal.DB2Adapter.types=web2py.gluon.dal.DB2Adapter-class.html#types,Variable web2py.gluon.dal.FireBirdAdapter.types=web2py.gluon.dal.FireBirdAdapter-class.html#types,Variable web2py.gluon.dal.GAENoSQLAdapter.types=web2py.gluon.dal.GAENoSQLAdapter-class.html#types,Variable web2py.gluon.dal.InformixAdapter.types=web2py.gluon.dal.InformixAdapter-class.html#types,Variable web2py.gluon.dal.IngresAdapter.types=web2py.gluon.dal.IngresAdapter-class.html#types,Variable web2py.gluon.dal.IngresUnicodeAdapter.types=web2py.gluon.dal.IngresUnicodeAdapter-class.html#types,Variable web2py.gluon.dal.MSSQL2Adapter.types=web2py.gluon.dal.MSSQL2Adapter-class.html#types,Variable web2py.gluon.dal.MSSQLAdapter.types=web2py.gluon.dal.MSSQLAdapter-class.html#types,Variable web2py.gluon.dal.MongoDBAdapter.types=web2py.gluon.dal.MongoDBAdapter-class.html#types,Variable web2py.gluon.dal.MySQLAdapter.types=web2py.gluon.dal.MySQLAdapter-class.html#types,Variable web2py.gluon.dal.OracleAdapter.types=web2py.gluon.dal.OracleAdapter-class.html#types,Variable web2py.gluon.dal.PostgreSQLAdapter.types=web2py.gluon.dal.PostgreSQLAdapter-class.html#types,Variable web2py.gluon.sql.BaseAdapter.types=web2py.gluon.sql.BaseAdapter-class.html#types,Variable web2py.gluon.sql.CouchDBAdapter.types=web2py.gluon.sql.CouchDBAdapter-class.html#types,Variable web2py.gluon.sql.DB2Adapter.types=web2py.gluon.sql.DB2Adapter-class.html#types,Variable web2py.gluon.sql.FireBirdAdapter.types=web2py.gluon.sql.FireBirdAdapter-class.html#types,Variable web2py.gluon.sql.GAENoSQLAdapter.types=web2py.gluon.sql.GAENoSQLAdapter-class.html#types,Variable web2py.gluon.sql.InformixAdapter.types=web2py.gluon.sql.InformixAdapter-class.html#types,Variable web2py.gluon.sql.IngresAdapter.types=web2py.gluon.sql.IngresAdapter-class.html#types,Variable web2py.gluon.sql.IngresUnicodeAdapter.types=web2py.gluon.sql.IngresUnicodeAdapter-class.html#types,Variable web2py.gluon.sql.MSSQL2Adapter.types=web2py.gluon.sql.MSSQL2Adapter-class.html#types,Variable web2py.gluon.sql.MSSQLAdapter.types=web2py.gluon.sql.MSSQLAdapter-class.html#types,Variable web2py.gluon.sql.MongoDBAdapter.types=web2py.gluon.sql.MongoDBAdapter-class.html#types,Variable web2py.gluon.sql.MySQLAdapter.types=web2py.gluon.sql.MySQLAdapter-class.html#types,Variable web2py.gluon.sql.OracleAdapter.types=web2py.gluon.sql.OracleAdapter-class.html#types,Variable web2py.gluon.sql.PostgreSQLAdapter.types=web2py.gluon.sql.PostgreSQLAdapter-class.html#types"><a title="web2py.gluon.dal.BaseAdapter.types
-web2py.gluon.dal.CouchDBAdapter.types
-web2py.gluon.dal.DB2Adapter.types
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Variable web2py.gluon.dal.DB2Adapter.types=web2py.gluon.dal.DB2Adapter-class.html#types,Variable web2py.gluon.dal.FireBirdAdapter.types=web2py.gluon.dal.FireBirdAdapter-class.html#types,Variable web2py.gluon.dal.InformixAdapter.types=web2py.gluon.dal.InformixAdapter-class.html#types,Variable web2py.gluon.dal.IngresAdapter.types=web2py.gluon.dal.IngresAdapter-class.html#types,Variable web2py.gluon.dal.IngresUnicodeAdapter.types=web2py.gluon.dal.IngresUnicodeAdapter-class.html#types,Variable web2py.gluon.dal.MSSQLAdapter.types=web2py.gluon.dal.MSSQLAdapter-class.html#types,Variable web2py.gluon.dal.MSSQLAdapter2.types=web2py.gluon.dal.MSSQLAdapter2-class.html#types,Variable web2py.gluon.dal.MySQLAdapter.types=web2py.gluon.dal.MySQLAdapter-class.html#types,Variable web2py.gluon.dal.OracleAdapter.types=web2py.gluon.dal.OracleAdapter-class.html#types,Variable web2py.gluon.dal.PostgreSQLAdapter.types=web2py.gluon.dal.PostgreSQLAdapter-class.html#types,Variable web2py.gluon.dal.SQLiteAdapter.types=web2py.gluon.dal.SQLiteAdapter-class.html#types"><a title="web2py.gluon.dal.DB2Adapter.types
 web2py.gluon.dal.FireBirdAdapter.types
-web2py.gluon.dal.GAENoSQLAdapter.types
 web2py.gluon.dal.InformixAdapter.types
 web2py.gluon.dal.IngresAdapter.types
 web2py.gluon.dal.IngresUnicodeAdapter.types
-web2py.gluon.dal.MSSQL2Adapter.types
 web2py.gluon.dal.MSSQLAdapter.types
-web2py.gluon.dal.MongoDBAdapter.types
+web2py.gluon.dal.MSSQLAdapter2.types
 web2py.gluon.dal.MySQLAdapter.types
 web2py.gluon.dal.OracleAdapter.types
 web2py.gluon.dal.PostgreSQLAdapter.types
-web2py.gluon.sql.BaseAdapter.types
-web2py.gluon.sql.CouchDBAdapter.types
-web2py.gluon.sql.DB2Adapter.types
-web2py.gluon.sql.FireBirdAdapter.types
-web2py.gluon.sql.GAENoSQLAdapter.types
-web2py.gluon.sql.InformixAdapter.types
-web2py.gluon.sql.IngresAdapter.types
-web2py.gluon.sql.IngresUnicodeAdapter.types
-web2py.gluon.sql.MSSQL2Adapter.types
-web2py.gluon.sql.MSSQLAdapter.types
-web2py.gluon.sql.MongoDBAdapter.types
-web2py.gluon.sql.MySQLAdapter.types
-web2py.gluon.sql.OracleAdapter.types
-web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="return doclink('link-0', 'types', 'link-0');">types</a></tt> </tt>
+web2py.gluon.dal.SQLiteAdapter.types" class="py-name" href="#" onclick="return doclink('link-0', 'types', 'link-0');">types</a></tt> </tt>
 <a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
 <a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">datetime</tt> </tt>
 <a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> </tt>
@@ -110,7 +93,7 @@ web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="retu
 <a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Module web2py.gluon.storage=web2py.gluon.storage-module.html"><a title="web2py.gluon.storage" class="py-name" href="#" onclick="return doclink('link-3', 'storage', 'link-3');">storage</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Class web2py.gluon.storage.Storage=web2py.gluon.storage.Storage-class.html"><a title="web2py.gluon.storage.Storage" class="py-name" href="#" onclick="return doclink('link-4', 'Storage', 'link-4');">Storage</a></tt> </tt>
 <a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name" targets="Module web2py.gluon.http=web2py.gluon.http-module.html"><a title="web2py.gluon.http" class="py-name" href="#" onclick="return doclink('link-5', 'http', 'link-5');">http</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Class web2py.gluon.http.HTTP=web2py.gluon.http.HTTP-class.html"><a title="web2py.gluon.http.HTTP" class="py-name" href="#" onclick="return doclink('link-6', 'HTTP', 'link-6');">HTTP</a></tt> </tt>
 <a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
-<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.sql_old.logger=web2py.gluon.sql_old-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
 web2py.gluon.compileapp.logger
 web2py.gluon.dal.logger
 web2py.gluon.main.logger
@@ -120,7 +103,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-7', 'logger', 'link-7');">logger</a></tt> <tt class="py-op">=</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">getLogger</tt><tt class="py-op">(</tt><tt class="py-string">"web2py"</tt><tt class="py-op">)</tt> </tt>
 <a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
@@ -152,19 +134,10 @@ web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('li
 </div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
 <a name="TicketStorage._store_in_db"></a><div id="TicketStorage._store_in_db-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="TicketStorage._store_in_db-toggle" onclick="return toggle('TicketStorage._store_in_db');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.restricted.TicketStorage-class.html#_store_in_db">_store_in_db</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">ticket_id</tt><tt class="py-op">,</tt> <tt class="py-param">ticket_data</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="TicketStorage._store_in_db-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="TicketStorage._store_in_db-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">table</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method web2py.gluon.restricted.TicketStorage._get_table()=web2py.gluon.restricted.TicketStorage-class.html#_get_table"><a title="web2py.gluon.restricted.TicketStorage._get_table" class="py-name" href="#" onclick="return doclink('link-10', '_get_table', 'link-10');">_get_table</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">db</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tablename</tt><tt class="py-op">,</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">application</tt><tt class="py-op">)</tt> </tt>
-<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">table</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method web2py.gluon.dal.BaseAdapter.insert()=web2py.gluon.dal.BaseAdapter-class.html#insert,Method web2py.gluon.dal.CouchDBAdapter.insert()=web2py.gluon.dal.CouchDBAdapter-class.html#insert,Method web2py.gluon.dal.GAENoSQLAdapter.insert()=web2py.gluon.dal.GAENoSQLAdapter-class.html#insert,Method web2py.gluon.dal.MongoDBAdapter.insert()=web2py.gluon.dal.MongoDBAdapter-class.html#insert,Method web2py.gluon.dal.Table.insert()=web2py.gluon.dal.Table-class.html#insert,Method web2py.gluon.html.DIV.insert()=web2py.gluon.html.DIV-class.html#insert,Method web2py.gluon.sql.BaseAdapter.insert()=web2py.gluon.sql.BaseAdapter-class.html#insert,Method web2py.gluon.sql.CouchDBAdapter.insert()=web2py.gluon.sql.CouchDBAdapter-class.html#insert,Method web2py.gluon.sql.GAENoSQLAdapter.insert()=web2py.gluon.sql.GAENoSQLAdapter-class.html#insert,Method web2py.gluon.sql.MongoDBAdapter.insert()=web2py.gluon.sql.MongoDBAdapter-class.html#insert,Method web2py.gluon.sql.Table.insert()=web2py.gluon.sql.Table-class.html#insert,Method web2py.gluon.sql_old.KeyedTable.insert()=web2py.gluon.sql_old.KeyedTable-class.html#insert,Method web2py.gluon.sql_old.Table.insert()=web2py.gluon.sql_old.Table-class.html#insert,Method web2py.gluon.template.Content.insert()=web2py.gluon.template.Content-class.html#insert"><a title="web2py.gluon.dal.BaseAdapter.insert
-web2py.gluon.dal.CouchDBAdapter.insert
-web2py.gluon.dal.GAENoSQLAdapter.insert
-web2py.gluon.dal.MongoDBAdapter.insert
-web2py.gluon.dal.Table.insert
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">table</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method web2py.gluon.dal.Table.insert()=web2py.gluon.dal.Table-class.html#insert,Method web2py.gluon.html.DIV.insert()=web2py.gluon.html.DIV-class.html#insert,Method web2py.gluon.sql.KeyedTable.insert()=web2py.gluon.sql.KeyedTable-class.html#insert,Method web2py.gluon.sql.Table.insert()=web2py.gluon.sql.Table-class.html#insert,Method web2py.gluon.template.Content.insert()=web2py.gluon.template.Content-class.html#insert"><a title="web2py.gluon.dal.Table.insert
 web2py.gluon.html.DIV.insert
-web2py.gluon.sql.BaseAdapter.insert
-web2py.gluon.sql.CouchDBAdapter.insert
-web2py.gluon.sql.GAENoSQLAdapter.insert
-web2py.gluon.sql.MongoDBAdapter.insert
+web2py.gluon.sql.KeyedTable.insert
 web2py.gluon.sql.Table.insert
-web2py.gluon.sql_old.KeyedTable.insert
-web2py.gluon.sql_old.Table.insert
 web2py.gluon.template.Content.insert" class="py-name" href="#" onclick="return doclink('link-11', 'insert', 'link-11');">insert</a></tt><tt class="py-op">(</tt><tt class="py-name">ticket_id</tt><tt class="py-op">=</tt><tt class="py-name">ticket_id</tt><tt class="py-op">,</tt> </tt>
 <a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                     <tt class="py-name">ticket_data</tt><tt class="py-op">=</tt><tt class="py-name">cPickle</tt><tt class="py-op">.</tt><tt class="py-name">dumps</tt><tt class="py-op">(</tt><tt class="py-name">ticket_data</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                     <tt class="py-name">created_datetime</tt><tt class="py-op">=</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">now</tt><tt class="py-op">)</tt> </tt>
@@ -178,7 +151,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-12', 'logger', 'link-7');">logger</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method web2py.gluon.tools.Service.error()=web2py.gluon.tools.Service-class.html#error,Method web2py.gluon.widget.web2pyDialog.error()=web2py.gluon.widget.web2pyDialog-class.html#error"><a title="web2py.gluon.tools.Service.error
 web2py.gluon.widget.web2pyDialog.error" class="py-name" href="#" onclick="return doclink('link-13', 'error', 'link-13');">error</a></tt><tt class="py-op">(</tt><tt class="py-string">'In FILE: %(layer)s\n\n%(traceback)s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">ticket_data</tt><tt class="py-op">)</tt> </tt>
@@ -198,27 +170,19 @@ web2py.gluon.widget.web2pyDialog.error" class="py-name" href="#" onclick="return
 <a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">table</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method web2py.gluon.rocket.Headers.get()=web2py.gluon.rocket.Headers-class.html#get,Method web2py.gluon.thread_local_singleton.Singleton.get()=web2py.gluon.thread_local_singleton.Singleton-class.html#get"><a title="web2py.gluon.rocket.Headers.get
 web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" onclick="return doclink('link-23', 'get', 'link-23');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">tablename</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
 <a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">table</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
-<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method web2py.gluon.dal.BaseAdapter.rollback()=web2py.gluon.dal.BaseAdapter-class.html#rollback,Method web2py.gluon.dal.DAL.rollback()=web2py.gluon.dal.DAL-class.html#rollback,Method web2py.gluon.dal.NoSQLAdapter.rollback()=web2py.gluon.dal.NoSQLAdapter-class.html#rollback,Method web2py.gluon.sql.BaseAdapter.rollback()=web2py.gluon.sql.BaseAdapter-class.html#rollback,Method web2py.gluon.sql.DAL.rollback()=web2py.gluon.sql.DAL-class.html#rollback,Method web2py.gluon.sql.NoSQLAdapter.rollback()=web2py.gluon.sql.NoSQLAdapter-class.html#rollback,Method web2py.gluon.sql_old.SQLDB.rollback()=web2py.gluon.sql_old.SQLDB-class.html#rollback"><a title="web2py.gluon.dal.BaseAdapter.rollback
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method web2py.gluon.dal.BaseAdapter.rollback()=web2py.gluon.dal.BaseAdapter-class.html#rollback,Method web2py.gluon.dal.DAL.rollback()=web2py.gluon.dal.DAL-class.html#rollback,Method web2py.gluon.sql.SQLDB.rollback()=web2py.gluon.sql.SQLDB-class.html#rollback"><a title="web2py.gluon.dal.BaseAdapter.rollback
 web2py.gluon.dal.DAL.rollback
-web2py.gluon.dal.NoSQLAdapter.rollback
-web2py.gluon.sql.BaseAdapter.rollback
-web2py.gluon.sql.DAL.rollback
-web2py.gluon.sql.NoSQLAdapter.rollback
-web2py.gluon.sql_old.SQLDB.rollback" class="py-name" href="#" onclick="return doclink('link-24', 'rollback', 'link-24');">rollback</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt>   <tt class="py-comment"># not necessary but one day</tt> </tt>
+web2py.gluon.sql.SQLDB.rollback" class="py-name" href="#" onclick="return doclink('link-24', 'rollback', 'link-24');">rollback</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt>   <tt class="py-comment"># not necessary but one day</tt> </tt>
 <a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                            <tt class="py-comment"># any app may store tickets on DB</tt> </tt>
-<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment"></tt>            <tt class="py-name">table</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method web2py.gluon.dal.DAL.define_table()=web2py.gluon.dal.DAL-class.html#define_table,Method web2py.gluon.sql.DAL.define_table()=web2py.gluon.sql.DAL-class.html#define_table,Method web2py.gluon.sql_old.SQLDB.define_table()=web2py.gluon.sql_old.SQLDB-class.html#define_table"><a title="web2py.gluon.dal.DAL.define_table
-web2py.gluon.sql.DAL.define_table
-web2py.gluon.sql_old.SQLDB.define_table" class="py-name" href="#" onclick="return doclink('link-25', 'define_table', 'link-25');">define_table</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment"></tt>            <tt class="py-name">table</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method web2py.gluon.dal.DAL.define_table()=web2py.gluon.dal.DAL-class.html#define_table,Method web2py.gluon.sql.SQLDB.define_table()=web2py.gluon.sql.SQLDB-class.html#define_table"><a title="web2py.gluon.dal.DAL.define_table
+web2py.gluon.sql.SQLDB.define_table" class="py-name" href="#" onclick="return doclink('link-25', 'define_table', 'link-25');">define_table</a></tt><tt class="py-op">(</tt> </tt>
 <a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-name">tablename</tt><tt class="py-op">,</tt> </tt>
-<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Class web2py.gluon.dal.Field=web2py.gluon.dal.Field-class.html,Class web2py.gluon.sql.Field=web2py.gluon.sql.Field-class.html,Class web2py.gluon.sql_old.Field=web2py.gluon.sql_old.Field-class.html"><a title="web2py.gluon.dal.Field
-web2py.gluon.sql.Field
-web2py.gluon.sql_old.Field" class="py-name" href="#" onclick="return doclink('link-26', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'ticket_id'</tt><tt class="py-op">,</tt> <tt class="py-name">length</tt><tt class="py-op">=</tt><tt class="py-number">100</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Class web2py.gluon.dal.Field=web2py.gluon.dal.Field-class.html,Class web2py.gluon.sql.Field=web2py.gluon.sql.Field-class.html"><a title="web2py.gluon.dal.Field
+web2py.gluon.sql.Field" class="py-name" href="#" onclick="return doclink('link-26', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'ticket_id'</tt><tt class="py-op">,</tt> <tt class="py-name">length</tt><tt class="py-op">=</tt><tt class="py-number">100</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="web2py.gluon.dal.Field
-web2py.gluon.sql.Field
-web2py.gluon.sql_old.Field" class="py-name" href="#" onclick="return doclink('link-27', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'ticket_data'</tt><tt class="py-op">,</tt> <tt class="py-string">'text'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+web2py.gluon.sql.Field" class="py-name" href="#" onclick="return doclink('link-27', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'ticket_data'</tt><tt class="py-op">,</tt> <tt class="py-string">'text'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="web2py.gluon.dal.Field
-web2py.gluon.sql.Field
-web2py.gluon.sql_old.Field" class="py-name" href="#" onclick="return doclink('link-28', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'created_datetime'</tt><tt class="py-op">,</tt> <tt class="py-string">'datetime'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+web2py.gluon.sql.Field" class="py-name" href="#" onclick="return doclink('link-28', 'Field', 'link-26');">Field</a></tt><tt class="py-op">(</tt><tt class="py-string">'created_datetime'</tt><tt class="py-op">,</tt> <tt class="py-string">'datetime'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-op">)</tt> </tt>
 <a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">table</tt> </tt>
 </div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
@@ -233,18 +197,10 @@ web2py.gluon.sql_old.Field" class="py-name" href="#" onclick="return doclink('li
 web2py.gluon.restricted.TicketStorage.load
 web2py.gluon.rewrite.load" class="py-name" href="#" onclick="return doclink('link-29', 'load', 'link-29');">load</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="web2py.gluon.restricted.TicketStorage._error_file" class="py-name" href="#" onclick="return doclink('link-30', '_error_file', 'link-14');">_error_file</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">ticket_id</tt><tt class="py-op">,</tt> <tt class="py-string">'rb'</tt><tt class="py-op">,</tt> <tt class="py-name">app</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">table</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="web2py.gluon.restricted.TicketStorage._get_table" class="py-name" href="#" onclick="return doclink('link-31', '_get_table', 'link-10');">_get_table</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">db</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tablename</tt><tt class="py-op">,</tt> <tt class="py-name">app</tt><tt class="py-op">)</tt> </tt>
-<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">rows</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">db</tt><tt class="py-op">(</tt><tt class="py-name">table</tt><tt class="py-op">.</tt><tt class="py-name">ticket_id</tt> <tt class="py-op">==</tt> <tt class="py-name">ticket_id</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method web2py.gluon.dal.BaseAdapter.select()=web2py.gluon.dal.BaseAdapter-class.html#select,Method web2py.gluon.dal.CouchDBAdapter.select()=web2py.gluon.dal.CouchDBAdapter-class.html#select,Method web2py.gluon.dal.GAENoSQLAdapter.select()=web2py.gluon.dal.GAENoSQLAdapter-class.html#select,Method web2py.gluon.dal.MongoDBAdapter.select()=web2py.gluon.dal.MongoDBAdapter-class.html#select,Method web2py.gluon.dal.Set.select()=web2py.gluon.dal.Set-class.html#select,Function web2py.gluon.rewrite.select()=web2py.gluon.rewrite-module.html#select,Method web2py.gluon.sql.BaseAdapter.select()=web2py.gluon.sql.BaseAdapter-class.html#select,Method web2py.gluon.sql.CouchDBAdapter.select()=web2py.gluon.sql.CouchDBAdapter-class.html#select,Method web2py.gluon.sql.GAENoSQLAdapter.select()=web2py.gluon.sql.GAENoSQLAdapter-class.html#select,Method web2py.gluon.sql.MongoDBAdapter.select()=web2py.gluon.sql.MongoDBAdapter-class.html#select,Method web2py.gluon.sql.Set.select()=web2py.gluon.sql.Set-class.html#select,Method web2py.gluon.sql_old.Set.select()=web2py.gluon.sql_old.Set-class.html#select,Method web2py.gluon.tools.Crud.select()=web2py.gluon.tools.Crud-class.html#select"><a title="web2py.gluon.dal.BaseAdapter.select
-web2py.gluon.dal.CouchDBAdapter.select
-web2py.gluon.dal.GAENoSQLAdapter.select
-web2py.gluon.dal.MongoDBAdapter.select
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">rows</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">db</tt><tt class="py-op">(</tt><tt class="py-name">table</tt><tt class="py-op">.</tt><tt class="py-name">ticket_id</tt> <tt class="py-op">==</tt> <tt class="py-name">ticket_id</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method web2py.gluon.dal.BaseAdapter.select()=web2py.gluon.dal.BaseAdapter-class.html#select,Method web2py.gluon.dal.Set.select()=web2py.gluon.dal.Set-class.html#select,Function web2py.gluon.rewrite.select()=web2py.gluon.rewrite-module.html#select,Method web2py.gluon.sql.Set.select()=web2py.gluon.sql.Set-class.html#select,Method web2py.gluon.tools.Crud.select()=web2py.gluon.tools.Crud-class.html#select"><a title="web2py.gluon.dal.BaseAdapter.select
 web2py.gluon.dal.Set.select
 web2py.gluon.rewrite.select
-web2py.gluon.sql.BaseAdapter.select
-web2py.gluon.sql.CouchDBAdapter.select
-web2py.gluon.sql.GAENoSQLAdapter.select
-web2py.gluon.sql.MongoDBAdapter.select
 web2py.gluon.sql.Set.select
-web2py.gluon.sql_old.Set.select
 web2py.gluon.tools.Crud.select" class="py-name" href="#" onclick="return doclink('link-32', 'select', 'link-32');">select</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">rows</tt><tt class="py-op">:</tt> </tt>
 <a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">cPickle</tt><tt class="py-op">.</tt><tt class="py-name">loads</tt><tt class="py-op">(</tt><tt class="py-name">rows</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">ticket_data</tt><tt class="py-op">)</tt> </tt>
@@ -303,10 +259,9 @@ web2py.gluon.tools.Crud.select" class="py-name" href="#" onclick="return doclink
 <a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                              <tt id="link-41" class="py-name"><a title="web2py.gluon.utils.web2py_uuid" class="py-name" href="#" onclick="return doclink('link-41', 'web2py_uuid', 'link-2');">web2py_uuid</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
 <a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-name">ticket_storage</tt> <tt class="py-op">=</tt> <tt id="link-42" class="py-name" targets="Class web2py.gluon.restricted.TicketStorage=web2py.gluon.restricted.TicketStorage-class.html"><a title="web2py.gluon.restricted.TicketStorage" class="py-name" href="#" onclick="return doclink('link-42', 'TicketStorage', 'link-42');">TicketStorage</a></tt><tt class="py-op">(</tt><tt class="py-name">db</tt><tt class="py-op">=</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">tickets_db</tt><tt class="py-op">)</tt> </tt>
-<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-name">ticket_storage</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Method web2py.gluon.dal.Field.store()=web2py.gluon.dal.Field-class.html#store,Method web2py.gluon.restricted.TicketStorage.store()=web2py.gluon.restricted.TicketStorage-class.html#store,Method web2py.gluon.sql.Field.store()=web2py.gluon.sql.Field-class.html#store,Method web2py.gluon.sql_old.Field.store()=web2py.gluon.sql_old.Field-class.html#store"><a title="web2py.gluon.dal.Field.store
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-name">ticket_storage</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Method web2py.gluon.dal.Field.store()=web2py.gluon.dal.Field-class.html#store,Method web2py.gluon.restricted.TicketStorage.store()=web2py.gluon.restricted.TicketStorage-class.html#store,Method web2py.gluon.sql.Field.store()=web2py.gluon.sql.Field-class.html#store"><a title="web2py.gluon.dal.Field.store
 web2py.gluon.restricted.TicketStorage.store
-web2py.gluon.sql.Field.store
-web2py.gluon.sql_old.Field.store" class="py-name" href="#" onclick="return doclink('link-43', 'store', 'link-43');">store</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">f</tt><tt class="py-op">,</tt> <tt class="py-name">d</tt><tt class="py-op">)</tt> </tt>
+web2py.gluon.sql.Field.store" class="py-name" href="#" onclick="return doclink('link-43', 'store', 'link-43');">store</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">f</tt><tt class="py-op">,</tt> <tt class="py-name">d</tt><tt class="py-op">)</tt> </tt>
 <a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-string">'%s/%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">a</tt><tt class="py-op">,</tt> <tt class="py-name">f</tt><tt class="py-op">)</tt> </tt>
 <a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
 <a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">            <tt id="link-44" class="py-name"><a title="web2py.gluon.cache.logger
@@ -319,7 +274,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-44', 'logger', 'link-7');">logger</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="web2py.gluon.tools.Service.error
 web2py.gluon.widget.web2pyDialog.error" class="py-name" href="#" onclick="return doclink('link-45', 'error', 'link-13');">error</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">traceback</tt><tt class="py-op">)</tt> </tt>
@@ -357,34 +311,17 @@ web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" oncl
 <a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
 <a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"> </tt>
 <a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
-<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt id="link-51" class="py-name"><a title="web2py.gluon.dal.BaseAdapter.types
-web2py.gluon.dal.CouchDBAdapter.types
-web2py.gluon.dal.DB2Adapter.types
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt id="link-51" class="py-name"><a title="web2py.gluon.dal.DB2Adapter.types
 web2py.gluon.dal.FireBirdAdapter.types
-web2py.gluon.dal.GAENoSQLAdapter.types
 web2py.gluon.dal.InformixAdapter.types
 web2py.gluon.dal.IngresAdapter.types
 web2py.gluon.dal.IngresUnicodeAdapter.types
-web2py.gluon.dal.MSSQL2Adapter.types
 web2py.gluon.dal.MSSQLAdapter.types
-web2py.gluon.dal.MongoDBAdapter.types
+web2py.gluon.dal.MSSQLAdapter2.types
 web2py.gluon.dal.MySQLAdapter.types
 web2py.gluon.dal.OracleAdapter.types
 web2py.gluon.dal.PostgreSQLAdapter.types
-web2py.gluon.sql.BaseAdapter.types
-web2py.gluon.sql.CouchDBAdapter.types
-web2py.gluon.sql.DB2Adapter.types
-web2py.gluon.sql.FireBirdAdapter.types
-web2py.gluon.sql.GAENoSQLAdapter.types
-web2py.gluon.sql.InformixAdapter.types
-web2py.gluon.sql.IngresAdapter.types
-web2py.gluon.sql.IngresUnicodeAdapter.types
-web2py.gluon.sql.MSSQL2Adapter.types
-web2py.gluon.sql.MSSQLAdapter.types
-web2py.gluon.sql.MongoDBAdapter.types
-web2py.gluon.sql.MySQLAdapter.types
-web2py.gluon.sql.OracleAdapter.types
-web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="return doclink('link-51', 'types', 'link-0');">types</a></tt><tt class="py-op">.</tt><tt class="py-name">CodeType</tt><tt class="py-op">:</tt> </tt>
+web2py.gluon.dal.SQLiteAdapter.types" class="py-name" href="#" onclick="return doclink('link-51', 'types', 'link-0');">types</a></tt><tt class="py-op">.</tt><tt class="py-name">CodeType</tt><tt class="py-op">:</tt> </tt>
 <a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">            <tt class="py-name">ccode</tt> <tt class="py-op">=</tt> <tt class="py-name">code</tt> </tt>
 <a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">            <tt class="py-name">ccode</tt> <tt class="py-op">=</tt> <tt id="link-52" class="py-name" targets="Function web2py.gluon.restricted.compile2()=web2py.gluon.restricted-module.html#compile2"><a title="web2py.gluon.restricted.compile2" class="py-name" href="#" onclick="return doclink('link-52', 'compile2', 'link-52');">compile2</a></tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">,</tt><tt class="py-name">layer</tt><tt class="py-op">)</tt> </tt>
@@ -401,73 +338,39 @@ web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="retu
 </div><a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"> </tt>
 <a name="snapshot"></a><div id="snapshot-def"><a name="L198"></a><tt class="py-lineno">198</tt> <a class="py-toggle" href="#" id="snapshot-toggle" onclick="return toggle('snapshot');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.restricted-module.html#snapshot">snapshot</a><tt class="py-op">(</tt><tt class="py-param">info</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">context</tt><tt class="py-op">=</tt><tt class="py-number">5</tt><tt class="py-op">,</tt> <tt class="py-param">code</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">environment</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="snapshot-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="snapshot-expanded"><a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">    <tt class="py-docstring">"""Return a dict describing a given traceback (based on cgitb.text)."""</tt> </tt>
-<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt id="link-56" class="py-name"><a title="web2py.gluon.dal.BaseAdapter.types
-web2py.gluon.dal.CouchDBAdapter.types
-web2py.gluon.dal.DB2Adapter.types
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt id="link-56" class="py-name"><a title="web2py.gluon.dal.DB2Adapter.types
 web2py.gluon.dal.FireBirdAdapter.types
-web2py.gluon.dal.GAENoSQLAdapter.types
 web2py.gluon.dal.InformixAdapter.types
 web2py.gluon.dal.IngresAdapter.types
 web2py.gluon.dal.IngresUnicodeAdapter.types
-web2py.gluon.dal.MSSQL2Adapter.types
 web2py.gluon.dal.MSSQLAdapter.types
-web2py.gluon.dal.MongoDBAdapter.types
+web2py.gluon.dal.MSSQLAdapter2.types
 web2py.gluon.dal.MySQLAdapter.types
 web2py.gluon.dal.OracleAdapter.types
 web2py.gluon.dal.PostgreSQLAdapter.types
-web2py.gluon.sql.BaseAdapter.types
-web2py.gluon.sql.CouchDBAdapter.types
-web2py.gluon.sql.DB2Adapter.types
-web2py.gluon.sql.FireBirdAdapter.types
-web2py.gluon.sql.GAENoSQLAdapter.types
-web2py.gluon.sql.InformixAdapter.types
-web2py.gluon.sql.IngresAdapter.types
-web2py.gluon.sql.IngresUnicodeAdapter.types
-web2py.gluon.sql.MSSQL2Adapter.types
-web2py.gluon.sql.MSSQLAdapter.types
-web2py.gluon.sql.MongoDBAdapter.types
-web2py.gluon.sql.MySQLAdapter.types
-web2py.gluon.sql.OracleAdapter.types
-web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="return doclink('link-56', 'types', 'link-0');">types</a></tt><tt class="py-op">,</tt> <tt class="py-name">time</tt><tt class="py-op">,</tt> <tt class="py-name">traceback</tt><tt class="py-op">,</tt> <tt class="py-name">linecache</tt><tt class="py-op">,</tt> <tt class="py-name">inspect</tt><tt class="py-op">,</tt> <tt class="py-name">pydoc</tt><tt class="py-op">,</tt> <tt class="py-name">cgitb</tt> </tt>
-<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line"> </tt>
+web2py.gluon.dal.SQLiteAdapter.types" class="py-name" href="#" onclick="return doclink('link-56', 'types', 'link-0');">types</a></tt><tt class="py-op">,</tt> <tt class="py-name">time</tt><tt class="py-op">,</tt> <tt class="py-name">traceback</tt><tt class="py-op">,</tt> <tt class="py-name">linecache</tt><tt class="py-op">,</tt> <tt class="py-name">inspect</tt><tt class="py-op">,</tt> <tt class="py-name">pydoc</tt><tt class="py-op">,</tt> <tt class="py-name">cgitb</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">     </tt>
 <a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">    <tt class="py-comment"># if no exception info given, get current:</tt> </tt>
 <a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">etype</tt><tt class="py-op">,</tt> <tt class="py-name">evalue</tt><tt class="py-op">,</tt> <tt class="py-name">etb</tt> <tt class="py-op">=</tt> <tt class="py-name">info</tt> <tt class="py-keyword">or</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exc_info</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"> </tt>
-<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">etype</tt><tt class="py-op">)</tt> <tt class="py-keyword">is</tt> <tt id="link-57" class="py-name"><a title="web2py.gluon.dal.BaseAdapter.types
-web2py.gluon.dal.CouchDBAdapter.types
-web2py.gluon.dal.DB2Adapter.types
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">type</tt><tt class="py-op">(</tt><tt class="py-name">etype</tt><tt class="py-op">)</tt> <tt class="py-keyword">is</tt> <tt id="link-57" class="py-name"><a title="web2py.gluon.dal.DB2Adapter.types
 web2py.gluon.dal.FireBirdAdapter.types
-web2py.gluon.dal.GAENoSQLAdapter.types
 web2py.gluon.dal.InformixAdapter.types
 web2py.gluon.dal.IngresAdapter.types
 web2py.gluon.dal.IngresUnicodeAdapter.types
-web2py.gluon.dal.MSSQL2Adapter.types
 web2py.gluon.dal.MSSQLAdapter.types
-web2py.gluon.dal.MongoDBAdapter.types
+web2py.gluon.dal.MSSQLAdapter2.types
 web2py.gluon.dal.MySQLAdapter.types
 web2py.gluon.dal.OracleAdapter.types
 web2py.gluon.dal.PostgreSQLAdapter.types
-web2py.gluon.sql.BaseAdapter.types
-web2py.gluon.sql.CouchDBAdapter.types
-web2py.gluon.sql.DB2Adapter.types
-web2py.gluon.sql.FireBirdAdapter.types
-web2py.gluon.sql.GAENoSQLAdapter.types
-web2py.gluon.sql.InformixAdapter.types
-web2py.gluon.sql.IngresAdapter.types
-web2py.gluon.sql.IngresUnicodeAdapter.types
-web2py.gluon.sql.MSSQL2Adapter.types
-web2py.gluon.sql.MSSQLAdapter.types
-web2py.gluon.sql.MongoDBAdapter.types
-web2py.gluon.sql.MySQLAdapter.types
-web2py.gluon.sql.OracleAdapter.types
-web2py.gluon.sql.PostgreSQLAdapter.types" class="py-name" href="#" onclick="return doclink('link-57', 'types', 'link-0');">types</a></tt><tt class="py-op">.</tt><tt class="py-name">ClassType</tt><tt class="py-op">:</tt> </tt>
+web2py.gluon.dal.SQLiteAdapter.types" class="py-name" href="#" onclick="return doclink('link-57', 'types', 'link-0');">types</a></tt><tt class="py-op">.</tt><tt class="py-name">ClassType</tt><tt class="py-op">:</tt> </tt>
 <a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-name">etype</tt> <tt class="py-op">=</tt> <tt class="py-name">etype</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt> </tt>
-<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">     </tt>
 <a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">    <tt class="py-comment"># create a snapshot dict with some basic information</tt> </tt>
-<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt id="link-58" class="py-name" targets="Variable web2py.gluon.languages.lazyT.s=web2py.gluon.languages.lazyT-class.html#s"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-58', 's', 'link-58');">s</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt id="link-58" class="py-name" targets="Variable web2py.gluon.languages.lazyT.s=web2py.gluon.languages.lazyT-class.html#s"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-58', 's', 'link-58');">s</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt>     </tt>
 <a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">    <tt id="link-59" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-59', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'pyver'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">'Python '</tt> <tt class="py-op">+</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">version</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-string">': '</tt> <tt class="py-op">+</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">executable</tt> </tt>
 <a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">    <tt id="link-60" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-60', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'date'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">ctime</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">time</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line"> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">     </tt>
 <a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">    <tt class="py-comment"># start to process frames</tt> </tt>
 <a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">records</tt> <tt class="py-op">=</tt> <tt class="py-name">inspect</tt><tt class="py-op">.</tt><tt class="py-name">getinnerframes</tt><tt class="py-op">(</tt><tt class="py-name">etb</tt><tt class="py-op">,</tt> <tt class="py-name">context</tt><tt class="py-op">)</tt> </tt>
 <a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">    <tt id="link-61" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-61', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'frames'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
@@ -492,17 +395,14 @@ web2py.gluon.highlight.highlight" class="py-name" href="#" onclick="return docli
 <a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">linecache</tt><tt class="py-op">.</tt><tt class="py-name">getline</tt><tt class="py-op">(</tt><tt class="py-name">file</tt><tt class="py-op">,</tt> <tt class="py-name">lnum</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
 <a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">            <tt class="py-keyword">finally</tt><tt class="py-op">:</tt> <tt class="py-name">lnum</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
 </div><a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">        <tt class="py-name">vars</tt> <tt class="py-op">=</tt> <tt class="py-name">cgitb</tt><tt class="py-op">.</tt><tt class="py-name">scanvars</tt><tt class="py-op">(</tt><tt class="py-name">reader</tt><tt class="py-op">,</tt> <tt class="py-name">frame</tt><tt class="py-op">,</tt> <tt class="py-name">locals</tt><tt class="py-op">)</tt> </tt>
-<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">         </tt>
 <a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">        <tt class="py-comment"># if it is a view, replace with generated code</tt> </tt>
-<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-keyword">if</tt> <tt class="py-name">file</tt><tt class="py-op">.</tt><tt id="link-66" class="py-name" targets="Method web2py.gluon.dal.Expression.endswith()=web2py.gluon.dal.Expression-class.html#endswith,Method web2py.gluon.sql.Expression.endswith()=web2py.gluon.sql.Expression-class.html#endswith,Method web2py.gluon.sql_old.Expression.endswith()=web2py.gluon.sql_old.Expression-class.html#endswith"><a title="web2py.gluon.dal.Expression.endswith
-web2py.gluon.sql.Expression.endswith
-web2py.gluon.sql_old.Expression.endswith" class="py-name" href="#" onclick="return doclink('link-66', 'endswith', 'link-66');">endswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-keyword">if</tt> <tt class="py-name">file</tt><tt class="py-op">.</tt><tt id="link-66" class="py-name" targets="Method web2py.gluon.sql.Expression.endswith()=web2py.gluon.sql.Expression-class.html#endswith"><a title="web2py.gluon.sql.Expression.endswith" class="py-name" href="#" onclick="return doclink('link-66', 'endswith', 'link-66');">endswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">            <tt class="py-name">lmin</tt> <tt class="py-op">=</tt> <tt class="py-name">lnum</tt><tt class="py-op">&gt;</tt><tt class="py-name">context</tt> <tt class="py-keyword">and</tt> <tt class="py-op">(</tt><tt class="py-name">lnum</tt><tt class="py-op">-</tt><tt class="py-name">context</tt><tt class="py-op">)</tt> <tt class="py-keyword">or</tt> <tt class="py-number">0</tt> </tt>
 <a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">            <tt class="py-name">lmax</tt> <tt class="py-op">=</tt> <tt class="py-name">lnum</tt><tt class="py-op">+</tt><tt class="py-name">context</tt> </tt>
 <a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">            <tt class="py-name">lines</tt> <tt class="py-op">=</tt> <tt class="py-name">code</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-name">lmin</tt><tt class="py-op">:</tt><tt class="py-name">lmax</tt><tt class="py-op">]</tt> </tt>
-<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">            <tt class="py-name">index</tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name" targets="Method web2py.gluon.dal.Field.min()=web2py.gluon.dal.Field-class.html#min,Method web2py.gluon.sql.Field.min()=web2py.gluon.sql.Field-class.html#min,Method web2py.gluon.sql_old.Field.min()=web2py.gluon.sql_old.Field-class.html#min"><a title="web2py.gluon.dal.Field.min
-web2py.gluon.sql.Field.min
-web2py.gluon.sql_old.Field.min" class="py-name" href="#" onclick="return doclink('link-67', 'min', 'link-67');">min</a></tt><tt class="py-op">(</tt><tt class="py-name">context</tt><tt class="py-op">,</tt> <tt class="py-name">lnum</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-number">1</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">            <tt class="py-name">index</tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name" targets="Method web2py.gluon.dal.Field.min()=web2py.gluon.dal.Field-class.html#min,Method web2py.gluon.sql.Field.min()=web2py.gluon.sql.Field-class.html#min"><a title="web2py.gluon.dal.Field.min
+web2py.gluon.sql.Field.min" class="py-name" href="#" onclick="return doclink('link-67', 'min', 'link-67');">min</a></tt><tt class="py-op">(</tt><tt class="py-name">context</tt><tt class="py-op">,</tt> <tt class="py-name">lnum</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-number">1</tt> </tt>
 <a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"> </tt>
 <a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">index</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
 <a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">            <tt class="py-name">i</tt> <tt class="py-op">=</tt> <tt class="py-name">lnum</tt> <tt class="py-op">-</tt> <tt class="py-name">index</tt> </tt>
@@ -520,7 +420,7 @@ web2py.gluon.sql_old.Field.min" class="py-name" href="#" onclick="return doclink
 <a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">                <tt class="py-name">f</tt><tt class="py-op">[</tt><tt class="py-string">'dump'</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt id="link-74" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-74', 'name', 'link-68');">name</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">pydoc</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">.</tt><tt class="py-name">repr</tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
 <a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">                <tt class="py-name">f</tt><tt class="py-op">[</tt><tt class="py-string">'dump'</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt id="link-75" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-75', 'name', 'link-68');">name</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">'undefined'</tt> </tt>
-<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">         </tt>
 <a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">        <tt id="link-76" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-76', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'frames'</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-77" class="py-name" targets="Method web2py.gluon.html.DIV.append()=web2py.gluon.html.DIV-class.html#append,Method web2py.gluon.template.BlockNode.append()=web2py.gluon.template.BlockNode-class.html#append,Method web2py.gluon.template.Content.append()=web2py.gluon.template.Content-class.html#append"><a title="web2py.gluon.html.DIV.append
 web2py.gluon.template.BlockNode.append
 web2py.gluon.template.Content.append" class="py-name" href="#" onclick="return doclink('link-77', 'append', 'link-77');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">f</tt><tt class="py-op">)</tt> </tt>
@@ -532,11 +432,11 @@ web2py.gluon.template.Content.append" class="py-name" href="#" onclick="return d
 <a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">evalue</tt><tt class="py-op">,</tt> <tt class="py-name">BaseException</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-81" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-81', 'name', 'link-68');">name</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">dir</tt><tt class="py-op">(</tt><tt class="py-name">evalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">            <tt class="py-comment"># prevent py26 DeprecatedWarning:</tt> </tt>
-<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt class="py-comment"></tt>            <tt class="py-keyword">if</tt> <tt id="link-82" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-82', 'name', 'link-68');">name</a></tt><tt class="py-op">!=</tt><tt class="py-string">'message'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt id="link-83" class="py-name" targets="Variable web2py.gluon.main.version_info=web2py.gluon.main-module.html#version_info"><a title="web2py.gluon.main.version_info" class="py-name" href="#" onclick="return doclink('link-83', 'version_info', 'link-83');">version_info</a></tt><tt class="py-op">&lt;</tt><tt class="py-op">(</tt><tt class="py-number">2.6</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt class="py-comment"></tt>            <tt class="py-keyword">if</tt> <tt id="link-82" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-82', 'name', 'link-68');">name</a></tt><tt class="py-op">!=</tt><tt class="py-string">'message'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt id="link-83" class="py-name" targets="Variable web2py.gluon.main.version_info=web2py.gluon.main-module.html#version_info"><a title="web2py.gluon.main.version_info" class="py-name" href="#" onclick="return doclink('link-83', 'version_info', 'link-83');">version_info</a></tt><tt class="py-op">&lt;</tt><tt class="py-op">(</tt><tt class="py-number">2.6</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
 <a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">                <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-name">pydoc</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">.</tt><tt class="py-name">repr</tt><tt class="py-op">(</tt><tt class="py-name">getattr</tt><tt class="py-op">(</tt><tt class="py-name">evalue</tt><tt class="py-op">,</tt> <tt id="link-84" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-84', 'name', 'link-68');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">                <tt id="link-85" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-85', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'exception'</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt id="link-86" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-86', 'name', 'link-68');">name</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">value</tt> </tt>
 <a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"> </tt>
-<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">    <tt class="py-comment"># add all local values (of last frame) to the snapshot</tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">    <tt class="py-comment"># add all local values (of last frame) to the snapshot </tt> </tt>
 <a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt id="link-87" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-87', 's', 'link-58');">s</a></tt><tt class="py-op">[</tt><tt class="py-string">'locals'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
 <a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-88" class="py-name"><a title="web2py.gluon.import_all.name" class="py-name" href="#" onclick="return doclink('link-88', 'name', 'link-68');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">value</tt> <tt class="py-keyword">in</tt> <tt class="py-name">locals</tt><tt class="py-op">.</tt><tt id="link-89" class="py-name" targets="Method web2py.gluon.rocket.Headers.items()=web2py.gluon.rocket.Headers-class.html#items,Method web2py.gluon.thread_local_singleton.Singleton.items()=web2py.gluon.thread_local_singleton.Singleton-class.html#items"><a title="web2py.gluon.rocket.Headers.items
 web2py.gluon.thread_local_singleton.Singleton.items" class="py-name" href="#" onclick="return doclink('link-89', 'items', 'link-89');">items</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -590,7 +490,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:59 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:54 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

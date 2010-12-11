@@ -47,4 +47,4 @@ class LinkedInAccount(object):
             return dict(first_name = profile.first_name,
                         last_name = profile.last_name,
                         username = profile.id)
-
+                        

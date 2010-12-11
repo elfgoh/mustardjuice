@@ -471,7 +471,7 @@ def populate(tables):
 
     s = 'from gluon.contrib.populate import populate\n'
     s+= 'if not db(db.auth_user).count():\n'
-    for table in sort_tables(tables):
+    for table in tables:
         t=table=='auth_user' and 'auth_user' or 't_'+table
         s+="     populate(db.%s,100)\n" % t
     return s

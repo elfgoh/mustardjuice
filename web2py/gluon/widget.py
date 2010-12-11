@@ -15,6 +15,7 @@ import time
 import thread
 import re
 import os
+import stat
 import socket
 import signal
 import math
@@ -362,8 +363,7 @@ class web2pyDialog(object):
                 profiler_filename=options.profiler_filename,
                 ssl_certificate=options.ssl_certificate,
                 ssl_private_key=options.ssl_private_key,
-                min_threads=options.minthreads,
-                max_threads=options.maxthreads,
+                numthreads=options.numthreads,
                 server_name=options.server_name,
                 request_queue_size=req_queue_size,
                 timeout=options.timeout,
@@ -405,7 +405,7 @@ class web2pyDialog(object):
         """ Update canvas """
 
         try:
-            t1 = os.path.size('httpserver.log')
+            t1 = os.stat('httpserver.log')[stat.ST_SIZE]
         except:
             self.canvas.after(1000, self.update_canvas)
             return
@@ -501,22 +501,10 @@ def console():
 
     parser.add_option('-n',
                       '--numthreads',
-                      default=None,
+                      default='10',
                       type='int',
                       dest='numthreads',
-                      help='number of threads (deprecated)')
-
-    parser.add_option('--minthreads',
-                      default=None,
-                      type='int',
-                      dest='minthreads',
-                      help='minimum number of server threads')
-
-    parser.add_option('--maxthreads',
-                      default=None,
-                      type='int',
-                      dest='maxthreads',
-                      help='maximum number of server threads')
+                      help='number of threads')
 
     parser.add_option('-s',
                       '--server_name',
@@ -716,9 +704,6 @@ def console():
 
     options.folder = os.path.abspath(options.folder)
 
-    if options.numthreads is not None and options.minthreads is None:
-        options.minthreads = options.numthreads  # legacy
-
     for path in ('applications', 'deposit', 'site-packages', 'logs'):
         if not os.path.exists(path):
             os.mkdir(path)
@@ -876,8 +861,7 @@ def start(cron=True):
                              profiler_filename=options.profiler_filename,
                              ssl_certificate=options.ssl_certificate,
                              ssl_private_key=options.ssl_private_key,
-                             min_threads=options.minthreads,
-                             max_threads=options.maxthreads,
+                             numthreads=options.numthreads,
                              server_name=options.server_name,
                              request_queue_size=options.request_queue_size,
                              timeout=options.timeout,

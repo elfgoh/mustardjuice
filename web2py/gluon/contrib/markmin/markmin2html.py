@@ -1,7 +1,7 @@
 #!/usr/bin/env python                                                                                                        # created my Massimo Di Pierro
 # license MIT/BSD/GPL
 import re
-import cgi
+import cgi    
 
 __all__ = ['render', 'markmin2html']
 
@@ -10,7 +10,7 @@ __doc__ = """
 
 ## About
 
-This is a new markup language that we call markmin designed to produce high quality scientific papers and books and also put them online. We provide serializers for html, latex and pdf. It is implemented in the ``markmin2html`` function in the ``markmin2html.py``.
+This is a new markup language that we call markmin designed to produce high quality scientific papers and books and also put them online. We provide serializers for html, latex and pdf. It is implemented in the ``markmin2html`` function in the ``markmin2html.py``. 
 
 Example of usage:
 
@@ -37,7 +37,7 @@ We wanted a markup language with the following requirements:
 - can add anchors
 - does not use _ for markup (since it creates odd behavior)
 - automatically links urls
-- fast
+- fast 
 - easy to extend
 - supports latex and pdf including references
 - allows to describe the markup in the markup (this document is generated from markmin syntax)
@@ -63,8 +63,8 @@ markmin2html.py and markmin2latex.py are single files and have no web2py depende
 ``# title``                | **title**
 ``## section``             | **section**
 ``### subsection``         | **subsection**
-``**bold**``               | **bold**
-``''italic''``             | ''italic''
+``**bold**``               | **bold** 
+``''italic''``             | ''italic'' 
 ``!`!`verbatim`!`!``       | ``verbatim``
 ``http://google.com``      | http://google.com
 ``[[click me #myanchor]]`` | [[click me #myanchor]]
@@ -94,10 +94,10 @@ This paragraph has an image aligned to the right with a width of 200px. Its is p
 - Mouse
 ``
 
-is rendered as
+is rendered as 
 - Dog
 - Cat
-- Mouse
+- Mouse 
 
 Two new lines between items break the list in two lists.
 
@@ -196,7 +196,7 @@ This requires a syntax highlighting tool, such as the web2py CODE helper.
            'code_python':lambda text: CODE(text,language='python').xml(),
            'code_html':lambda text: CODE(text,language='html').xml()}
 >>> markmin2html(text,extra=extra)
-``
+`` 
 
 Code can now be marked up as in this example:
 
@@ -274,7 +274,7 @@ def render(text,extra={},allowed={},sep='p'):
     - allowed is a dictionary of list of allowed classes like
       allowed = dict(code=('python','cpp','java'))
     - sep can be 'p' to separate text in <p>...</p>
-      or can be 'br' to separate text using <br />
+      or can be 'br' to separate text using <br /> 
 
 
     >>> render('this is\\n# a section\\nparagraph')
@@ -311,14 +311,14 @@ def render(text,extra={},allowed={},sep='p'):
     >>> render('[[this is a link http://example.com]]')
     '<p><a href="http://example.com">this is a link</a></p>'
 
-    >>> render('[[this is an image http://example.com left]]')
+    >>> render('[[this is an image http://example.com left]]')    
     '<p><img src="http://example.com" alt="this is an image" align="left" /></p>'
     >>> render('[[this is an image http://example.com left 200px]]')
     '<p><img src="http://example.com" alt="this is an image" align="left" width="200px" /></p>'
 
-    >>> render('[[this is an image http://example.com video]]')
+    >>> render('[[this is an image http://example.com video]]')    
     '<p><video src="http://example.com" controls></video></p>'
-    >>> render('[[this is an image http://example.com audio]]')
+    >>> render('[[this is an image http://example.com audio]]')    
     '<p><audio src="http://example.com" controls></audio></p>'
 
     >>> render('[[this is a **link** http://example.com]]')
@@ -358,7 +358,7 @@ def render(text,extra={},allowed={},sep='p'):
     text = cgi.escape(text)
     for regex, sub in regex_maps:
         text = regex.sub(sub,text)
-
+ 
     #############################################################
     # process tables and blockquotes
     #############################################################
@@ -386,7 +386,7 @@ def render(text,extra={},allowed={},sep='p'):
     text = regex_link_popup.sub('<a href="\g<k>" target="_blank">\g<t></a>', text)
     text = regex_link.sub('<a href="\g<k>">\g<t></a>', text)
     text = regex_auto.sub('<a href="\g<k>">\g<k></a>', text)
-
+    
     #############################################################
     # deal with paragraphs (trick <<ul, <<ol, <<table, <<h1, etc)
     # the << indicates that there should NOT be a new paragraph
@@ -402,7 +402,7 @@ def render(text,extra={},allowed={},sep='p'):
     # finally get rid of <<
     #############################################################
     text=text.replace('<<','<')
-
+    
     #############################################################
     # process all code text
     #############################################################

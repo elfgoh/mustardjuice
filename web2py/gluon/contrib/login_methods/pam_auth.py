@@ -9,5 +9,5 @@ def pam_auth():
 
     def pam_auth_aux(username, password):
         return authenticate(username, password)
-
+    
     return pam_auth_aux

@@ -163,8 +163,8 @@ for c in controllers: controller_functions+=[c[:-3]+'/%s.html'%x for x in functi
       items=file.split('/')
       file_path=items[:-1]
       filename=items[-1]
-      while path!=file_path:
-          if len(file_path)>=len(path) and all([v==file_path[k] for k,v in enumerate(path)]):
+      while path!=file_path:          
+          if '/'.join(file_path).startswith('/'.join(path)):
               path.append(file_path[len(path)])
               thispath='static__'+'__'.join(path)
     }}

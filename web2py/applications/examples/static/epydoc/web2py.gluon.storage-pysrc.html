@@ -88,11 +88,10 @@
 <a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">    Like a regular python list but a[i] if i is out of bounds return None</tt> </tt>
 <a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">    instead of IndexOutOfBounds</tt> </tt>
 <a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">     </tt>
 <a name="List.__call__"></a><div id="List.__call__-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="List.__call__-toggle" onclick="return toggle('List.__call__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.storage.List-class.html#__call__">__call__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">i</tt><tt class="py-op">,</tt> <tt class="py-param">default</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="List.__call__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="List.__call__-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-number">0</tt><tt class="py-op">&lt;=</tt><tt class="py-name">i</tt><tt class="py-op">&lt;</tt><tt id="link-1" class="py-name" targets="Method web2py.gluon.dal.Field.len()=web2py.gluon.dal.Field-class.html#len,Method web2py.gluon.sql.Field.len()=web2py.gluon.sql.Field-class.html#len,Method web2py.gluon.sql_old.Expression.len()=web2py.gluon.sql_old.Expression-class.html#len"><a title="web2py.gluon.dal.Field.len
-web2py.gluon.sql.Field.len
-web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return doclink('link-1', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="List.__call__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="List.__call__-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-number">0</tt><tt class="py-op">&lt;=</tt><tt class="py-name">i</tt><tt class="py-op">&lt;</tt><tt id="link-1" class="py-name" targets="Method web2py.gluon.dal.Field.len()=web2py.gluon.dal.Field-class.html#len,Method web2py.gluon.sql.Expression.len()=web2py.gluon.sql.Expression-class.html#len"><a title="web2py.gluon.dal.Field.len
+web2py.gluon.sql.Expression.len" class="py-name" href="#" onclick="return doclink('link-1', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
 <a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">default</tt> </tt>
@@ -137,20 +136,15 @@ web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return do
 <a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">AttributeError</tt><tt class="py-op">,</tt> <tt class="py-string">"missing key=%s"</tt> <tt class="py-op">%</tt> <tt class="py-name">key</tt> </tt>
 </div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
 <a name="Storage.__repr__"></a><div id="Storage.__repr__-def"><a name="L73"></a><tt class="py-lineno"> 73</tt> <a class="py-toggle" href="#" id="Storage.__repr__-toggle" onclick="return toggle('Storage.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.storage.Storage-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="Storage.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.__repr__-expanded"><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'&lt;Storage '</tt> <tt class="py-op">+</tt> <tt class="py-name">dict</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method web2py.gluon.dal.DAL.__repr__()=web2py.gluon.dal.DAL-class.html#__repr__,Method web2py.gluon.dal.GAEF.__repr__()=web2py.gluon.dal.GAEF-class.html#__repr__,Method web2py.gluon.dal.Row.__repr__()=web2py.gluon.dal.Row-class.html#__repr__,Method web2py.gluon.dal.Table.__repr__()=web2py.gluon.dal.Table-class.html#__repr__,Method web2py.gluon.languages.lazyT.__repr__()=web2py.gluon.languages.lazyT-class.html#__repr__,Method web2py.gluon.rocket.Headers.__repr__()=web2py.gluon.rocket.Headers-class.html#__repr__,Method web2py.gluon.sql.DAL.__repr__()=web2py.gluon.sql.DAL-class.html#__repr__,Method web2py.gluon.sql.GAEF.__repr__()=web2py.gluon.sql.GAEF-class.html#__repr__,Method web2py.gluon.sql.Row.__repr__()=web2py.gluon.sql.Row-class.html#__repr__,Method web2py.gluon.sql.Table.__repr__()=web2py.gluon.sql.Table-class.html#__repr__,Method web2py.gluon.sql_old.KeyedTable.__repr__()=web2py.gluon.sql_old.KeyedTable-class.html#__repr__,Method web2py.gluon.sql_old.Row.__repr__()=web2py.gluon.sql_old.Row-class.html#__repr__,Method web2py.gluon.sql_old.SQLDB.__repr__()=web2py.gluon.sql_old.SQLDB-class.html#__repr__,Method web2py.gluon.sql_old.Table.__repr__()=web2py.gluon.sql_old.Table-class.html#__repr__,Method web2py.gluon.storage.Storage.__repr__()=web2py.gluon.storage.Storage-class.html#__repr__,Method web2py.gluon.template.BlockNode.__repr__()=web2py.gluon.template.BlockNode-class.html#__repr__,Method web2py.gluon.template.SuperNode.__repr__()=web2py.gluon.template.SuperNode-class.html#__repr__,Method web2py.gluon.thread_local_singleton.Singleton.__repr__()=web2py.gluon.thread_local_singleton.Singleton-class.html#__repr__"><a title="web2py.gluon.dal.DAL.__repr__
-web2py.gluon.dal.GAEF.__repr__
+</div><div id="Storage.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.__repr__-expanded"><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'&lt;Storage '</tt> <tt class="py-op">+</tt> <tt class="py-name">dict</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method web2py.gluon.dal.DAL.__repr__()=web2py.gluon.dal.DAL-class.html#__repr__,Method web2py.gluon.dal.Row.__repr__()=web2py.gluon.dal.Row-class.html#__repr__,Method web2py.gluon.dal.Table.__repr__()=web2py.gluon.dal.Table-class.html#__repr__,Method web2py.gluon.languages.lazyT.__repr__()=web2py.gluon.languages.lazyT-class.html#__repr__,Method web2py.gluon.rocket.Headers.__repr__()=web2py.gluon.rocket.Headers-class.html#__repr__,Method web2py.gluon.sql.KeyedTable.__repr__()=web2py.gluon.sql.KeyedTable-class.html#__repr__,Method web2py.gluon.sql.Row.__repr__()=web2py.gluon.sql.Row-class.html#__repr__,Method web2py.gluon.sql.SQLDB.__repr__()=web2py.gluon.sql.SQLDB-class.html#__repr__,Method web2py.gluon.sql.Table.__repr__()=web2py.gluon.sql.Table-class.html#__repr__,Method web2py.gluon.storage.Storage.__repr__()=web2py.gluon.storage.Storage-class.html#__repr__,Method web2py.gluon.template.BlockNode.__repr__()=web2py.gluon.template.BlockNode-class.html#__repr__,Method web2py.gluon.template.SuperNode.__repr__()=web2py.gluon.template.SuperNode-class.html#__repr__,Method web2py.gluon.thread_local_singleton.Singleton.__repr__()=web2py.gluon.thread_local_singleton.Singleton-class.html#__repr__"><a title="web2py.gluon.dal.DAL.__repr__
 web2py.gluon.dal.Row.__repr__
 web2py.gluon.dal.Table.__repr__
 web2py.gluon.languages.lazyT.__repr__
 web2py.gluon.rocket.Headers.__repr__
-web2py.gluon.sql.DAL.__repr__
-web2py.gluon.sql.GAEF.__repr__
+web2py.gluon.sql.KeyedTable.__repr__
 web2py.gluon.sql.Row.__repr__
+web2py.gluon.sql.SQLDB.__repr__
 web2py.gluon.sql.Table.__repr__
-web2py.gluon.sql_old.KeyedTable.__repr__
-web2py.gluon.sql_old.Row.__repr__
-web2py.gluon.sql_old.SQLDB.__repr__
-web2py.gluon.sql_old.Table.__repr__
 web2py.gluon.storage.Storage.__repr__
 web2py.gluon.template.BlockNode.__repr__
 web2py.gluon.template.SuperNode.__repr__
@@ -163,13 +157,13 @@ web2py.gluon.thread_local_singleton.Singleton.__repr__" class="py-name" href="#"
 </div><div id="Storage.__setstate__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.__setstate__-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-op">(</tt><tt class="py-name">k</tt><tt class="py-op">,</tt> <tt class="py-name">v</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">value</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method web2py.gluon.rocket.Headers.items()=web2py.gluon.rocket.Headers-class.html#items,Method web2py.gluon.thread_local_singleton.Singleton.items()=web2py.gluon.thread_local_singleton.Singleton-class.html#items"><a title="web2py.gluon.rocket.Headers.items
 web2py.gluon.thread_local_singleton.Singleton.items" class="py-name" href="#" onclick="return doclink('link-3', 'items', 'link-3');">items</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">[</tt><tt class="py-name">k</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">v</tt> </tt>
-</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">             </tt>
 <a name="Storage.getlist"></a><div id="Storage.getlist-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="Storage.getlist-toggle" onclick="return toggle('Storage.getlist');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.storage.Storage-class.html#getlist">getlist</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">obj</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Storage.getlist-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.getlist-expanded"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-docstring">"""Returns a list given a request.vars style object attribute.</tt> </tt>
-<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        If object is list it will be returned as is.  If object is None, an empty</tt> </tt>
 <a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        list will be returned.  Otherwise, [object] will be returned.</tt> </tt>
-<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">        Simulated output with a query string of ?x=abc&amp;y=abc&amp;y=def</tt> </tt>
 <a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.x = 'abc'</tt> </tt>
 <a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.y = ['abc', 'def']</tt> </tt>
@@ -179,7 +173,7 @@ web2py.gluon.thread_local_singleton.Singleton.items" class="py-name" href="#" on
 <a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        ['abc', 'def']</tt> </tt>
 <a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.getlist('z')</tt> </tt>
 <a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        []</tt> </tt>
-<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
 <a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method web2py.gluon.rocket.Headers.get()=web2py.gluon.rocket.Headers-class.html#get,Method web2py.gluon.thread_local_singleton.Singleton.get()=web2py.gluon.thread_local_singleton.Singleton-class.html#get"><a title="web2py.gluon.rocket.Headers.get
 web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" onclick="return doclink('link-4', 'get', 'link-4');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
@@ -188,13 +182,13 @@ web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" oncl
 <a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">value</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
 <a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
 <a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">value</tt><tt class="py-op">]</tt> </tt>
-</div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+</div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">     </tt>
 <a name="Storage.getfirst"></a><div id="Storage.getfirst-def"><a name="L107"></a><tt class="py-lineno">107</tt> <a class="py-toggle" href="#" id="Storage.getfirst-toggle" onclick="return toggle('Storage.getfirst');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.storage.Storage-class.html#getfirst">getfirst</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">obj</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Storage.getfirst-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.getfirst-expanded"><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-docstring">"""Returns a single value when given a request.vars style object attribute.</tt> </tt>
-<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">        If object is list, the first item will be returned, otherwise, object</tt> </tt>
 <a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">        will be returned as is.</tt> </tt>
-<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">        Simulated output with a query string of ?x=abc&amp;y=abc&amp;y=def</tt> </tt>
 <a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.x = 'abc'</tt> </tt>
 <a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.y = ['abc', 'def']</tt> </tt>
@@ -204,21 +198,20 @@ web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" oncl
 <a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">        'abc'</tt> </tt>
 <a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.getfirst('z')</tt> </tt>
 <a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">        None</tt> </tt>
-<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
 <a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method web2py.gluon.storage.Storage.getlist()=web2py.gluon.storage.Storage-class.html#getlist"><a title="web2py.gluon.storage.Storage.getlist" class="py-name" href="#" onclick="return doclink('link-5', 'getlist', 'link-5');">getlist</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">)</tt> </tt>
 <a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-6" class="py-name"><a title="web2py.gluon.dal.Field.len
-web2py.gluon.sql.Field.len
-web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return doclink('link-6', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+web2py.gluon.sql.Expression.len" class="py-name" href="#" onclick="return doclink('link-6', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">value</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
-<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
-</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt>  </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">     </tt>
 <a name="Storage.getlast"></a><div id="Storage.getlast-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="Storage.getlast-toggle" onclick="return toggle('Storage.getlast');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.storage.Storage-class.html#getlast">getlast</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">obj</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Storage.getlast-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Storage.getlast-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-docstring">"""Returns a single value when given a request.vars style object attribute.</tt> </tt>
-<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">        If object is list, the last item will be returned, otherwise, object</tt> </tt>
 <a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">        will be returned as is.</tt> </tt>
-<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">        Simulated output with a query string of ?x=abc&amp;y=abc&amp;y=def</tt> </tt>
 <a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.x = 'abc'</tt> </tt>
 <a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.y = ['abc', 'def']</tt> </tt>
@@ -228,12 +221,11 @@ web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return do
 <a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-docstring">        'def'</tt> </tt>
 <a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring">        &gt;&gt;&gt; request.vars.getlast('z')</tt> </tt>
 <a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">        None</tt> </tt>
-<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
 <a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
 <a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="web2py.gluon.storage.Storage.getlist" class="py-name" href="#" onclick="return doclink('link-7', 'getlist', 'link-5');">getlist</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">)</tt> </tt>
 <a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-8" class="py-name"><a title="web2py.gluon.dal.Field.len
-web2py.gluon.sql.Field.len
-web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return doclink('link-8', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+web2py.gluon.sql.Expression.len" class="py-name" href="#" onclick="return doclink('link-8', 'len', 'link-1');">len</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">value</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
 <a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
 </div></div><a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"> </tt>
@@ -338,7 +330,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:59 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:48 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

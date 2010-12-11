@@ -322,12 +322,12 @@ class IS_IN_SET(Validator):
                 values = []
         else:
             values = [value]
-        failures = [x for x in values if not x in self.theset]
+        failures = [x for x in values if not x in self.theset]        
         if failures and self.theset:
             if self.multiple and (value == None or value == ''):
                 return ([], None)
             return (value, self.error_message)
-        if self.multiple:
+        if self.multiple:            
             if isinstance(self.multiple,(tuple,list)) and \
                     not self.multiple[0]<=len(values)<self.multiple[1]:
                 return (values, self.error_message)
@@ -433,7 +433,7 @@ class IS_IN_DB(Validator):
         if self.multiple:
             if isinstance(value,list):
                 values=value
-            elif value:
+            elif value:            
                 values = [value]
             else:
                 values = []
@@ -492,7 +492,7 @@ class IS_NOT_IN_DB(Validator):
         if not value.strip():
             return (value, self.error_message)
         if value in self.allowed_override:
-            return (value, None)
+            return (value, None)        
         (tablename, fieldname) = str(self.field).split('.')
         field = self.dbset._db[tablename][fieldname]
         rows = self.dbset(field == value).select(limitby=(0, 1))
@@ -611,10 +611,10 @@ class IS_FLOAT_IN_RANGE(Validator):
         (4.0, None)
         >>> IS_FLOAT_IN_RANGE(1,5)(1)
         (1.0, None)
-        >>> IS_FLOAT_IN_RANGE(1,5)(5.25)
-        (5.25, 'enter a number between 1 and 5')
+        >>> IS_FLOAT_IN_RANGE(1,5)(5.1)
+        (5.1, 'enter a number between 1.0 and 5.0')
         >>> IS_FLOAT_IN_RANGE(1,5)(6.0)
-        (6.0, 'enter a number between 1 and 5')
+        (6.0, 'enter a number between 1.0 and 5.0')
         >>> IS_FLOAT_IN_RANGE(1,5)(3.5)
         (3.5, None)
         >>> IS_FLOAT_IN_RANGE(1,None)(3.5)
@@ -622,9 +622,9 @@ class IS_FLOAT_IN_RANGE(Validator):
         >>> IS_FLOAT_IN_RANGE(None,5)(3.5)
         (3.5, None)
         >>> IS_FLOAT_IN_RANGE(1,None)(0.5)
-        (0.5, 'enter a number greater than or equal to 1')
+        (0.5, 'enter a number greater than or equal to 1.0')
         >>> IS_FLOAT_IN_RANGE(None,5)(6.5)
-        (6.5, 'enter a number less than or equal to 5')
+        (6.5, 'enter a number less than or equal to 5.0')
         >>> IS_FLOAT_IN_RANGE()(6.5)
         (6.5, None)
         >>> IS_FLOAT_IN_RANGE()('abc')
@@ -698,41 +698,41 @@ class IS_DECIMAL_IN_RANGE(Validator):
         INPUT(_type='text', _name='name', requires=IS_DECIMAL_IN_RANGE(0, 10))
 
         >>> IS_DECIMAL_IN_RANGE(1,5)('4')
-        (Decimal("4"), None)
+        (Decimal('4'), None)
         >>> IS_DECIMAL_IN_RANGE(1,5)(4)
-        (Decimal("4"), None)
+        (Decimal('4'), None)
         >>> IS_DECIMAL_IN_RANGE(1,5)(1)
-        (Decimal("1"), None)
-        >>> IS_DECIMAL_IN_RANGE(1,5)(5.25)
-        (5.25, 'enter a number between 1 and 5')
-        >>> IS_DECIMAL_IN_RANGE(5.25,6)(5.25)
-        (Decimal("5.25"), None)
-        >>> IS_DECIMAL_IN_RANGE(5.25,6)('5.25')
-        (Decimal("5.25"), None)
+        (Decimal('1'), None)
+        >>> IS_DECIMAL_IN_RANGE(1,5)(5.1)
+        (5.1, 'enter a number between 1 and 5')
+        >>> IS_DECIMAL_IN_RANGE(5.1,6)(5.1)
+        (Decimal('5.1'), None)
+        >>> IS_DECIMAL_IN_RANGE(5.1,6)('5.1')
+        (Decimal('5.1'), None)
         >>> IS_DECIMAL_IN_RANGE(1,5)(6.0)
         (6.0, 'enter a number between 1 and 5')
         >>> IS_DECIMAL_IN_RANGE(1,5)(3.5)
-        (Decimal("3.5"), None)
+        (Decimal('3.5'), None)
         >>> IS_DECIMAL_IN_RANGE(1.5,5.5)(3.5)
-        (Decimal("3.5"), None)
+        (Decimal('3.5'), None)
         >>> IS_DECIMAL_IN_RANGE(1.5,5.5)(6.5)
         (6.5, 'enter a number between 1.5 and 5.5')
         >>> IS_DECIMAL_IN_RANGE(1.5,None)(6.5)
-        (Decimal("6.5"), None)
+        (Decimal('6.5'), None)
         >>> IS_DECIMAL_IN_RANGE(1.5,None)(0.5)
         (0.5, 'enter a number greater than or equal to 1.5')
         >>> IS_DECIMAL_IN_RANGE(None,5.5)(4.5)
-        (Decimal("4.5"), None)
+        (Decimal('4.5'), None)
         >>> IS_DECIMAL_IN_RANGE(None,5.5)(6.5)
         (6.5, 'enter a number less than or equal to 5.5')
         >>> IS_DECIMAL_IN_RANGE()(6.5)
-        (Decimal("6.5"), None)
+        (Decimal('6.5'), None)
         >>> IS_DECIMAL_IN_RANGE(0,99)(123.123)
         (123.123, 'enter a number between 0 and 99')
         >>> IS_DECIMAL_IN_RANGE(0,99)('123.123')
         ('123.123', 'enter a number between 0 and 99')
         >>> IS_DECIMAL_IN_RANGE(0,99)('12.34')
-        (Decimal("12.34"), None)
+        (Decimal('12.34'), None)
         >>> IS_DECIMAL_IN_RANGE()('abc')
         ('abc', 'enter a decimal number')
     """
@@ -2135,8 +2135,8 @@ class IS_DATETIME(Validator):
 
 class IS_DATE_IN_RANGE(IS_DATE):
     """
-    example::
-
+    example::                                         
+    
         >>> v = IS_DATE_IN_RANGE(minimum=datetime.date(2008,1,1), \
                                  maximum=datetime.date(2009,12,31), \
                                  format="%m/%d/%Y",error_message="oops")
@@ -2146,7 +2146,7 @@ class IS_DATE_IN_RANGE(IS_DATE):
 
         >>> v('03/03/2010')
         (datetime.date(2010, 3, 3), 'oops')
-
+                             
     """
     def __init__(self,
                  minimum = None,
@@ -2181,7 +2181,7 @@ class IS_DATE_IN_RANGE(IS_DATE):
 class IS_DATETIME_IN_RANGE(IS_DATETIME):
     """
     example::
-
+    
         >>> v = IS_DATETIME_IN_RANGE(\
                 minimum=datetime.datetime(2008,1,1,12,20), \
                 maximum=datetime.datetime(2009,12,31,12,20), \

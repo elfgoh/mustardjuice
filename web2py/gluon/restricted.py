@@ -198,18 +198,18 @@ def restricted(code, environment={}, layer='Unknown'):
 def snapshot(info=None, context=5, code=None, environment=None):
     """Return a dict describing a given traceback (based on cgitb.text)."""
     import os, types, time, traceback, linecache, inspect, pydoc, cgitb
-
+    
     # if no exception info given, get current:
     etype, evalue, etb = info or sys.exc_info()
 
     if type(etype) is types.ClassType:
         etype = etype.__name__
-
+    
     # create a snapshot dict with some basic information
-    s = {}
+    s = {}    
     s['pyver'] = 'Python ' + sys.version.split()[0] + ': ' + sys.executable
     s['date'] = time.ctime(time.time())
-
+    
     # start to process frames
     records = inspect.getinnerframes(etb, context)
     s['frames'] = []
@@ -230,7 +230,7 @@ def snapshot(info=None, context=5, code=None, environment=None):
             try: return linecache.getline(file, lnum[0])
             finally: lnum[0] += 1
         vars = cgitb.scanvars(reader, frame, locals)
-
+        
         # if it is a view, replace with generated code
         if file.endswith('html'):
             lmin = lnum>context and (lnum-context) or 0
@@ -254,7 +254,7 @@ def snapshot(info=None, context=5, code=None, environment=None):
                 f['dump'][name] = pydoc.text.repr(value)
             else:
                 f['dump'][name] = 'undefined'
-
+        
         s['frames'].append(f)
 
     # add exception type, value and attributes
@@ -264,11 +264,11 @@ def snapshot(info=None, context=5, code=None, environment=None):
     if isinstance(evalue, BaseException):
         for name in dir(evalue):
             # prevent py26 DeprecatedWarning:
-            if name!='message' or sys.version_info<(2.6):
+            if name!='message' or sys.version_info<(2.6): 
                 value = pydoc.text.repr(getattr(evalue, name))
                 s['exception'][name] = value
 
-    # add all local values (of last frame) to the snapshot
+    # add all local values (of last frame) to the snapshot 
     s['locals'] = {}
     for name, value in locals.items():
         s['locals'][name] = pydoc.text.repr(value)

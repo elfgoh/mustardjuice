@@ -12,7 +12,7 @@ from tempfile import mkstemp, mkdtemp, NamedTemporaryFile
 from markmin2latex import markmin2latex
 
 __all__ = ['markmin2pdf']
-
+    
 def removeall(path):
 
     ERROR_STR= """Error removing %(path)s, %(error)s """
@@ -24,7 +24,7 @@ def removeall(path):
 
     files=[path]
 
-    while files:
+    while files: 
         file=files[0]
         if os.path.isfile(file):
             f=os.remove
@@ -42,17 +42,17 @@ def removeall(path):
 def latex2pdf(latex, pdflatex='pdflatex', passes=3):
     """
     calls pdflatex in a tempfolder
-
+    
     Arguments:
-
+    
     - pdflatex: path to the pdflatex command. Default is just 'pdflatex'.
     - passes:   defines how often pdflates should be run in the texfile.
     """
-
+    
     pdflatex=pdflatex
     passes=passes
     warnings=[]
-
+    
     # setup the envoriment
     tmpdir = mkdtemp()
     texfile = open(tmpdir+'/test.tex','wb')
@@ -70,8 +70,8 @@ def latex2pdf(latex, pdflatex='pdflatex', passes=3):
                                '-output-format', 'pdf',
                                '-output-directory', tmpdir,
                                texfile],
-                              cwd=os.path.dirname(texfile), stdout=outfile,
-                              stderr=subprocess.PIPE)
+                              cwd=os.path.dirname(texfile), stdout=outfile, 
+                              stderr=subprocess.PIPE)        
         outfile.close()
         re_errors=re.compile('^\!(.*)$',re.M)
         re_warnings=re.compile('^LaTeX Warning\:(.*)$',re.M)
@@ -87,7 +87,7 @@ def latex2pdf(latex, pdflatex='pdflatex', passes=3):
         data = None
     removeall(tmpdir)
     return data, warnings, errors
-
+    
 
 def markmin2pdf(text, image_mapper=lambda x: None, extra={}):
     return latex2pdf(markmin2latex(text,image_mapper=image_mapper, extra=extra))

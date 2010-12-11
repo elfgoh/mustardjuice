@@ -85,7 +85,7 @@
 <a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module web2py.gluon.settings=web2py.gluon.settings-module.html,Variable web2py.gluon.settings.settings=web2py.gluon.settings-module.html#settings"><a title="web2py.gluon.settings
 web2py.gluon.settings.settings" class="py-name" href="#" onclick="return doclink('link-2', 'settings', 'link-2');">settings</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Variable web2py.gluon.settings.global_settings=web2py.gluon.settings-module.html#global_settings"><a title="web2py.gluon.settings.global_settings" class="py-name" href="#" onclick="return doclink('link-3', 'global_settings', 'link-3');">global_settings</a></tt> </tt>
 <a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
-<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.sql_old.logger=web2py.gluon.sql_old-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable web2py.gluon.cache.logger=web2py.gluon.cache-module.html#logger,Variable web2py.gluon.compileapp.logger=web2py.gluon.compileapp-module.html#logger,Variable web2py.gluon.dal.logger=web2py.gluon.dal-module.html#logger,Variable web2py.gluon.main.logger=web2py.gluon.main-module.html#logger,Variable web2py.gluon.newcron.logger=web2py.gluon.newcron-module.html#logger,Variable web2py.gluon.portalocker.logger=web2py.gluon.portalocker-module.html#logger,Variable web2py.gluon.restricted.logger=web2py.gluon.restricted-module.html#logger,Variable web2py.gluon.rewrite.logger=web2py.gluon.rewrite-module.html#logger,Variable web2py.gluon.shell.logger=web2py.gluon.shell-module.html#logger,Variable web2py.gluon.sql.logger=web2py.gluon.sql-module.html#logger,Variable web2py.gluon.tools.logger=web2py.gluon.tools-module.html#logger,Variable web2py.gluon.widget.logger=web2py.gluon.widget-module.html#logger"><a title="web2py.gluon.cache.logger
 web2py.gluon.compileapp.logger
 web2py.gluon.dal.logger
 web2py.gluon.main.logger
@@ -95,7 +95,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-4', 'logger', 'link-4');">logger</a></tt> <tt class="py-op">=</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">getLogger</tt><tt class="py-op">(</tt><tt class="py-string">"web2py.cron"</tt><tt class="py-op">)</tt> </tt>
 <a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable web2py.gluon.newcron._cron_stopping=web2py.gluon.newcron-module.html#_cron_stopping"><a title="web2py.gluon.newcron._cron_stopping" class="py-name" href="#" onclick="return doclink('link-5', '_cron_stopping', 'link-5');">_cron_stopping</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
@@ -108,27 +107,24 @@ web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('li
 <a name="extcron"></a><div id="extcron-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="extcron-toggle" onclick="return toggle('extcron');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="web2py.gluon.newcron.extcron-class.html">extcron</a><tt class="py-op">(</tt><tt class="py-base-class">threading</tt><tt class="py-op">.</tt><tt class="py-base-class">Thread</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="extcron-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="extcron-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
 <a name="extcron.__init__"></a><div id="extcron.__init__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="extcron.__init__-toggle" onclick="return toggle('extcron.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.newcron.extcron-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">applications_parent</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="extcron.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="extcron.__init__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">threading</tt><tt class="py-op">.</tt><tt class="py-name">Thread</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method web2py.gluon.cache.Cache.__init__()=web2py.gluon.cache.Cache-class.html#__init__,Method web2py.gluon.cache.CacheAbstract.__init__()=web2py.gluon.cache.CacheAbstract-class.html#__init__,Method web2py.gluon.cache.CacheInRam.__init__()=web2py.gluon.cache.CacheInRam-class.html#__init__,Method web2py.gluon.cache.CacheOnDisk.__init__()=web2py.gluon.cache.CacheOnDisk-class.html#__init__,Method web2py.gluon.compileapp.LoadFactory.__init__()=web2py.gluon.compileapp.LoadFactory-class.html#__init__,Method web2py.gluon.dal.BaseAdapter.__init__()=web2py.gluon.dal.BaseAdapter-class.html#__init__,Method web2py.gluon.dal.CouchDBAdapter.__init__()=web2py.gluon.dal.CouchDBAdapter-class.html#__init__,Method web2py.gluon.dal.DAL.__init__()=web2py.gluon.dal.DAL-class.html#__init__,Method web2py.gluon.dal.DB2Adapter.__init__()=web2py.gluon.dal.DB2Adapter-class.html#__init__,Method web2py.gluon.dal.Expression.__init__()=web2py.gluon.dal.Expression-class.html#__init__,Method web2py.gluon.dal.Field.__init__()=web2py.gluon.dal.Field-class.html#__init__,Method web2py.gluon.dal.FireBirdAdapter.__init__()=web2py.gluon.dal.FireBirdAdapter-class.html#__init__,Method web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__()=web2py.gluon.dal.FireBirdEmbeddedAdapter-class.html#__init__,Method web2py.gluon.dal.GAEF.__init__()=web2py.gluon.dal.GAEF-class.html#__init__,Method web2py.gluon.dal.GAENoSQLAdapter.__init__()=web2py.gluon.dal.GAENoSQLAdapter-class.html#__init__,Method web2py.gluon.dal.InformixAdapter.__init__()=web2py.gluon.dal.InformixAdapter-class.html#__init__,Method web2py.gluon.dal.IngresAdapter.__init__()=web2py.gluon.dal.IngresAdapter-class.html#__init__,Method web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__()=web2py.gluon.dal.JDBCPostgreSQLAdapter-class.html#__init__,Method web2py.gluon.dal.JDBCSQLiteAdapter.__init__()=web2py.gluon.dal.JDBCSQLiteAdapter-class.html#__init__,Method web2py.gluon.dal.MSSQLAdapter.__init__()=web2py.gluon.dal.MSSQLAdapter-class.html#__init__,Method web2py.gluon.dal.MongoDBAdapter.__init__()=web2py.gluon.dal.MongoDBAdapter-class.html#__init__,Method web2py.gluon.dal.MySQLAdapter.__init__()=web2py.gluon.dal.MySQLAdapter-class.html#__init__,Method web2py.gluon.dal.OracleAdapter.__init__()=web2py.gluon.dal.OracleAdapter-class.html#__init__,Method web2py.gluon.dal.PostgreSQLAdapter.__init__()=web2py.gluon.dal.PostgreSQLAdapter-class.html#__init__,Method web2py.gluon.dal.Query.__init__()=web2py.gluon.dal.Query-class.html#__init__,Method web2py.gluon.dal.Rows.__init__()=web2py.gluon.dal.Rows-class.html#__init__,Method web2py.gluon.dal.SQLALL.__init__()=web2py.gluon.dal.SQLALL-class.html#__init__,Method web2py.gluon.dal.SQLCustomType.__init__()=web2py.gluon.dal.SQLCustomType-class.html#__init__,Method web2py.gluon.dal.SQLiteAdapter.__init__()=web2py.gluon.dal.SQLiteAdapter-class.html#__init__,Method web2py.gluon.dal.Set.__init__()=web2py.gluon.dal.Set-class.html#__init__,Method web2py.gluon.dal.Table.__init__()=web2py.gluon.dal.Table-class.html#__init__,Method web2py.gluon.globals.Request.__init__()=web2py.gluon.globals.Request-class.html#__init__,Method web2py.gluon.globals.Response.__init__()=web2py.gluon.globals.Response-class.html#__init__,Method web2py.gluon.highlight.Highlighter.__init__()=web2py.gluon.highlight.Highlighter-class.html#__init__,Method web2py.gluon.html.BEAUTIFY.__init__()=web2py.gluon.html.BEAUTIFY-class.html#__init__,Method web2py.gluon.html.DIV.__init__()=web2py.gluon.html.DIV-class.html#__init__,Method web2py.gluon.html.FORM.__init__()=web2py.gluon.html.FORM-class.html#__init__,Method web2py.gluon.html.MARKMIN.__init__()=web2py.gluon.html.MARKMIN-class.html#__init__,Method web2py.gluon.html.MENU.__init__()=web2py.gluon.html.MENU-class.html#__init__,Method web2py.gluon.html.XML.__init__()=web2py.gluon.html.XML-class.html#__init__,Method web2py.gluon.html.web2pyHTMLParser.__init__()=web2py.gluon.html.web2pyHTMLParser-class.html#__init__,Method web2py.gluon.http.HTTP.__init__()=web2py.gluon.http.HTTP-class.html#__init__,Method web2py.gluon.languages.lazyT.__init__()=web2py.gluon.languages.lazyT-class.html#__init__,Method web2py.gluon.languages.translator.__init__()=web2py.gluon.languages.translator-class.html#__init__,Method web2py.gluon.main.HttpServer.__init__()=web2py.gluon.main.HttpServer-class.html#__init__,Method web2py.gluon.newcron.Token.__init__()=web2py.gluon.newcron.Token-class.html#__init__,Method web2py.gluon.newcron.cronlauncher.__init__()=web2py.gluon.newcron.cronlauncher-class.html#__init__,Method web2py.gluon.newcron.extcron.__init__()=web2py.gluon.newcron.extcron-class.html#__init__,Method web2py.gluon.newcron.hardcron.__init__()=web2py.gluon.newcron.hardcron-class.html#__init__,Method web2py.gluon.newcron.softcron.__init__()=web2py.gluon.newcron.softcron-class.html#__init__,Method web2py.gluon.restricted.RestrictedError.__init__()=web2py.gluon.restricted.RestrictedError-class.html#__init__,Method web2py.gluon.restricted.TicketStorage.__init__()=web2py.gluon.restricted.TicketStorage-class.html#__init__,Method web2py.gluon.rocket.ChunkedReader.__init__()=web2py.gluon.rocket.ChunkedReader-class.html#__init__,Method web2py.gluon.rocket.Connection.__init__()=web2py.gluon.rocket.Connection-class.html#__init__,Method web2py.gluon.rocket.FileWrapper.__init__()=web2py.gluon.rocket.FileWrapper-class.html#__init__,Method web2py.gluon.rocket.Headers.__init__()=web2py.gluon.rocket.Headers-class.html#__init__,Method web2py.gluon.rocket.Listener.__init__()=web2py.gluon.rocket.Listener-class.html#__init__,Method web2py.gluon.rocket.Monitor.__init__()=web2py.gluon.rocket.Monitor-class.html#__init__,Method web2py.gluon.rocket.Rocket.__init__()=web2py.gluon.rocket.Rocket-class.html#__init__,Method web2py.gluon.rocket.ThreadPool.__init__()=web2py.gluon.rocket.ThreadPool-class.html#__init__,Method web2py.gluon.rocket.WSGIWorker.__init__()=web2py.gluon.rocket.WSGIWorker-class.html#__init__,Method web2py.gluon.rocket.Worker.__init__()=web2py.gluon.rocket.Worker-class.html#__init__,Method web2py.gluon.sanitizer.XssCleaner.__init__()=web2py.gluon.sanitizer.XssCleaner-class.html#__init__,Method web2py.gluon.sql.BaseAdapter.__init__()=web2py.gluon.sql.BaseAdapter-class.html#__init__,Method web2py.gluon.sql.CouchDBAdapter.__init__()=web2py.gluon.sql.CouchDBAdapter-class.html#__init__,Method web2py.gluon.sql.DAL.__init__()=web2py.gluon.sql.DAL-class.html#__init__,Method web2py.gluon.sql.DB2Adapter.__init__()=web2py.gluon.sql.DB2Adapter-class.html#__init__,Method web2py.gluon.sql.Expression.__init__()=web2py.gluon.sql.Expression-class.html#__init__,Method web2py.gluon.sql.Field.__init__()=web2py.gluon.sql.Field-class.html#__init__,Method web2py.gluon.sql.FireBirdAdapter.__init__()=web2py.gluon.sql.FireBirdAdapter-class.html#__init__,Method web2py.gluon.sql.FireBirdEmbeddedAdapter.__init__()=web2py.gluon.sql.FireBirdEmbeddedAdapter-class.html#__init__,Method web2py.gluon.sql.GAEF.__init__()=web2py.gluon.sql.GAEF-class.html#__init__,Method web2py.gluon.sql.GAENoSQLAdapter.__init__()=web2py.gluon.sql.GAENoSQLAdapter-class.html#__init__,Method web2py.gluon.sql.InformixAdapter.__init__()=web2py.gluon.sql.InformixAdapter-class.html#__init__,Method web2py.gluon.sql.IngresAdapter.__init__()=web2py.gluon.sql.IngresAdapter-class.html#__init__,Method web2py.gluon.sql.JDBCPostgreSQLAdapter.__init__()=web2py.gluon.sql.JDBCPostgreSQLAdapter-class.html#__init__,Method web2py.gluon.sql.JDBCSQLiteAdapter.__init__()=web2py.gluon.sql.JDBCSQLiteAdapter-class.html#__init__,Method web2py.gluon.sql.MSSQLAdapter.__init__()=web2py.gluon.sql.MSSQLAdapter-class.html#__init__,Method web2py.gluon.sql.MongoDBAdapter.__init__()=web2py.gluon.sql.MongoDBAdapter-class.html#__init__,Method web2py.gluon.sql.MySQLAdapter.__init__()=web2py.gluon.sql.MySQLAdapter-class.html#__init__,Method web2py.gluon.sql.OracleAdapter.__init__()=web2py.gluon.sql.OracleAdapter-class.html#__init__,Method web2py.gluon.sql.PostgreSQLAdapter.__init__()=web2py.gluon.sql.PostgreSQLAdapter-class.html#__init__,Method web2py.gluon.sql.Query.__init__()=web2py.gluon.sql.Query-class.html#__init__,Method web2py.gluon.sql.Rows.__init__()=web2py.gluon.sql.Rows-class.html#__init__,Method web2py.gluon.sql.SQLALL.__init__()=web2py.gluon.sql.SQLALL-class.html#__init__,Method web2py.gluon.sql.SQLCustomType.__init__()=web2py.gluon.sql.SQLCustomType-class.html#__init__,Method web2py.gluon.sql.SQLiteAdapter.__init__()=web2py.gluon.sql.SQLiteAdapter-class.html#__init__,Method web2py.gluon.sql.Set.__init__()=web2py.gluon.sql.Set-class.html#__init__,Method web2py.gluon.sql.Table.__init__()=web2py.gluon.sql.Table-class.html#__init__,Method web2py.gluon.sql_old.Expression.__init__()=web2py.gluon.sql_old.Expression-class.html#__init__,Method web2py.gluon.sql_old.Field.__init__()=web2py.gluon.sql_old.Field-class.html#__init__,Method web2py.gluon.sql_old.KeyedTable.__init__()=web2py.gluon.sql_old.KeyedTable-class.html#__init__,Method web2py.gluon.sql_old.Query.__init__()=web2py.gluon.sql_old.Query-class.html#__init__,Method web2py.gluon.sql_old.Rows.__init__()=web2py.gluon.sql_old.Rows-class.html#__init__,Method web2py.gluon.sql_old.SQLALL.__init__()=web2py.gluon.sql_old.SQLALL-class.html#__init__,Method web2py.gluon.sql_old.SQLCustomType.__init__()=web2py.gluon.sql_old.SQLCustomType-class.html#__init__,Method web2py.gluon.sql_old.SQLDB.__init__()=web2py.gluon.sql_old.SQLDB-class.html#__init__,Method web2py.gluon.sql_old.SQLJoin.__init__()=web2py.gluon.sql_old.SQLJoin-class.html#__init__,Method web2py.gluon.sql_old.Set.__init__()=web2py.gluon.sql_old.Set-class.html#__init__,Method web2py.gluon.sql_old.Table.__init__()=web2py.gluon.sql_old.Table-class.html#__init__,Method web2py.gluon.sqlhtml.AutocompleteWidget.__init__()=web2py.gluon.sqlhtml.AutocompleteWidget-class.html#__init__,Method web2py.gluon.sqlhtml.SQLFORM.__init__()=web2py.gluon.sqlhtml.SQLFORM-class.html#__init__,Method web2py.gluon.sqlhtml.SQLTABLE.__init__()=web2py.gluon.sqlhtml.SQLTABLE-class.html#__init__,Method web2py.gluon.storage.Messages.__init__()=web2py.gluon.storage.Messages-class.html#__init__,Method web2py.gluon.template.BlockNode.__init__()=web2py.gluon.template.BlockNode-class.html#__init__,Method web2py.gluon.template.Content.__init__()=web2py.gluon.template.Content-class.html#__init__,Method web2py.gluon.template.Node.__init__()=web2py.gluon.template.Node-class.html#__init__,Method web2py.gluon.template.SuperNode.__init__()=web2py.gluon.template.SuperNode-class.html#__init__,Method web2py.gluon.template.TemplateParser.__init__()=web2py.gluon.template.TemplateParser-class.html#__init__,Method web2py.gluon.thread_local_singleton.Singleton.__init__()=web2py.gluon.thread_local_singleton.Singleton-class.html#__init__,Method web2py.gluon.tools.Auth.__init__()=web2py.gluon.tools.Auth-class.html#__init__,Method web2py.gluon.tools.Crud.__init__()=web2py.gluon.tools.Crud-class.html#__init__,Method web2py.gluon.tools.Mail.Attachment.__init__()=web2py.gluon.tools.Mail.Attachment-class.html#__init__,Method web2py.gluon.tools.Mail.__init__()=web2py.gluon.tools.Mail-class.html#__init__,Method web2py.gluon.tools.PluginManager.__init__()=web2py.gluon.tools.PluginManager-class.html#__init__,Method web2py.gluon.tools.Recaptcha.__init__()=web2py.gluon.tools.Recaptcha-class.html#__init__,Method web2py.gluon.tools.Service.JsonRpcException.__init__()=web2py.gluon.tools.Service.JsonRpcException-class.html#__init__,Method web2py.gluon.tools.Service.__init__()=web2py.gluon.tools.Service-class.html#__init__,Method web2py.gluon.validators.CLEANUP.__init__()=web2py.gluon.validators.CLEANUP-class.html#__init__,Method web2py.gluon.validators.CRYPT.__init__()=web2py.gluon.validators.CRYPT-class.html#__init__,Method web2py.gluon.validators.IS_ALPHANUMERIC.__init__()=web2py.gluon.validators.IS_ALPHANUMERIC-class.html#__init__,Method web2py.gluon.validators.IS_DATE.__init__()=web2py.gluon.validators.IS_DATE-class.html#__init__,Method web2py.gluon.validators.IS_DATETIME.__init__()=web2py.gluon.validators.IS_DATETIME-class.html#__init__,Method web2py.gluon.validators.IS_DATETIME_IN_RANGE.__init__()=web2py.gluon.validators.IS_DATETIME_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_DATE_IN_RANGE.__init__()=web2py.gluon.validators.IS_DATE_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_DECIMAL_IN_RANGE.__init__()=web2py.gluon.validators.IS_DECIMAL_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_EMAIL.__init__()=web2py.gluon.validators.IS_EMAIL-class.html#__init__,Method web2py.gluon.validators.IS_EMPTY_OR.__init__()=web2py.gluon.validators.IS_EMPTY_OR-class.html#__init__,Method web2py.gluon.validators.IS_EQUAL_TO.__init__()=web2py.gluon.validators.IS_EQUAL_TO-class.html#__init__,Method web2py.gluon.validators.IS_EXPR.__init__()=web2py.gluon.validators.IS_EXPR-class.html#__init__,Method web2py.gluon.validators.IS_FLOAT_IN_RANGE.__init__()=web2py.gluon.validators.IS_FLOAT_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_GENERIC_URL.__init__()=web2py.gluon.validators.IS_GENERIC_URL-class.html#__init__,Method web2py.gluon.validators.IS_HTTP_URL.__init__()=web2py.gluon.validators.IS_HTTP_URL-class.html#__init__,Method web2py.gluon.validators.IS_IMAGE.__init__()=web2py.gluon.validators.IS_IMAGE-class.html#__init__,Method web2py.gluon.validators.IS_INT_IN_RANGE.__init__()=web2py.gluon.validators.IS_INT_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_IN_DB.__init__()=web2py.gluon.validators.IS_IN_DB-class.html#__init__,Method web2py.gluon.validators.IS_IN_SET.__init__()=web2py.gluon.validators.IS_IN_SET-class.html#__init__,Method web2py.gluon.validators.IS_IN_SUBSET.__init__()=web2py.gluon.validators.IS_IN_SUBSET-class.html#__init__,Method web2py.gluon.validators.IS_IPV4.__init__()=web2py.gluon.validators.IS_IPV4-class.html#__init__,Method web2py.gluon.validators.IS_LENGTH.__init__()=web2py.gluon.validators.IS_LENGTH-class.html#__init__,Method web2py.gluon.validators.IS_LIST_OF.__init__()=web2py.gluon.validators.IS_LIST_OF-class.html#__init__,Method web2py.gluon.validators.IS_MATCH.__init__()=web2py.gluon.validators.IS_MATCH-class.html#__init__,Method web2py.gluon.validators.IS_NOT_EMPTY.__init__()=web2py.gluon.validators.IS_NOT_EMPTY-class.html#__init__,Method web2py.gluon.validators.IS_NOT_IN_DB.__init__()=web2py.gluon.validators.IS_NOT_IN_DB-class.html#__init__,Method web2py.gluon.validators.IS_SLUG.__init__()=web2py.gluon.validators.IS_SLUG-class.html#__init__,Method web2py.gluon.validators.IS_STRONG.__init__()=web2py.gluon.validators.IS_STRONG-class.html#__init__,Method web2py.gluon.validators.IS_TIME.__init__()=web2py.gluon.validators.IS_TIME-class.html#__init__,Method web2py.gluon.validators.IS_UPLOAD_FILENAME.__init__()=web2py.gluon.validators.IS_UPLOAD_FILENAME-class.html#__init__,Method web2py.gluon.validators.IS_URL.__init__()=web2py.gluon.validators.IS_URL-class.html#__init__,Method web2py.gluon.widget.IO.__init__()=web2py.gluon.widget.IO-class.html#__init__,Method web2py.gluon.widget.web2pyDialog.__init__()=web2py.gluon.widget.web2pyDialog-class.html#__init__,Method web2py.gluon.winservice.Service.__init__()=web2py.gluon.winservice.Service-class.html#__init__"><a title="web2py.gluon.cache.Cache.__init__
+</div><div id="extcron.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="extcron.__init__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">threading</tt><tt class="py-op">.</tt><tt class="py-name">Thread</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method web2py.gluon.cache.Cache.__init__()=web2py.gluon.cache.Cache-class.html#__init__,Method web2py.gluon.cache.CacheAbstract.__init__()=web2py.gluon.cache.CacheAbstract-class.html#__init__,Method web2py.gluon.cache.CacheInRam.__init__()=web2py.gluon.cache.CacheInRam-class.html#__init__,Method web2py.gluon.cache.CacheOnDisk.__init__()=web2py.gluon.cache.CacheOnDisk-class.html#__init__,Method web2py.gluon.compileapp.LoadFactory.__init__()=web2py.gluon.compileapp.LoadFactory-class.html#__init__,Method web2py.gluon.dal.BaseAdapter.__init__()=web2py.gluon.dal.BaseAdapter-class.html#__init__,Method web2py.gluon.dal.DAL.__init__()=web2py.gluon.dal.DAL-class.html#__init__,Method web2py.gluon.dal.DB2Adapter.__init__()=web2py.gluon.dal.DB2Adapter-class.html#__init__,Method web2py.gluon.dal.Expression.__init__()=web2py.gluon.dal.Expression-class.html#__init__,Method web2py.gluon.dal.Field.__init__()=web2py.gluon.dal.Field-class.html#__init__,Method web2py.gluon.dal.FireBirdAdapter.__init__()=web2py.gluon.dal.FireBirdAdapter-class.html#__init__,Method web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__()=web2py.gluon.dal.FireBirdEmbeddedAdapter-class.html#__init__,Method web2py.gluon.dal.InformixAdapter.__init__()=web2py.gluon.dal.InformixAdapter-class.html#__init__,Method web2py.gluon.dal.IngresAdapter.__init__()=web2py.gluon.dal.IngresAdapter-class.html#__init__,Method web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__()=web2py.gluon.dal.JDBCPostgreSQLAdapter-class.html#__init__,Method web2py.gluon.dal.JDBCSQLiteAdapter.__init__()=web2py.gluon.dal.JDBCSQLiteAdapter-class.html#__init__,Method web2py.gluon.dal.Logger.__init__()=web2py.gluon.dal.Logger-class.html#__init__,Method web2py.gluon.dal.MSSQLAdapter.__init__()=web2py.gluon.dal.MSSQLAdapter-class.html#__init__,Method web2py.gluon.dal.MySQLAdapter.__init__()=web2py.gluon.dal.MySQLAdapter-class.html#__init__,Method web2py.gluon.dal.OracleAdapter.__init__()=web2py.gluon.dal.OracleAdapter-class.html#__init__,Method web2py.gluon.dal.PostgreSQLAdapter.__init__()=web2py.gluon.dal.PostgreSQLAdapter-class.html#__init__,Method web2py.gluon.dal.Query.__init__()=web2py.gluon.dal.Query-class.html#__init__,Method web2py.gluon.dal.Rows.__init__()=web2py.gluon.dal.Rows-class.html#__init__,Method web2py.gluon.dal.SQLALL.__init__()=web2py.gluon.dal.SQLALL-class.html#__init__,Method web2py.gluon.dal.SQLCustomType.__init__()=web2py.gluon.dal.SQLCustomType-class.html#__init__,Method web2py.gluon.dal.SQLiteAdapter.__init__()=web2py.gluon.dal.SQLiteAdapter-class.html#__init__,Method web2py.gluon.dal.Set.__init__()=web2py.gluon.dal.Set-class.html#__init__,Method web2py.gluon.dal.Table.__init__()=web2py.gluon.dal.Table-class.html#__init__,Method web2py.gluon.globals.Request.__init__()=web2py.gluon.globals.Request-class.html#__init__,Method web2py.gluon.globals.Response.__init__()=web2py.gluon.globals.Response-class.html#__init__,Method web2py.gluon.highlight.Highlighter.__init__()=web2py.gluon.highlight.Highlighter-class.html#__init__,Method web2py.gluon.html.BEAUTIFY.__init__()=web2py.gluon.html.BEAUTIFY-class.html#__init__,Method web2py.gluon.html.DIV.__init__()=web2py.gluon.html.DIV-class.html#__init__,Method web2py.gluon.html.FORM.__init__()=web2py.gluon.html.FORM-class.html#__init__,Method web2py.gluon.html.MARKMIN.__init__()=web2py.gluon.html.MARKMIN-class.html#__init__,Method web2py.gluon.html.MENU.__init__()=web2py.gluon.html.MENU-class.html#__init__,Method web2py.gluon.html.XML.__init__()=web2py.gluon.html.XML-class.html#__init__,Method web2py.gluon.html.web2pyHTMLParser.__init__()=web2py.gluon.html.web2pyHTMLParser-class.html#__init__,Method web2py.gluon.http.HTTP.__init__()=web2py.gluon.http.HTTP-class.html#__init__,Method web2py.gluon.languages.lazyT.__init__()=web2py.gluon.languages.lazyT-class.html#__init__,Method web2py.gluon.languages.translator.__init__()=web2py.gluon.languages.translator-class.html#__init__,Method web2py.gluon.main.HttpServer.__init__()=web2py.gluon.main.HttpServer-class.html#__init__,Method web2py.gluon.newcron.Token.__init__()=web2py.gluon.newcron.Token-class.html#__init__,Method web2py.gluon.newcron.cronlauncher.__init__()=web2py.gluon.newcron.cronlauncher-class.html#__init__,Method web2py.gluon.newcron.extcron.__init__()=web2py.gluon.newcron.extcron-class.html#__init__,Method web2py.gluon.newcron.hardcron.__init__()=web2py.gluon.newcron.hardcron-class.html#__init__,Method web2py.gluon.newcron.softcron.__init__()=web2py.gluon.newcron.softcron-class.html#__init__,Method web2py.gluon.restricted.RestrictedError.__init__()=web2py.gluon.restricted.RestrictedError-class.html#__init__,Method web2py.gluon.restricted.TicketStorage.__init__()=web2py.gluon.restricted.TicketStorage-class.html#__init__,Method web2py.gluon.rocket.ChunkedReader.__init__()=web2py.gluon.rocket.ChunkedReader-class.html#__init__,Method web2py.gluon.rocket.Connection.__init__()=web2py.gluon.rocket.Connection-class.html#__init__,Method web2py.gluon.rocket.FileWrapper.__init__()=web2py.gluon.rocket.FileWrapper-class.html#__init__,Method web2py.gluon.rocket.Headers.__init__()=web2py.gluon.rocket.Headers-class.html#__init__,Method web2py.gluon.rocket.Rocket.__init__()=web2py.gluon.rocket.Rocket-class.html#__init__,Method web2py.gluon.rocket.ThreadPool.__init__()=web2py.gluon.rocket.ThreadPool-class.html#__init__,Method web2py.gluon.rocket.WSGIWorker.__init__()=web2py.gluon.rocket.WSGIWorker-class.html#__init__,Method web2py.gluon.rocket.Worker.__init__()=web2py.gluon.rocket.Worker-class.html#__init__,Method web2py.gluon.sanitizer.XssCleaner.__init__()=web2py.gluon.sanitizer.XssCleaner-class.html#__init__,Method web2py.gluon.sql.Expression.__init__()=web2py.gluon.sql.Expression-class.html#__init__,Method web2py.gluon.sql.Field.__init__()=web2py.gluon.sql.Field-class.html#__init__,Method web2py.gluon.sql.KeyedTable.__init__()=web2py.gluon.sql.KeyedTable-class.html#__init__,Method web2py.gluon.sql.Query.__init__()=web2py.gluon.sql.Query-class.html#__init__,Method web2py.gluon.sql.Rows.__init__()=web2py.gluon.sql.Rows-class.html#__init__,Method web2py.gluon.sql.SQLALL.__init__()=web2py.gluon.sql.SQLALL-class.html#__init__,Method web2py.gluon.sql.SQLCustomType.__init__()=web2py.gluon.sql.SQLCustomType-class.html#__init__,Method web2py.gluon.sql.SQLDB.__init__()=web2py.gluon.sql.SQLDB-class.html#__init__,Method web2py.gluon.sql.SQLJoin.__init__()=web2py.gluon.sql.SQLJoin-class.html#__init__,Method web2py.gluon.sql.Set.__init__()=web2py.gluon.sql.Set-class.html#__init__,Method web2py.gluon.sql.Table.__init__()=web2py.gluon.sql.Table-class.html#__init__,Method web2py.gluon.sqlhtml.AutocompleteWidget.__init__()=web2py.gluon.sqlhtml.AutocompleteWidget-class.html#__init__,Method web2py.gluon.sqlhtml.SQLFORM.__init__()=web2py.gluon.sqlhtml.SQLFORM-class.html#__init__,Method web2py.gluon.sqlhtml.SQLTABLE.__init__()=web2py.gluon.sqlhtml.SQLTABLE-class.html#__init__,Method web2py.gluon.storage.Messages.__init__()=web2py.gluon.storage.Messages-class.html#__init__,Method web2py.gluon.template.BlockNode.__init__()=web2py.gluon.template.BlockNode-class.html#__init__,Method web2py.gluon.template.Content.__init__()=web2py.gluon.template.Content-class.html#__init__,Method web2py.gluon.template.Node.__init__()=web2py.gluon.template.Node-class.html#__init__,Method web2py.gluon.template.SuperNode.__init__()=web2py.gluon.template.SuperNode-class.html#__init__,Method web2py.gluon.template.TemplateParser.__init__()=web2py.gluon.template.TemplateParser-class.html#__init__,Method web2py.gluon.thread_local_singleton.Singleton.__init__()=web2py.gluon.thread_local_singleton.Singleton-class.html#__init__,Method web2py.gluon.tools.Auth.__init__()=web2py.gluon.tools.Auth-class.html#__init__,Method web2py.gluon.tools.Crud.__init__()=web2py.gluon.tools.Crud-class.html#__init__,Method web2py.gluon.tools.Mail.Attachment.__init__()=web2py.gluon.tools.Mail.Attachment-class.html#__init__,Method web2py.gluon.tools.Mail.__init__()=web2py.gluon.tools.Mail-class.html#__init__,Method web2py.gluon.tools.PluginManager.__init__()=web2py.gluon.tools.PluginManager-class.html#__init__,Method web2py.gluon.tools.Recaptcha.__init__()=web2py.gluon.tools.Recaptcha-class.html#__init__,Method web2py.gluon.tools.Service.JsonRpcException.__init__()=web2py.gluon.tools.Service.JsonRpcException-class.html#__init__,Method web2py.gluon.tools.Service.__init__()=web2py.gluon.tools.Service-class.html#__init__,Method web2py.gluon.validators.CLEANUP.__init__()=web2py.gluon.validators.CLEANUP-class.html#__init__,Method web2py.gluon.validators.CRYPT.__init__()=web2py.gluon.validators.CRYPT-class.html#__init__,Method web2py.gluon.validators.IS_ALPHANUMERIC.__init__()=web2py.gluon.validators.IS_ALPHANUMERIC-class.html#__init__,Method web2py.gluon.validators.IS_DATE.__init__()=web2py.gluon.validators.IS_DATE-class.html#__init__,Method web2py.gluon.validators.IS_DATETIME.__init__()=web2py.gluon.validators.IS_DATETIME-class.html#__init__,Method web2py.gluon.validators.IS_DATETIME_IN_RANGE.__init__()=web2py.gluon.validators.IS_DATETIME_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_DATE_IN_RANGE.__init__()=web2py.gluon.validators.IS_DATE_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_DECIMAL_IN_RANGE.__init__()=web2py.gluon.validators.IS_DECIMAL_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_EMAIL.__init__()=web2py.gluon.validators.IS_EMAIL-class.html#__init__,Method web2py.gluon.validators.IS_EMPTY_OR.__init__()=web2py.gluon.validators.IS_EMPTY_OR-class.html#__init__,Method web2py.gluon.validators.IS_EQUAL_TO.__init__()=web2py.gluon.validators.IS_EQUAL_TO-class.html#__init__,Method web2py.gluon.validators.IS_EXPR.__init__()=web2py.gluon.validators.IS_EXPR-class.html#__init__,Method web2py.gluon.validators.IS_FLOAT_IN_RANGE.__init__()=web2py.gluon.validators.IS_FLOAT_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_GENERIC_URL.__init__()=web2py.gluon.validators.IS_GENERIC_URL-class.html#__init__,Method web2py.gluon.validators.IS_HTTP_URL.__init__()=web2py.gluon.validators.IS_HTTP_URL-class.html#__init__,Method web2py.gluon.validators.IS_IMAGE.__init__()=web2py.gluon.validators.IS_IMAGE-class.html#__init__,Method web2py.gluon.validators.IS_INT_IN_RANGE.__init__()=web2py.gluon.validators.IS_INT_IN_RANGE-class.html#__init__,Method web2py.gluon.validators.IS_IN_DB.__init__()=web2py.gluon.validators.IS_IN_DB-class.html#__init__,Method web2py.gluon.validators.IS_IN_SET.__init__()=web2py.gluon.validators.IS_IN_SET-class.html#__init__,Method web2py.gluon.validators.IS_IN_SUBSET.__init__()=web2py.gluon.validators.IS_IN_SUBSET-class.html#__init__,Method web2py.gluon.validators.IS_IPV4.__init__()=web2py.gluon.validators.IS_IPV4-class.html#__init__,Method web2py.gluon.validators.IS_LENGTH.__init__()=web2py.gluon.validators.IS_LENGTH-class.html#__init__,Method web2py.gluon.validators.IS_LIST_OF.__init__()=web2py.gluon.validators.IS_LIST_OF-class.html#__init__,Method web2py.gluon.validators.IS_MATCH.__init__()=web2py.gluon.validators.IS_MATCH-class.html#__init__,Method web2py.gluon.validators.IS_NOT_EMPTY.__init__()=web2py.gluon.validators.IS_NOT_EMPTY-class.html#__init__,Method web2py.gluon.validators.IS_NOT_IN_DB.__init__()=web2py.gluon.validators.IS_NOT_IN_DB-class.html#__init__,Method web2py.gluon.validators.IS_SLUG.__init__()=web2py.gluon.validators.IS_SLUG-class.html#__init__,Method web2py.gluon.validators.IS_STRONG.__init__()=web2py.gluon.validators.IS_STRONG-class.html#__init__,Method web2py.gluon.validators.IS_TIME.__init__()=web2py.gluon.validators.IS_TIME-class.html#__init__,Method web2py.gluon.validators.IS_UPLOAD_FILENAME.__init__()=web2py.gluon.validators.IS_UPLOAD_FILENAME-class.html#__init__,Method web2py.gluon.validators.IS_URL.__init__()=web2py.gluon.validators.IS_URL-class.html#__init__,Method web2py.gluon.widget.IO.__init__()=web2py.gluon.widget.IO-class.html#__init__,Method web2py.gluon.widget.web2pyDialog.__init__()=web2py.gluon.widget.web2pyDialog-class.html#__init__,Method web2py.gluon.winservice.Service.__init__()=web2py.gluon.winservice.Service-class.html#__init__"><a title="web2py.gluon.cache.Cache.__init__
 web2py.gluon.cache.CacheAbstract.__init__
 web2py.gluon.cache.CacheInRam.__init__
 web2py.gluon.cache.CacheOnDisk.__init__
 web2py.gluon.compileapp.LoadFactory.__init__
 web2py.gluon.dal.BaseAdapter.__init__
-web2py.gluon.dal.CouchDBAdapter.__init__
 web2py.gluon.dal.DAL.__init__
 web2py.gluon.dal.DB2Adapter.__init__
 web2py.gluon.dal.Expression.__init__
 web2py.gluon.dal.Field.__init__
 web2py.gluon.dal.FireBirdAdapter.__init__
 web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.dal.GAEF.__init__
-web2py.gluon.dal.GAENoSQLAdapter.__init__
 web2py.gluon.dal.InformixAdapter.__init__
 web2py.gluon.dal.IngresAdapter.__init__
 web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__
 web2py.gluon.dal.JDBCSQLiteAdapter.__init__
+web2py.gluon.dal.Logger.__init__
 web2py.gluon.dal.MSSQLAdapter.__init__
-web2py.gluon.dal.MongoDBAdapter.__init__
 web2py.gluon.dal.MySQLAdapter.__init__
 web2py.gluon.dal.OracleAdapter.__init__
 web2py.gluon.dal.PostgreSQLAdapter.__init__
@@ -164,50 +160,22 @@ web2py.gluon.rocket.ChunkedReader.__init__
 web2py.gluon.rocket.Connection.__init__
 web2py.gluon.rocket.FileWrapper.__init__
 web2py.gluon.rocket.Headers.__init__
-web2py.gluon.rocket.Listener.__init__
-web2py.gluon.rocket.Monitor.__init__
 web2py.gluon.rocket.Rocket.__init__
 web2py.gluon.rocket.ThreadPool.__init__
 web2py.gluon.rocket.WSGIWorker.__init__
 web2py.gluon.rocket.Worker.__init__
 web2py.gluon.sanitizer.XssCleaner.__init__
-web2py.gluon.sql.BaseAdapter.__init__
-web2py.gluon.sql.CouchDBAdapter.__init__
-web2py.gluon.sql.DAL.__init__
-web2py.gluon.sql.DB2Adapter.__init__
 web2py.gluon.sql.Expression.__init__
 web2py.gluon.sql.Field.__init__
-web2py.gluon.sql.FireBirdAdapter.__init__
-web2py.gluon.sql.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.sql.GAEF.__init__
-web2py.gluon.sql.GAENoSQLAdapter.__init__
-web2py.gluon.sql.InformixAdapter.__init__
-web2py.gluon.sql.IngresAdapter.__init__
-web2py.gluon.sql.JDBCPostgreSQLAdapter.__init__
-web2py.gluon.sql.JDBCSQLiteAdapter.__init__
-web2py.gluon.sql.MSSQLAdapter.__init__
-web2py.gluon.sql.MongoDBAdapter.__init__
-web2py.gluon.sql.MySQLAdapter.__init__
-web2py.gluon.sql.OracleAdapter.__init__
-web2py.gluon.sql.PostgreSQLAdapter.__init__
+web2py.gluon.sql.KeyedTable.__init__
 web2py.gluon.sql.Query.__init__
 web2py.gluon.sql.Rows.__init__
 web2py.gluon.sql.SQLALL.__init__
 web2py.gluon.sql.SQLCustomType.__init__
-web2py.gluon.sql.SQLiteAdapter.__init__
+web2py.gluon.sql.SQLDB.__init__
+web2py.gluon.sql.SQLJoin.__init__
 web2py.gluon.sql.Set.__init__
 web2py.gluon.sql.Table.__init__
-web2py.gluon.sql_old.Expression.__init__
-web2py.gluon.sql_old.Field.__init__
-web2py.gluon.sql_old.KeyedTable.__init__
-web2py.gluon.sql_old.Query.__init__
-web2py.gluon.sql_old.Rows.__init__
-web2py.gluon.sql_old.SQLALL.__init__
-web2py.gluon.sql_old.SQLCustomType.__init__
-web2py.gluon.sql_old.SQLDB.__init__
-web2py.gluon.sql_old.SQLJoin.__init__
-web2py.gluon.sql_old.Set.__init__
-web2py.gluon.sql_old.Table.__init__
 web2py.gluon.sqlhtml.AutocompleteWidget.__init__
 web2py.gluon.sqlhtml.SQLFORM.__init__
 web2py.gluon.sqlhtml.SQLTABLE.__init__
@@ -276,7 +244,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-13', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'external cron invocation'</tt><tt class="py-op">)</tt> </tt>
 <a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">            <tt id="link-14" class="py-name"><a title="web2py.gluon.newcron.crondance" class="py-name" href="#" onclick="return doclink('link-14', 'crondance', 'link-10');">crondance</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-15', 'path', 'link-9');">path</a></tt><tt class="py-op">,</tt> <tt class="py-string">'external'</tt><tt class="py-op">,</tt> <tt class="py-name">startup</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
@@ -290,21 +257,18 @@ web2py.gluon.cache.CacheInRam.__init__
 web2py.gluon.cache.CacheOnDisk.__init__
 web2py.gluon.compileapp.LoadFactory.__init__
 web2py.gluon.dal.BaseAdapter.__init__
-web2py.gluon.dal.CouchDBAdapter.__init__
 web2py.gluon.dal.DAL.__init__
 web2py.gluon.dal.DB2Adapter.__init__
 web2py.gluon.dal.Expression.__init__
 web2py.gluon.dal.Field.__init__
 web2py.gluon.dal.FireBirdAdapter.__init__
 web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.dal.GAEF.__init__
-web2py.gluon.dal.GAENoSQLAdapter.__init__
 web2py.gluon.dal.InformixAdapter.__init__
 web2py.gluon.dal.IngresAdapter.__init__
 web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__
 web2py.gluon.dal.JDBCSQLiteAdapter.__init__
+web2py.gluon.dal.Logger.__init__
 web2py.gluon.dal.MSSQLAdapter.__init__
-web2py.gluon.dal.MongoDBAdapter.__init__
 web2py.gluon.dal.MySQLAdapter.__init__
 web2py.gluon.dal.OracleAdapter.__init__
 web2py.gluon.dal.PostgreSQLAdapter.__init__
@@ -340,50 +304,22 @@ web2py.gluon.rocket.ChunkedReader.__init__
 web2py.gluon.rocket.Connection.__init__
 web2py.gluon.rocket.FileWrapper.__init__
 web2py.gluon.rocket.Headers.__init__
-web2py.gluon.rocket.Listener.__init__
-web2py.gluon.rocket.Monitor.__init__
 web2py.gluon.rocket.Rocket.__init__
 web2py.gluon.rocket.ThreadPool.__init__
 web2py.gluon.rocket.WSGIWorker.__init__
 web2py.gluon.rocket.Worker.__init__
 web2py.gluon.sanitizer.XssCleaner.__init__
-web2py.gluon.sql.BaseAdapter.__init__
-web2py.gluon.sql.CouchDBAdapter.__init__
-web2py.gluon.sql.DAL.__init__
-web2py.gluon.sql.DB2Adapter.__init__
 web2py.gluon.sql.Expression.__init__
 web2py.gluon.sql.Field.__init__
-web2py.gluon.sql.FireBirdAdapter.__init__
-web2py.gluon.sql.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.sql.GAEF.__init__
-web2py.gluon.sql.GAENoSQLAdapter.__init__
-web2py.gluon.sql.InformixAdapter.__init__
-web2py.gluon.sql.IngresAdapter.__init__
-web2py.gluon.sql.JDBCPostgreSQLAdapter.__init__
-web2py.gluon.sql.JDBCSQLiteAdapter.__init__
-web2py.gluon.sql.MSSQLAdapter.__init__
-web2py.gluon.sql.MongoDBAdapter.__init__
-web2py.gluon.sql.MySQLAdapter.__init__
-web2py.gluon.sql.OracleAdapter.__init__
-web2py.gluon.sql.PostgreSQLAdapter.__init__
+web2py.gluon.sql.KeyedTable.__init__
 web2py.gluon.sql.Query.__init__
 web2py.gluon.sql.Rows.__init__
 web2py.gluon.sql.SQLALL.__init__
 web2py.gluon.sql.SQLCustomType.__init__
-web2py.gluon.sql.SQLiteAdapter.__init__
+web2py.gluon.sql.SQLDB.__init__
+web2py.gluon.sql.SQLJoin.__init__
 web2py.gluon.sql.Set.__init__
 web2py.gluon.sql.Table.__init__
-web2py.gluon.sql_old.Expression.__init__
-web2py.gluon.sql_old.Field.__init__
-web2py.gluon.sql_old.KeyedTable.__init__
-web2py.gluon.sql_old.Query.__init__
-web2py.gluon.sql_old.Rows.__init__
-web2py.gluon.sql_old.SQLALL.__init__
-web2py.gluon.sql_old.SQLCustomType.__init__
-web2py.gluon.sql_old.SQLDB.__init__
-web2py.gluon.sql_old.SQLJoin.__init__
-web2py.gluon.sql_old.Set.__init__
-web2py.gluon.sql_old.Table.__init__
 web2py.gluon.sqlhtml.AutocompleteWidget.__init__
 web2py.gluon.sqlhtml.SQLFORM.__init__
 web2py.gluon.sqlhtml.SQLTABLE.__init__
@@ -452,7 +388,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-21', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'hard cron invocation'</tt><tt class="py-op">)</tt> </tt>
 <a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">            <tt id="link-22" class="py-name"><a title="web2py.gluon.newcron.crondance" class="py-name" href="#" onclick="return doclink('link-22', 'crondance', 'link-10');">crondance</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-23', 'path', 'link-9');">path</a></tt><tt class="py-op">,</tt> <tt class="py-string">'hard'</tt><tt class="py-op">,</tt> <tt class="py-name">startup</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
@@ -469,17 +404,15 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-25', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">'Hard cron daemon started'</tt><tt class="py-op">)</tt> </tt>
 <a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">while</tt> <tt class="py-keyword">not</tt> <tt id="link-26" class="py-name"><a title="web2py.gluon.newcron._cron_stopping" class="py-name" href="#" onclick="return doclink('link-26', '_cron_stopping', 'link-5');">_cron_stopping</a></tt><tt class="py-op">:</tt> </tt>
 <a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-name">now</tt> <tt class="py-op">=</tt> <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">time</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 <a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">            <tt id="link-27" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-27', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt class="py-name">enter</tt><tt class="py-op">(</tt><tt class="py-number">60</tt> <tt class="py-op">-</tt> <tt class="py-name">now</tt> <tt class="py-op">%</tt> <tt class="py-number">60</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method web2py.gluon.newcron.hardcron.launch()=web2py.gluon.newcron.hardcron-class.html#launch"><a title="web2py.gluon.newcron.hardcron.launch" class="py-name" href="#" onclick="return doclink('link-28', 'launch', 'link-28');">launch</a></tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-29" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-29', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method web2py.gluon.newcron.cronlauncher.run()=web2py.gluon.newcron.cronlauncher-class.html#run,Method web2py.gluon.newcron.extcron.run()=web2py.gluon.newcron.extcron-class.html#run,Method web2py.gluon.newcron.hardcron.run()=web2py.gluon.newcron.hardcron-class.html#run,Method web2py.gluon.newcron.softcron.run()=web2py.gluon.newcron.softcron-class.html#run,Method web2py.gluon.rocket.Listener.run()=web2py.gluon.rocket.Listener-class.html#run,Method web2py.gluon.rocket.Monitor.run()=web2py.gluon.rocket.Monitor-class.html#run,Method web2py.gluon.rocket.Worker.run()=web2py.gluon.rocket.Worker-class.html#run,Function web2py.gluon.shell.run()=web2py.gluon.shell-module.html#run,Method web2py.gluon.tools.Service.run()=web2py.gluon.tools.Service-class.html#run"><a title="web2py.gluon.newcron.cronlauncher.run
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-29" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-29', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method web2py.gluon.newcron.cronlauncher.run()=web2py.gluon.newcron.cronlauncher-class.html#run,Method web2py.gluon.newcron.extcron.run()=web2py.gluon.newcron.extcron-class.html#run,Method web2py.gluon.newcron.hardcron.run()=web2py.gluon.newcron.hardcron-class.html#run,Method web2py.gluon.newcron.softcron.run()=web2py.gluon.newcron.softcron-class.html#run,Method web2py.gluon.rocket.Monitor.run()=web2py.gluon.rocket.Monitor-class.html#run,Method web2py.gluon.rocket.Worker.run()=web2py.gluon.rocket.Worker-class.html#run,Function web2py.gluon.shell.run()=web2py.gluon.shell-module.html#run,Method web2py.gluon.tools.Service.run()=web2py.gluon.tools.Service-class.html#run"><a title="web2py.gluon.newcron.cronlauncher.run
 web2py.gluon.newcron.extcron.run
 web2py.gluon.newcron.hardcron.run
 web2py.gluon.newcron.softcron.run
-web2py.gluon.rocket.Listener.run
 web2py.gluon.rocket.Monitor.run
 web2py.gluon.rocket.Worker.run
 web2py.gluon.shell.run
@@ -494,21 +427,18 @@ web2py.gluon.cache.CacheInRam.__init__
 web2py.gluon.cache.CacheOnDisk.__init__
 web2py.gluon.compileapp.LoadFactory.__init__
 web2py.gluon.dal.BaseAdapter.__init__
-web2py.gluon.dal.CouchDBAdapter.__init__
 web2py.gluon.dal.DAL.__init__
 web2py.gluon.dal.DB2Adapter.__init__
 web2py.gluon.dal.Expression.__init__
 web2py.gluon.dal.Field.__init__
 web2py.gluon.dal.FireBirdAdapter.__init__
 web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.dal.GAEF.__init__
-web2py.gluon.dal.GAENoSQLAdapter.__init__
 web2py.gluon.dal.InformixAdapter.__init__
 web2py.gluon.dal.IngresAdapter.__init__
 web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__
 web2py.gluon.dal.JDBCSQLiteAdapter.__init__
+web2py.gluon.dal.Logger.__init__
 web2py.gluon.dal.MSSQLAdapter.__init__
-web2py.gluon.dal.MongoDBAdapter.__init__
 web2py.gluon.dal.MySQLAdapter.__init__
 web2py.gluon.dal.OracleAdapter.__init__
 web2py.gluon.dal.PostgreSQLAdapter.__init__
@@ -544,50 +474,22 @@ web2py.gluon.rocket.ChunkedReader.__init__
 web2py.gluon.rocket.Connection.__init__
 web2py.gluon.rocket.FileWrapper.__init__
 web2py.gluon.rocket.Headers.__init__
-web2py.gluon.rocket.Listener.__init__
-web2py.gluon.rocket.Monitor.__init__
 web2py.gluon.rocket.Rocket.__init__
 web2py.gluon.rocket.ThreadPool.__init__
 web2py.gluon.rocket.WSGIWorker.__init__
 web2py.gluon.rocket.Worker.__init__
 web2py.gluon.sanitizer.XssCleaner.__init__
-web2py.gluon.sql.BaseAdapter.__init__
-web2py.gluon.sql.CouchDBAdapter.__init__
-web2py.gluon.sql.DAL.__init__
-web2py.gluon.sql.DB2Adapter.__init__
 web2py.gluon.sql.Expression.__init__
 web2py.gluon.sql.Field.__init__
-web2py.gluon.sql.FireBirdAdapter.__init__
-web2py.gluon.sql.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.sql.GAEF.__init__
-web2py.gluon.sql.GAENoSQLAdapter.__init__
-web2py.gluon.sql.InformixAdapter.__init__
-web2py.gluon.sql.IngresAdapter.__init__
-web2py.gluon.sql.JDBCPostgreSQLAdapter.__init__
-web2py.gluon.sql.JDBCSQLiteAdapter.__init__
-web2py.gluon.sql.MSSQLAdapter.__init__
-web2py.gluon.sql.MongoDBAdapter.__init__
-web2py.gluon.sql.MySQLAdapter.__init__
-web2py.gluon.sql.OracleAdapter.__init__
-web2py.gluon.sql.PostgreSQLAdapter.__init__
+web2py.gluon.sql.KeyedTable.__init__
 web2py.gluon.sql.Query.__init__
 web2py.gluon.sql.Rows.__init__
 web2py.gluon.sql.SQLALL.__init__
 web2py.gluon.sql.SQLCustomType.__init__
-web2py.gluon.sql.SQLiteAdapter.__init__
+web2py.gluon.sql.SQLDB.__init__
+web2py.gluon.sql.SQLJoin.__init__
 web2py.gluon.sql.Set.__init__
 web2py.gluon.sql.Table.__init__
-web2py.gluon.sql_old.Expression.__init__
-web2py.gluon.sql_old.Field.__init__
-web2py.gluon.sql_old.KeyedTable.__init__
-web2py.gluon.sql_old.Query.__init__
-web2py.gluon.sql_old.Rows.__init__
-web2py.gluon.sql_old.SQLALL.__init__
-web2py.gluon.sql_old.SQLCustomType.__init__
-web2py.gluon.sql_old.SQLDB.__init__
-web2py.gluon.sql_old.SQLJoin.__init__
-web2py.gluon.sql_old.Set.__init__
-web2py.gluon.sql_old.Table.__init__
 web2py.gluon.sqlhtml.AutocompleteWidget.__init__
 web2py.gluon.sqlhtml.SQLFORM.__init__
 web2py.gluon.sqlhtml.SQLTABLE.__init__
@@ -655,7 +557,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-36', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'soft cron invocation'</tt><tt class="py-op">)</tt> </tt>
 <a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">            <tt id="link-37" class="py-name"><a title="web2py.gluon.newcron.crondance" class="py-name" href="#" onclick="return doclink('link-37', 'crondance', 'link-10');">crondance</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-38', 'path', 'link-9');">path</a></tt><tt class="py-op">,</tt> <tt class="py-string">'soft'</tt><tt class="py-op">,</tt> <tt class="py-name">startup</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
@@ -692,7 +593,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-48', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON: Disabled because no file locking'</tt><tt class="py-op">)</tt> </tt>
 <a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
@@ -756,7 +656,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-61', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON: Stale cron.master detected'</tt><tt class="py-op">)</tt> </tt>
 <a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                <tt id="link-62" class="py-name"><a title="web2py.gluon.cache.logger
@@ -769,7 +668,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-62', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON: Acquiring lock'</tt><tt class="py-op">)</tt> </tt>
 <a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">master</tt><tt class="py-op">.</tt><tt class="py-name">seek</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
@@ -798,7 +696,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-70', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON: Releasing cron lock'</tt><tt class="py-op">)</tt> </tt>
 <a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">master</tt><tt class="py-op">.</tt><tt class="py-name">seek</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
@@ -832,12 +729,8 @@ web2py.gluon.winservice.Web2pyService.start" class="py-name" href="#" onclick="r
 <a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt>
 <a name="rangetolist"></a><div id="rangetolist-def"><a name="L141"></a><tt class="py-lineno">141</tt> <a class="py-toggle" href="#" id="rangetolist-toggle" onclick="return toggle('rangetolist');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.newcron-module.html#rangetolist">rangetolist</a><tt class="py-op">(</tt><tt class="py-param">s</tt><tt class="py-op">,</tt> <tt class="py-param">period</tt><tt class="py-op">=</tt><tt class="py-string">'min'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="rangetolist-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="rangetolist-expanded"><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">    <tt class="py-name">retval</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
-<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-78" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-78', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Method web2py.gluon.dal.Expression.startswith()=web2py.gluon.dal.Expression-class.html#startswith,Method web2py.gluon.dal.SQLCustomType.startswith()=web2py.gluon.dal.SQLCustomType-class.html#startswith,Method web2py.gluon.sql.Expression.startswith()=web2py.gluon.sql.Expression-class.html#startswith,Method web2py.gluon.sql.SQLCustomType.startswith()=web2py.gluon.sql.SQLCustomType-class.html#startswith,Method web2py.gluon.sql_old.Expression.startswith()=web2py.gluon.sql_old.Expression-class.html#startswith,Method web2py.gluon.sql_old.SQLCustomType.startswith()=web2py.gluon.sql_old.SQLCustomType-class.html#startswith"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-79', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'*'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-78" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-78', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Method web2py.gluon.sql.Expression.startswith()=web2py.gluon.sql.Expression-class.html#startswith,Method web2py.gluon.sql.SQLCustomType.startswith()=web2py.gluon.sql.SQLCustomType-class.html#startswith"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-79', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'*'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">period</tt> <tt class="py-op">==</tt> <tt class="py-string">'min'</tt><tt class="py-op">:</tt> </tt>
 <a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">            <tt id="link-80" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-80', 's', 'link-24');">s</a></tt> <tt class="py-op">=</tt> <tt id="link-81" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-81', 's', 'link-24');">s</a></tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'*'</tt><tt class="py-op">,</tt> <tt class="py-string">'0-59'</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
 <a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">period</tt> <tt class="py-op">==</tt> <tt class="py-string">'hr'</tt><tt class="py-op">:</tt> </tt>
@@ -861,66 +754,33 @@ web2py.gluon.template.Content.append" class="py-name" href="#" onclick="return d
 <a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"> </tt>
 <a name="parsecronline"></a><div id="parsecronline-def"><a name="L163"></a><tt class="py-lineno">163</tt> <a class="py-toggle" href="#" id="parsecronline-toggle" onclick="return toggle('parsecronline');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="web2py.gluon.newcron-module.html#parsecronline">parsecronline</a><tt class="py-op">(</tt><tt class="py-param">line</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="parsecronline-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="parsecronline-expanded"><a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">    <tt class="py-name">task</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
-<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-94" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-94', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@reboot'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-94" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-94', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@reboot'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@reboot'</tt><tt class="py-op">,</tt> <tt class="py-string">'-1 * * * *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-95', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@yearly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-95', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@yearly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@yearly'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 1 1 *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-96', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@annually'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-96', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@annually'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@annually'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 1 1 *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-97', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@monthly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-97', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@monthly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@monthly'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 1 * *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-98" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-98', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@weekly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-98" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-98', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@weekly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@weekly'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 * * 0'</tt><tt class="py-op">)</tt> </tt>
-<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-99', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@daily'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-99', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@daily'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@daily'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 * * *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-100', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@midnight'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-100', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@midnight'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@midnight'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 0 * * *'</tt><tt class="py-op">)</tt> </tt>
-<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-101" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-101', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@hourly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-101" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-101', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'@hourly'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">        <tt class="py-name">line</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'@hourly'</tt><tt class="py-op">,</tt> <tt class="py-string">'0 * * * *'</tt><tt class="py-op">)</tt> </tt>
 <a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">    <tt id="link-102" class="py-name" targets="Variable web2py.gluon.rewrite.params=web2py.gluon.rewrite-module.html#params"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-102', 'params', 'link-102');">params</a></tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt id="link-103" class="py-name" targets="Method web2py.gluon.sanitizer.XssCleaner.strip()=web2py.gluon.sanitizer.XssCleaner-class.html#strip"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-103', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-number">6</tt><tt class="py-op">)</tt> </tt>
-<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-104" class="py-name" targets="Method web2py.gluon.dal.Field.len()=web2py.gluon.dal.Field-class.html#len,Method web2py.gluon.sql.Field.len()=web2py.gluon.sql.Field-class.html#len,Method web2py.gluon.sql_old.Expression.len()=web2py.gluon.sql_old.Expression-class.html#len"><a title="web2py.gluon.dal.Field.len
-web2py.gluon.sql.Field.len
-web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return doclink('link-104', 'len', 'link-104');">len</a></tt><tt class="py-op">(</tt><tt id="link-105" class="py-name"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-105', 'params', 'link-102');">params</a></tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">7</tt><tt class="py-op">:</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-104" class="py-name" targets="Method web2py.gluon.dal.Field.len()=web2py.gluon.dal.Field-class.html#len,Method web2py.gluon.sql.Expression.len()=web2py.gluon.sql.Expression-class.html#len"><a title="web2py.gluon.dal.Field.len
+web2py.gluon.sql.Expression.len" class="py-name" href="#" onclick="return doclink('link-104', 'len', 'link-104');">len</a></tt><tt class="py-op">(</tt><tt id="link-105" class="py-name"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-105', 'params', 'link-102');">params</a></tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">7</tt><tt class="py-op">:</tt> </tt>
 <a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
 <a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">    <tt class="py-name">daysofweek</tt><tt class="py-op">=</tt><tt class="py-op">{</tt><tt class="py-string">'sun'</tt><tt class="py-op">:</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-string">'mon'</tt><tt class="py-op">:</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-string">'tue'</tt><tt class="py-op">:</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-string">'wed'</tt><tt class="py-op">:</tt><tt class="py-number">3</tt><tt class="py-op">,</tt><tt class="py-string">'thu'</tt><tt class="py-op">:</tt><tt class="py-number">4</tt><tt class="py-op">,</tt><tt class="py-string">'fri'</tt><tt class="py-op">:</tt><tt class="py-number">5</tt><tt class="py-op">,</tt><tt class="py-string">'sat'</tt><tt class="py-op">:</tt><tt class="py-number">6</tt><tt class="py-op">}</tt> </tt>
 <a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-op">(</tt><tt id="link-106" class="py-name"><a title="web2py.gluon.languages.lazyT.s" class="py-name" href="#" onclick="return doclink('link-106', 's', 'link-24');">s</a></tt><tt class="py-op">,</tt> <tt class="py-name">id</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt id="link-107" class="py-name"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-107', 'params', 'link-102');">params</a></tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">5</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'min'</tt><tt class="py-op">,</tt> <tt class="py-string">'hr'</tt><tt class="py-op">,</tt> <tt class="py-string">'dom'</tt><tt class="py-op">,</tt> <tt class="py-string">'mon'</tt><tt class="py-op">,</tt> <tt class="py-string">'dow'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -936,14 +796,12 @@ web2py.gluon.sql_old.Expression.len" class="py-name" href="#" onclick="return do
 <a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">                    <tt class="py-name">task</tt><tt class="py-op">[</tt><tt class="py-name">id</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-111" class="py-name"><a title="web2py.gluon.html.DIV.append
 web2py.gluon.template.BlockNode.append
 web2py.gluon.template.Content.append" class="py-name" href="#" onclick="return doclink('link-111', 'append', 'link-93');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">val</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">id</tt><tt class="py-op">==</tt><tt class="py-string">'dow'</tt> <tt class="py-keyword">and</tt> <tt class="py-name">val</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-112" class="py-name" targets="Method web2py.gluon.dal.Field.lower()=web2py.gluon.dal.Field-class.html#lower,Method web2py.gluon.sql.Field.lower()=web2py.gluon.sql.Field-class.html#lower,Method web2py.gluon.sql_old.Field.lower()=web2py.gluon.sql_old.Field-class.html#lower"><a title="web2py.gluon.dal.Field.lower
-web2py.gluon.sql.Field.lower
-web2py.gluon.sql_old.Field.lower" class="py-name" href="#" onclick="return doclink('link-112', 'lower', 'link-112');">lower</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">daysofweek</tt><tt class="py-op">:</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">id</tt><tt class="py-op">==</tt><tt class="py-string">'dow'</tt> <tt class="py-keyword">and</tt> <tt class="py-name">val</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-112" class="py-name" targets="Method web2py.gluon.dal.Field.lower()=web2py.gluon.dal.Field-class.html#lower,Method web2py.gluon.sql.Field.lower()=web2py.gluon.sql.Field-class.html#lower"><a title="web2py.gluon.dal.Field.lower
+web2py.gluon.sql.Field.lower" class="py-name" href="#" onclick="return doclink('link-112', 'lower', 'link-112');">lower</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">daysofweek</tt><tt class="py-op">:</tt> </tt>
 <a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">                    <tt class="py-name">task</tt><tt class="py-op">[</tt><tt class="py-name">id</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-113" class="py-name"><a title="web2py.gluon.html.DIV.append
 web2py.gluon.template.BlockNode.append
 web2py.gluon.template.Content.append" class="py-name" href="#" onclick="return doclink('link-113', 'append', 'link-93');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">daysofweek</tt><tt class="py-op">(</tt><tt class="py-name">val</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-114" class="py-name"><a title="web2py.gluon.dal.Field.lower
-web2py.gluon.sql.Field.lower
-web2py.gluon.sql_old.Field.lower" class="py-name" href="#" onclick="return doclink('link-114', 'lower', 'link-112');">lower</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+web2py.gluon.sql.Field.lower" class="py-name" href="#" onclick="return doclink('link-114', 'lower', 'link-112');">lower</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">    <tt class="py-name">task</tt><tt class="py-op">[</tt><tt class="py-string">'user'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-115" class="py-name"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-115', 'params', 'link-102');">params</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> </tt>
 <a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">    <tt class="py-name">task</tt><tt class="py-op">[</tt><tt class="py-string">'cmd'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-116" class="py-name"><a title="web2py.gluon.rewrite.params" class="py-name" href="#" onclick="return doclink('link-116', 'params', 'link-102');">params</a></tt><tt class="py-op">[</tt><tt class="py-number">6</tt><tt class="py-op">]</tt> </tt>
 <a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">task</tt> </tt>
@@ -958,21 +816,18 @@ web2py.gluon.cache.CacheInRam.__init__
 web2py.gluon.cache.CacheOnDisk.__init__
 web2py.gluon.compileapp.LoadFactory.__init__
 web2py.gluon.dal.BaseAdapter.__init__
-web2py.gluon.dal.CouchDBAdapter.__init__
 web2py.gluon.dal.DAL.__init__
 web2py.gluon.dal.DB2Adapter.__init__
 web2py.gluon.dal.Expression.__init__
 web2py.gluon.dal.Field.__init__
 web2py.gluon.dal.FireBirdAdapter.__init__
 web2py.gluon.dal.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.dal.GAEF.__init__
-web2py.gluon.dal.GAENoSQLAdapter.__init__
 web2py.gluon.dal.InformixAdapter.__init__
 web2py.gluon.dal.IngresAdapter.__init__
 web2py.gluon.dal.JDBCPostgreSQLAdapter.__init__
 web2py.gluon.dal.JDBCSQLiteAdapter.__init__
+web2py.gluon.dal.Logger.__init__
 web2py.gluon.dal.MSSQLAdapter.__init__
-web2py.gluon.dal.MongoDBAdapter.__init__
 web2py.gluon.dal.MySQLAdapter.__init__
 web2py.gluon.dal.OracleAdapter.__init__
 web2py.gluon.dal.PostgreSQLAdapter.__init__
@@ -1008,50 +863,22 @@ web2py.gluon.rocket.ChunkedReader.__init__
 web2py.gluon.rocket.Connection.__init__
 web2py.gluon.rocket.FileWrapper.__init__
 web2py.gluon.rocket.Headers.__init__
-web2py.gluon.rocket.Listener.__init__
-web2py.gluon.rocket.Monitor.__init__
 web2py.gluon.rocket.Rocket.__init__
 web2py.gluon.rocket.ThreadPool.__init__
 web2py.gluon.rocket.WSGIWorker.__init__
 web2py.gluon.rocket.Worker.__init__
 web2py.gluon.sanitizer.XssCleaner.__init__
-web2py.gluon.sql.BaseAdapter.__init__
-web2py.gluon.sql.CouchDBAdapter.__init__
-web2py.gluon.sql.DAL.__init__
-web2py.gluon.sql.DB2Adapter.__init__
 web2py.gluon.sql.Expression.__init__
 web2py.gluon.sql.Field.__init__
-web2py.gluon.sql.FireBirdAdapter.__init__
-web2py.gluon.sql.FireBirdEmbeddedAdapter.__init__
-web2py.gluon.sql.GAEF.__init__
-web2py.gluon.sql.GAENoSQLAdapter.__init__
-web2py.gluon.sql.InformixAdapter.__init__
-web2py.gluon.sql.IngresAdapter.__init__
-web2py.gluon.sql.JDBCPostgreSQLAdapter.__init__
-web2py.gluon.sql.JDBCSQLiteAdapter.__init__
-web2py.gluon.sql.MSSQLAdapter.__init__
-web2py.gluon.sql.MongoDBAdapter.__init__
-web2py.gluon.sql.MySQLAdapter.__init__
-web2py.gluon.sql.OracleAdapter.__init__
-web2py.gluon.sql.PostgreSQLAdapter.__init__
+web2py.gluon.sql.KeyedTable.__init__
 web2py.gluon.sql.Query.__init__
 web2py.gluon.sql.Rows.__init__
 web2py.gluon.sql.SQLALL.__init__
 web2py.gluon.sql.SQLCustomType.__init__
-web2py.gluon.sql.SQLiteAdapter.__init__
+web2py.gluon.sql.SQLDB.__init__
+web2py.gluon.sql.SQLJoin.__init__
 web2py.gluon.sql.Set.__init__
 web2py.gluon.sql.Table.__init__
-web2py.gluon.sql_old.Expression.__init__
-web2py.gluon.sql_old.Field.__init__
-web2py.gluon.sql_old.KeyedTable.__init__
-web2py.gluon.sql_old.Query.__init__
-web2py.gluon.sql_old.Rows.__init__
-web2py.gluon.sql_old.SQLALL.__init__
-web2py.gluon.sql_old.SQLCustomType.__init__
-web2py.gluon.sql_old.SQLDB.__init__
-web2py.gluon.sql_old.SQLJoin.__init__
-web2py.gluon.sql_old.Set.__init__
-web2py.gluon.sql_old.Table.__init__
 web2py.gluon.sqlhtml.AutocompleteWidget.__init__
 web2py.gluon.sqlhtml.SQLFORM.__init__
 web2py.gluon.sqlhtml.SQLTABLE.__init__
@@ -1130,7 +957,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-123', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt> </tt>
 <a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">                <tt class="py-string">'WEB2PY CRON Call returned code %s:\n%s'</tt> <tt class="py-op">%</tt> \ </tt>
@@ -1146,7 +972,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-124', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON Call returned success:\n%s'</tt> \ </tt>
 <a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">                              <tt class="py-op">%</tt> <tt class="py-name">stdoutdata</tt><tt class="py-op">)</tt> </tt>
@@ -1165,8 +990,8 @@ web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('li
 <a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">            <tt class="py-op">(</tt><tt class="py-string">'dom'</tt><tt class="py-op">,</tt><tt class="py-name">now_s</tt><tt class="py-op">.</tt><tt class="py-name">tm_mday</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">            <tt class="py-op">(</tt><tt class="py-string">'dow'</tt><tt class="py-op">,</tt><tt class="py-op">(</tt><tt class="py-name">now_s</tt><tt class="py-op">.</tt><tt class="py-name">tm_wday</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">%</tt><tt class="py-number">7</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"> </tt>
-<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">    <tt class="py-name">apps</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-129" class="py-name" targets="Variable web2py.gluon.sql_old.x=web2py.gluon.sql_old-module.html#x"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-129', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">for</tt> <tt id="link-130" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-130', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-131" class="py-name" targets="Function web2py.gluon.fileutils.listdir()=web2py.gluon.fileutils-module.html#listdir"><a title="web2py.gluon.fileutils.listdir" class="py-name" href="#" onclick="return doclink('link-131', 'listdir', 'link-131');">listdir</a></tt><tt class="py-op">(</tt><tt class="py-name">apppath</tt><tt class="py-op">)</tt> </tt>
-<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-132" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-132', 'path', 'link-9');">path</a></tt><tt class="py-op">.</tt><tt class="py-name">isdir</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-133" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-133', 'path', 'link-9');">path</a></tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">apppath</tt><tt class="py-op">,</tt> <tt id="link-134" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-134', 'x', 'link-129');">x</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">    <tt class="py-name">apps</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-129" class="py-name" targets="Variable web2py.gluon.sql.x=web2py.gluon.sql-module.html#x"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-129', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">for</tt> <tt id="link-130" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-130', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-131" class="py-name" targets="Function web2py.gluon.fileutils.listdir()=web2py.gluon.fileutils-module.html#listdir"><a title="web2py.gluon.fileutils.listdir" class="py-name" href="#" onclick="return doclink('link-131', 'listdir', 'link-131');">listdir</a></tt><tt class="py-op">(</tt><tt class="py-name">apppath</tt><tt class="py-op">)</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-132" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-132', 'path', 'link-9');">path</a></tt><tt class="py-op">.</tt><tt class="py-name">isdir</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt id="link-133" class="py-name"><a title="web2py.gluon.main.path" class="py-name" href="#" onclick="return doclink('link-133', 'path', 'link-9');">path</a></tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">apppath</tt><tt class="py-op">,</tt> <tt id="link-134" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-134', 'x', 'link-129');">x</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
 <a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"> </tt>
 <a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">app</tt> <tt class="py-keyword">in</tt> <tt class="py-name">apps</tt><tt class="py-op">:</tt> </tt>
 <a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-135" class="py-name"><a title="web2py.gluon.newcron._cron_stopping" class="py-name" href="#" onclick="return doclink('link-135', '_cron_stopping', 'link-5');">_cron_stopping</a></tt><tt class="py-op">:</tt> </tt>
@@ -1179,12 +1004,8 @@ web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('li
 <a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
 <a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">            <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">crontab</tt><tt class="py-op">,</tt> <tt class="py-string">'rt'</tt><tt class="py-op">)</tt> </tt>
 <a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">            <tt class="py-name">cronlines</tt> <tt class="py-op">=</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt id="link-142" class="py-name" targets="Method web2py.gluon.rocket.ChunkedReader.readlines()=web2py.gluon.rocket.ChunkedReader-class.html#readlines"><a title="web2py.gluon.rocket.ChunkedReader.readlines" class="py-name" href="#" onclick="return doclink('link-142', 'readlines', 'link-142');">readlines</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">            <tt class="py-name">lines</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-143" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-143', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-144" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-144', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt id="link-145" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-145', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">cronlines</tt> <tt class="py-keyword">if</tt> <tt id="link-146" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-146', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-147" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-147', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt id="link-148" class="py-name"><a title="web2py.gluon.sql_old.x" class="py-name" href="#" onclick="return doclink('link-148', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-149" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-149', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-150" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-150', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'#'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">            <tt class="py-name">lines</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-143" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-143', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-144" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-144', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt id="link-145" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-145', 'x', 'link-129');">x</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">cronlines</tt> <tt class="py-keyword">if</tt> <tt id="link-146" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-146', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-147" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-147', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt id="link-148" class="py-name"><a title="web2py.gluon.sql.x" class="py-name" href="#" onclick="return doclink('link-148', 'x', 'link-129');">x</a></tt><tt class="py-op">.</tt><tt id="link-149" class="py-name"><a title="web2py.gluon.sanitizer.XssCleaner.strip" class="py-name" href="#" onclick="return doclink('link-149', 'strip', 'link-103');">strip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-150" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-150', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'#'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt>          </tt>
 <a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">            <tt class="py-name">tasks</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-151" class="py-name" targets="Function web2py.gluon.newcron.parsecronline()=web2py.gluon.newcron-module.html#parsecronline"><a title="web2py.gluon.newcron.parsecronline" class="py-name" href="#" onclick="return doclink('link-151', 'parsecronline', 'link-151');">parsecronline</a></tt><tt class="py-op">(</tt><tt class="py-name">cline</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">cline</tt> <tt class="py-keyword">in</tt> <tt class="py-name">lines</tt><tt class="py-op">]</tt> </tt>
 <a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt id="link-152" class="py-name" targets="Class exceptions.Exception=exceptions.Exception-class.html"><a title="exceptions.Exception" class="py-name" href="#" onclick="return doclink('link-152', 'Exception', 'link-152');">Exception</a></tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
 <a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">            <tt id="link-153" class="py-name"><a title="web2py.gluon.cache.logger
@@ -1197,7 +1018,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-153', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt id="link-154" class="py-name" targets="Method web2py.gluon.tools.Service.error()=web2py.gluon.tools.Service-class.html#error,Method web2py.gluon.widget.web2pyDialog.error()=web2py.gluon.widget.web2pyDialog-class.html#error"><a title="web2py.gluon.tools.Service.error
 web2py.gluon.widget.web2pyDialog.error" class="py-name" href="#" onclick="return doclink('link-154', 'error', 'link-154');">error</a></tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON: crontab read error %s'</tt> <tt class="py-op">%</tt> <tt class="py-name">e</tt><tt class="py-op">)</tt> </tt>
@@ -1235,32 +1055,21 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-168', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">'WEB2PY CRON (%s): %s executing %s in %s at %s'</tt> \ </tt>
 <a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line">                             <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">ctype</tt><tt class="py-op">,</tt> <tt class="py-name">app</tt><tt class="py-op">,</tt> <tt class="py-name">task</tt><tt class="py-op">.</tt><tt id="link-169" class="py-name"><a title="web2py.gluon.rocket.Headers.get
 web2py.gluon.thread_local_singleton.Singleton.get" class="py-name" href="#" onclick="return doclink('link-169', 'get', 'link-165');">get</a></tt><tt class="py-op">(</tt><tt class="py-string">'cmd'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
 <a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">                                <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">now</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
 <a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">            <tt class="py-name">action</tt><tt class="py-op">,</tt> <tt class="py-name">command</tt><tt class="py-op">,</tt> <tt class="py-name">models</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">task</tt><tt class="py-op">[</tt><tt class="py-string">'cmd'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt> </tt>
-<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-170" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-170', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'**'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-170" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-170', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'**'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-name">action</tt><tt class="py-op">,</tt><tt class="py-name">models</tt><tt class="py-op">,</tt><tt class="py-name">command</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">,</tt><tt class="py-string">''</tt><tt class="py-op">,</tt><tt class="py-name">command</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
-<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-171" class="py-name"><a title="web2py.gluon.dal.Expression.startswith
-web2py.gluon.dal.SQLCustomType.startswith
-web2py.gluon.sql.Expression.startswith
-web2py.gluon.sql.SQLCustomType.startswith
-web2py.gluon.sql_old.Expression.startswith
-web2py.gluon.sql_old.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-171', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'*'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-171" class="py-name"><a title="web2py.gluon.sql.Expression.startswith
+web2py.gluon.sql.SQLCustomType.startswith" class="py-name" href="#" onclick="return doclink('link-171', 'startswith', 'link-79');">startswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'*'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-name">action</tt><tt class="py-op">,</tt><tt class="py-name">models</tt><tt class="py-op">,</tt><tt class="py-name">command</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">,</tt><tt class="py-string">'-M'</tt><tt class="py-op">,</tt><tt class="py-name">command</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
 <a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line">                <tt class="py-name">action</tt><tt class="py-op">=</tt><tt class="py-name">False</tt> </tt>
-<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">action</tt> <tt class="py-keyword">and</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-172" class="py-name" targets="Method web2py.gluon.dal.Expression.endswith()=web2py.gluon.dal.Expression-class.html#endswith,Method web2py.gluon.sql.Expression.endswith()=web2py.gluon.sql.Expression-class.html#endswith,Method web2py.gluon.sql_old.Expression.endswith()=web2py.gluon.sql_old.Expression-class.html#endswith"><a title="web2py.gluon.dal.Expression.endswith
-web2py.gluon.sql.Expression.endswith
-web2py.gluon.sql_old.Expression.endswith" class="py-name" href="#" onclick="return doclink('link-172', 'endswith', 'link-172');">endswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'.py'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">action</tt> <tt class="py-keyword">and</tt> <tt class="py-name">command</tt><tt class="py-op">.</tt><tt id="link-172" class="py-name" targets="Method web2py.gluon.sql.Expression.endswith()=web2py.gluon.sql.Expression-class.html#endswith"><a title="web2py.gluon.sql.Expression.endswith" class="py-name" href="#" onclick="return doclink('link-172', 'endswith', 'link-172');">endswith</a></tt><tt class="py-op">(</tt><tt class="py-string">'.py'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line">                <tt class="py-name">commands</tt><tt class="py-op">.</tt><tt id="link-173" class="py-name"><a title="web2py.gluon.template.BlockNode.extend
 web2py.gluon.template.Content.extend
 web2py.gluon.template.TemplateParser.extend" class="py-name" href="#" onclick="return doclink('link-173', 'extend', 'link-163');">extend</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'-J'</tt><tt class="py-op">,</tt>                <tt class="py-comment"># cron job</tt> </tt>
@@ -1299,7 +1108,6 @@ web2py.gluon.restricted.logger
 web2py.gluon.rewrite.logger
 web2py.gluon.shell.logger
 web2py.gluon.sql.logger
-web2py.gluon.sql_old.logger
 web2py.gluon.tools.logger
 web2py.gluon.widget.logger" class="py-name" href="#" onclick="return doclink('link-183', 'logger', 'link-4');">logger</a></tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt> </tt>
 <a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line">                    <tt class="py-string">'WEB2PY CRON: Execution error for %s: %s'</tt> \ </tt>
@@ -1344,7 +1152,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:20:02 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:54 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

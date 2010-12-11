@@ -50,7 +50,7 @@ class HTML2FPDF(HTMLParser):
         self.thead = None
         self.tfoot = None
         self.theader_out = self.tfooter_out = False
-
+        
     def width2mm(self, length):
         if length[-1]=='%':
             total = self.pdf.w - self.pdf.r_margin - self.pdf.l_margin
@@ -94,13 +94,13 @@ class HTML2FPDF(HTMLParser):
                 self.pdf.add_page()
                 self.theader_out = self.tfooter_out = False
             if self.tfoot is None and self.thead is None:
-                if not self.theader_out:
+                if not self.theader_out: 
                     self.output_table_header()
                 self.box_shadow(w, h, bgcolor)
                 if DEBUG: print "td cell", self.pdf.x, w, txt, "*"
                 self.pdf.cell(w,h,txt,border,0,align)
         elif self.table is not None:
-            # ignore anything else than td inside a table
+            # ignore anything else than td inside a table 
             pass
         elif self.align:
             if DEBUG: print "cell", txt, "*"
@@ -133,7 +133,7 @@ class HTML2FPDF(HTMLParser):
             self.pdf.ln(self.theader[0][0][1])
             self.pdf.set_x(x)
         self.theader_out = True
-
+        
     def output_table_footer(self):
         if self.tfooter:
             x = self.pdf.x
@@ -145,7 +145,7 @@ class HTML2FPDF(HTMLParser):
             self.pdf.set_x(x)
             #TODO: self.output_table_sep()
         self.tfooter_out = True
-
+            
     def output_table_sep(self):
         x1 = self.pdf.x
         y1 = self.pdf.y
@@ -336,7 +336,7 @@ class HTML2FPDF(HTMLParser):
         self.set_style('u', False)
         self.set_style('b', False)
         self.set_style('i', False)
-        self.set_text_color()
+        self.set_text_color()        
 
     def set_style(self, tag=None, enable=None):
         #Modify style and select corresponding font
@@ -358,7 +358,7 @@ class HTML2FPDF(HTMLParser):
             self.r = r
             self.g = g
             self.b = b
-
+    
     def put_link(self, url, txt):
         #Put a hyperlink
         self.set_text_color(0,0,255)
@@ -431,13 +431,13 @@ or on an image: click on the logo.<br>
             self.cell(80)
             self.cell(30,10,'Title',1,0,'C')
             self.ln(20)
-
+            
         def footer(self):
             self.set_y(-15)
             self.set_font('Arial','I',8)
             txt = 'Page %s of %s' % (self.page_no(), self.alias_nb_pages())
             self.cell(0,10,txt,0,0,'C')
-
+        
     pdf=MyFPDF()
     #First page
     pdf.add_page()

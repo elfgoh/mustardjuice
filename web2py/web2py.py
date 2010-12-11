@@ -9,7 +9,7 @@ try:
     os.chdir(path)
 except NameError:
     path = os.getcwd() # Seems necessary for py2exe
-
+    
 try:
     sys.path.remove(os.path.dirname(os.path.abspath(__file__)))
 except ValueError:

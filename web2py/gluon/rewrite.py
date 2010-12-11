@@ -48,11 +48,11 @@ thread.routes = params # default to base rewrite parameters
 def compile_re(k, v):
     """
     Preprocess and compile the regular expressions in routes_app/in/out
-
+    
     The resulting regex will match a pattern of the form:
-
+    
         [remote address]:[protocol]://[host]:[method] [path]
-
+    
     We allow abbreviated regexes on input; here we try to complete them.
     """
     k0 = k  # original k for error reporting
@@ -86,28 +86,32 @@ def load(routes='routes.py', app=None):
     """
     load: read and parse routes.py
     (called from main.py at web2py initialization time)
-    store results in params
+    store results in params 
     """
+    symbols = {}
+
     if app is None:
         path = abspath(routes)
     else:
         path = abspath('applications', app, routes)
     if not os.path.exists(path):
         return
-
-    symbols = {}
     try:
         routesfp = open(path, 'r')
         exec routesfp.read().replace('\r\n','\n') in symbols
         routesfp.close()
+        logger.debug('URL rewrite is on. configuration in %s' % path)
     except SyntaxError, e:
         routesfp.close()
-        logger.error(
-            '%s has a syntax error and will not be loaded\n' % path
-            + traceback.format_exc())
+        logger.error('Your %s has a syntax error ' % path + \
+                          'Please fix it before you restart web2py\n' + \
+                          traceback.format_exc())
         raise e
 
-    p = _params_default(app)
+    if app is None:
+        p = params
+    else:
+        p = _params_default(app)
 
     for sym in ('routes_app', 'routes_in', 'routes_out'):
         if sym in symbols:
@@ -120,14 +124,11 @@ def load(routes='routes.py', app=None):
             p[sym] = symbols[sym]
 
     if app is None:
-        global params
-        params = p  # install base rewrite parameters
         for appname in os.listdir('applications'):
             if os.path.exists(abspath('applications', appname, routes)):
                 load(routes, appname)
     else:
         params_apps[app] = p
-    logger.debug('URL rewrite is on. configuration in %s' % path)
 
 def filter_uri(e, regexes, tag, default=None):
     "filter incoming URI against a list of regexes"

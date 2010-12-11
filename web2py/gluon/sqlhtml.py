@@ -31,7 +31,7 @@ import cStringIO
 table_field = re.compile('[\w_]+\.[\w_]+')
 widget_class = re.compile('^\w*')
 
-def safe_int(x):
+def safe_int(x):    
     try:
         return int(x)
     except ValueError:
@@ -327,7 +327,7 @@ class CheckboxesWidget(OptionsWidget):
         """
 
         # was values = re.compile('[\w\-:]+').findall(str(value))
-        values = not isinstance(value,(list,tuple)) and [value] or value
+        values = not isinstance(value,(list,tuple)) and [value] or value 
 
         attr = OptionsWidget._attributes(field, {}, **attributes)
 
@@ -770,7 +770,7 @@ class SQLFORM(FORM):
                 # ## format everything else
 
                 if field.represent:
-                    inp = field.represent(default)
+                    inp = field.represent(default)                    
                 elif field.type in ['blob']:
                     continue
                 elif field.type == 'upload':
@@ -942,7 +942,7 @@ class SQLFORM(FORM):
 
         # implement logic to detect whether record exist but has been modified
         # server side
-        self.record_changed = None
+        self.record_changed = None            
         if detect_record_change:
             if self.record:
                 self.record_changed = False
@@ -952,7 +952,7 @@ class SQLFORM(FORM):
         # logic to deal with record_id for keyed tables
         if self.record:
             if keyed:
-                formname_id = '.'.join(str(self.record[k])
+                formname_id = '.'.join(str(self.record[k]) 
                                        for k in self.table._primarykey
                                        if hasattr(self.record,k))
                 record_id = dict((k,request_vars[k]) for k in self.table._primarykey)
@@ -1059,7 +1059,7 @@ class SQLFORM(FORM):
                     if self.table._db(qry).delete():
                         self.vars.update(record_id)
                 else:
-                    self.table._db(self.table.id == self.record.id).delete()
+                    self.table._db(self.table.id == self.record.id).delete()            
                     self.vars.id = self.record.id
             self.errors.clear()
             for component in self.elements('input, select, textarea'):
@@ -1250,12 +1250,6 @@ class SQLTABLE(TABLE):
             headers = {}
             for c in columns:
                 headers[c] = ' '.join([w.capitalize() for w in c.split('.')[-1].split('_')])
-        elif headers=='labels':
-            headers = {}
-            for c in columns:
-                (t,f) = c.split('.')
-                field = sqlrows.db[t][f]
-                headers[c] = field.label
 
         for c in columns:
             if orderby:
@@ -1274,12 +1268,9 @@ class SQLTABLE(TABLE):
                 _class = 'odd'
             for colname in columns:
                 if not table_field.match(colname):
-                    if "_extra" in record and colname in record._extra:
-                        r = record._extra[colname]
-                        row.append(TD(r))
-                        continue
-                    else:
-                        raise KeyError("Column %s not found (SQLTABLE)" % colname)
+                    r = record._extra[colname]
+                    row.append(TD(r))
+                    continue
                 (tablename, fieldname) = colname.split('.')
                 try:
                     field = sqlrows.db[tablename][fieldname]

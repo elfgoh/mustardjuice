@@ -19,9 +19,7 @@ from settings import global_settings
 
 __all__ = [
     'up',
-    'abspath',
     'listdir',
-    'recursive_unlink',
     'cleanpath',
     'tar',
     'untar',
@@ -44,7 +42,7 @@ def abspath(*relpath, **base):
         return path
     if gluon:
         return os.path.join(global_settings.gluon_parent, path)
-    return os.path.join(global_settings.applications_parent, path)
+    return os.path.join(global_settings.applications_parent, path)    
 
 def listdir(
     path,
@@ -75,15 +73,6 @@ def listdir(
             if regex.match(file) and not file.startswith('.'):
                 items.append(os.path.join(root, file)[n:])
     return sorted(items)
-
-
-def recursive_unlink(f):
-    if os.path.isdir(f):
-        for s in os.listdir(f):
-            recursive_unlink(os.path.join(f,s))
-        os.rmdir(f)
-    elif os.path.isfile(f):
-        os.unlink(f)
 
 
 def cleanpath(path):
@@ -194,7 +183,7 @@ def w2p_pack(filename, path, compiled=False):
     w2pfp.close()
     tarfp.close()
     os.unlink(tarname)
-
+    
 def w2p_unpack(filename, path, delete_tar=True):
     filename = abspath(filename)
     path = abspath(path)
@@ -277,9 +266,12 @@ def get_session(request, other_application='admin'):
     if request.application == other_application:
         raise KeyError
     try:
-        session_id = request.cookies['session_id_' + other_application].value
-        osession = storage.load_storage(os.path.join(
-                up(request.folder), other_application, 'sessions', session_id))
+        session_id = request.cookies['session_id_'
+                 + other_application].value
+        osession = \
+            storage.load_storage(os.path.join(up(request.folder),
+                                 other_application, 'sessions',
+                                 session_id))
     except:
         osession = storage.Storage()
     return osession
@@ -313,7 +305,6 @@ def fix_newlines(path):
             fp = open(filename, 'wb')
             fp.write(wdata)
             fp.close()
-
 
 def copystream(
     src,

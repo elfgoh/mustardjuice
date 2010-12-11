@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 ##############################################################################
-# Configuration parameters for Google App Engine
+# Configuration parameters for Google App Engine 
 ##############################################################################
 KEEP_CACHED = False    # request a dummy url every 10secs to force caching app
 LOG_STATS = False      # web2py level log statistics
@@ -15,7 +15,7 @@ AUTO_RETRY = True      # force gae to retry commit on failure
 # can be accessed from:
 #   http://localhost:8080/_ah/stats
 ##############################################################################
-# All tricks in this file developed by Robin Bhattacharyya
+# All tricks in this file developed by Robin Bhattacharyya 
 ##############################################################################
 
 
@@ -59,7 +59,7 @@ import gluon.main
 def log_stats(fun):
     """Function that will act as a decorator to make logging"""
     def newfun(env, res):
-        """Log the execution time of the passed function"""
+        """Log the execution time of the passed function"""        
         timer = lambda t: (t.time(), t.clock())
         (t0, c0) = timer(time)
         executed_function = fun(env, res)
@@ -67,7 +67,7 @@ def log_stats(fun):
         log_info = """**** Request: %.2fms/%.2fms (real time/cpu time)"""
         log_info = log_info % ((t1 - t0) * 1000, (c1 - c0) * 1000)
         logging.info(log_info)
-        return executed_function
+        return executed_function    
     return newfun
 
 
@@ -82,7 +82,7 @@ def wsgiapp(env, res):
             taskqueue.add(eta=datetime.datetime.now() + delta)
         res('200 OK',[('Content-Type','text/plain')])
         return ['']
-    env['PATH_INFO'] = env['PATH_INFO'].encode('utf8')
+    env['PATH_INFO'] = env['PATH_INFO'].encode('utf8') 
     return gluon.main.wsgibase(env, res)
 
 

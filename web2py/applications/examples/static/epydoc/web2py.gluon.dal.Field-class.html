@@ -86,7 +86,7 @@ object --+
        autodelete=False, represent=None, uploadfolder=None,
        uploadseparate=False # upload to separate directories by uuid_keys
                             # first 2 character and tablename.fieldname
-                            # False - old behavior
+                            # False - old behaviour
                             # True - put uploaded file in
                             #   &lt;uploaddir&gt;/&lt;tablename&gt;.&lt;fieldname&gt;/uuid_key[:2]
                             #        directory)
@@ -125,12 +125,12 @@ object --+
         <span class="summary-sig-arg">fieldname</span>,
         <span class="summary-sig-arg">type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">string</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">length</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">&lt;function &lt;lambda&gt; at 0x2a40578&gt;</span>,
-        <span class="summary-sig-arg">required</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">requires</span>=<span class="summary-sig-default">&lt;function &lt;lambda&gt; at 0x2a40578&gt;</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">required</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">requires</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">&lt;default&gt;</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">ondelete</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">CASCADE</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">notnull</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">unique</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">notnull</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">unique</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">uploadfield</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">widget</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">1</span>,
@@ -139,10 +139,10 @@ object --+
         <span class="summary-sig-arg">readable</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">authorize</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">autodelete</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">autodelete</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">represent</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">uploadfolder</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">uploadseparate</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">uploadseparate</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">compute</span>=<span class="summary-sig-default">1</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for 
       signature</td>
@@ -518,10 +518,7 @@ object --+
       <code><a href="web2py.gluon.dal.Expression-class.html#__or__">__or__</a></code>,
       <code><a href="web2py.gluon.dal.Expression-class.html#__sub__">__sub__</a></code>,
       <code><a href="web2py.gluon.dal.Expression-class.html#belongs">belongs</a></code>,
-      <code><a href="web2py.gluon.dal.Expression-class.html#contains">contains</a></code>,
-      <code><a href="web2py.gluon.dal.Expression-class.html#endswith">endswith</a></code>,
       <code><a href="web2py.gluon.dal.Expression-class.html#like">like</a></code>,
-      <code><a href="web2py.gluon.dal.Expression-class.html#startswith">startswith</a></code>,
       <code><a href="web2py.gluon.dal.Expression-class.html#with_alias">with_alias</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -591,12 +588,12 @@ object --+
         <span class="sig-arg">fieldname</span>,
         <span class="sig-arg">type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">string</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">length</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">default</span>=<span class="sig-default">&lt;function &lt;lambda&gt; at 0x2a40578&gt;</span>,
-        <span class="sig-arg">required</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">requires</span>=<span class="sig-default">&lt;function &lt;lambda&gt; at 0x2a40578&gt;</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">required</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">requires</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">&lt;default&gt;</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">ondelete</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">CASCADE</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">notnull</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">unique</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">notnull</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">unique</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">uploadfield</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">widget</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">label</span>=<span class="sig-default">1</span>,
@@ -605,10 +602,10 @@ object --+
         <span class="sig-arg">readable</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">update</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">authorize</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">autodelete</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">autodelete</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">represent</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">uploadfolder</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">uploadseparate</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">uploadseparate</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">compute</span>=<span class="sig-default">1</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -681,7 +678,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Thu Dec  9 06:19:56 2010
+    Generated by Epydoc 3.0beta1 on Sun Nov 21 22:12:45 2010
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

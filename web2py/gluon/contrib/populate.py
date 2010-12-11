@@ -76,14 +76,10 @@ def populate(table, n, default=True):
                 record[fieldname]=ell.generate(random.randint(10,100),prefix=None)
             elif field.type == 'boolean':
                 record[fieldname]=random.random()>0.5
-            elif field.type == 'date':
-                record[fieldname] = \
-                    datetime.date(2009,1,1) - \
-                    datetime.timedelta(days=random.randint(0,365))
-            elif field.type == 'datetime':
+            elif field.type in ['datetime', 'date']:
                 record[fieldname] = \
                     datetime.datetime(2009,1,1) - \
-                    datetime.timedelta(days=random.randint(0,365))
+                    datetime.timedelta(days=random.randint(0,10000))
             elif field.type == 'time':
                 h = random.randint(0,23)
                 m = 15*random.randint(0,3)
@@ -92,10 +88,10 @@ def populate(table, n, default=True):
                 record[fieldname] = ''
             elif field.type == 'upload':
                 record[fieldname] = None
-            elif field.type=='integer' and hasattr(field.requires,'options'):
+            elif field.type=='integer' and hasattr(field.requires,'options'):                
                 options=field.requires.options()
                 record[fieldname] = options[random.randint(0,len(options)-1)][0]
-            elif field.type=='list:integer' and hasattr(field.requires,'options'):
+            elif field.type=='list:integer' and hasattr(field.requires,'options'):                
                 options=field.requires.options()
                 if len(options) > 0:
                     vals = []
@@ -134,14 +130,14 @@ def populate(table, n, default=True):
                     record[fieldname] = vals
                 else:
                     record[fieldname] = 0
-            elif field.type=='list:string' and hasattr(field.requires,'options'):
+            elif field.type=='list:string' and hasattr(field.requires,'options'):                
                 options=field.requires.options()
                 if len(options) > 0:
                     vals = []
                     for i in range(0, random.randint(0,len(options)-1)/2):
                         vals.append(options[random.randint(0,len(options)-1)][0])
                     record[fieldname] = vals
-            elif field.type=='string' and hasattr(field.requires,'options'):
+            elif field.type=='string' and hasattr(field.requires,'options'):                
                 options=field.requires.options()
                 record[fieldname] = options[random.randint(0,len(options)-1)][0]
             elif field.type=='string' and fieldname.find('url')>=0:
@@ -153,7 +149,6 @@ def populate(table, n, default=True):
             elif field.type=='string':
                 record[fieldname] = ell.generate(10, prefix=False)[:field.length].replace('\n',' ')
         table.insert(**record)
-    table._db.commit()
 
 if __name__ == '__main__':
     ell=Learner()

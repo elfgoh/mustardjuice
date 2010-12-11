@@ -29,12 +29,13 @@ from utils import web2py_uuid
 import portalocker
 import cPickle
 import cStringIO
+import stat
 import datetime
 import re
 import Cookie
 import os
 
-regex_session_id = re.compile('^([\w\-]+/)?[\w\-\.]+$')
+regex_session_id = re.compile('^[\w\-]+$')
 
 __all__ = ['Request', 'Response', 'Session']
 
@@ -163,7 +164,7 @@ class Response(Storage):
         if filename and not 'content-length' in keys:
             try:
                 self.headers['Content-Length'] = \
-                    os.path.getsize(filename)
+                    os.stat(filename)[stat.ST_SIZE]
             except OSError:
                 pass
         if request and request.env.web2py_use_wsgi_file_wrapper:
@@ -242,23 +243,12 @@ class Session(Storage):
         tablename='web2py_session',
         masterapp=None,
         migrate=True,
-        separate = None,
-        check_client=False,
         ):
-        """
-        separate can be separate=lambda(session_name): session_name[-2:]
-        and it is used to determine a session prefix.
-        separate can be True and it is set to session_name[-2:]
-        """
-        if separate == True:
-            separate = lambda session_name: session_name[-2:]
         self._unlock(response)
         if not masterapp:
             masterapp = request.application
         response.session_id_name = 'session_id_%s' % masterapp
-
         if not db:
-            client = request.client.replace(':', '.')
             if response.session_id_name in request.cookies:
                 response.session_id = \
                     request.cookies[response.session_id_name].value
@@ -276,9 +266,6 @@ class Session(Storage):
                             portalocker.LOCK_EX)
                     self.update(cPickle.load(response.session_file))
                     response.session_file.seek(0)
-                    oc = response.session_filename.split('/')[-1].split('-')[0]
-                    if check_client and client!=oc:
-                        raise Exception, "cookie attack"
                 except:
                     self._unlock(response)
                     if response.session_file:
@@ -287,11 +274,9 @@ class Session(Storage):
                         del response.session_file
                     response.session_id = None
             if not response.session_id:
-                uuid = web2py_uuid()
-                response.session_id = '%s-%s' % (client, uuid)
-                if separate:
-                    prefix = separate(response.session_id)
-                    response.session_id = '%s/%s' % (prefix,response.session_id)
+                response.session_id = '%s-%s'\
+                     % (request.client.replace(':', '-').replace('.',
+                        '-'), web2py_uuid())
                 response.session_filename = \
                     os.path.join(up(request.folder), masterapp,
                                  'sessions', response.session_id)
@@ -385,17 +370,14 @@ class Session(Storage):
         response.cookies[response.session_id_name]['path'] = '/'
 
     def _try_store_on_disk(self, request, response):
-        if not hasattr(os,'mkdir'): return
         if response._dbtable_and_field \
                 or not response.session_id \
                 or self._forget:
             self._unlock(response)
             return
         if response.session_new:
-            # Tests if the session sub-folder exists, if not, create it
+            # Tests if the session folder exists, if not, create it
             session_folder = os.path.dirname(response.session_filename)
-            if not os.path.exists(session_folder):
-                os.mkdir(session_folder)
             response.session_file = open(response.session_filename, 'wb')
             portalocker.lock(response.session_file, portalocker.LOCK_EX)
         if response.session_file:
