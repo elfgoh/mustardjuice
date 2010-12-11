@@ -18,22 +18,30 @@ def index():
     #check if user has any payments
     payment_rows = db(db.t_payment.f_member == auth.user.id).select()
     
-    total_credit, total_debit, i= 0, 0, 0
+    total_credit, total_debit, contract_fee, i= 0, 0, None, 0
     
     for row in payment_rows:
         total_credit += row.f_amount
     
     for row in contract_rows:
         if row.f_end_date == None:
-            end_date = datetime.date.today()
+            row.f_end_date = datetime.date.today()
         
         #calculating months that have passed in the contract
-        m1 = end_date.month + end_date.year*12
+        m1 = row.f_end_date.month + row.f_end_date.year*12
         m2 = row.f_start_date.month + row.f_start_date.year*12
         contract_rows[i].months_passed = m1 - m2
         
         #calculate sum consumed based on time elapsed for contract
-        contract_rows[i].debit = contract_rows[i].months_passed * contract_rows[i].f_contract_type.f_fee
+        contract_fee = db(db.t_contract_type.id == contract_rows[i].f_contract_type).select(db.t_contract_type.f_fee)
+        
+        #fix for GAE
+        if contract_fee:
+            contract_fee = contract_fee[0].f_fee
+        else:
+            contract_fee = 0
+        
+        contract_rows[i].debit = contract_rows[i].months_passed * contract_fee
         
         total_debit += contract_rows[i].debit
         
