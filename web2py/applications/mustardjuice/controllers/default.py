@@ -6,6 +6,8 @@ def call():
     session.forget()
     return service()
 ### end requires
+
+@auth.requires_login()
 def index():
     return dict(user=auth.user.username)
 
