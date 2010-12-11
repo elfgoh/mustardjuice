@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<h2>Search contract_type</h2>
+{{=A(T('create new contract_type'),_href=URL('contract_type_create'))}}
+<br/>
+
+{{=form}}
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_contract_type)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

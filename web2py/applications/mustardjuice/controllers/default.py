@@ -110,3 +110,34 @@ def payment_search():
     form, rows=crud.search(db.t_payment,query=db.t_payment.active==True)
     return dict(form=form, rows=rows)
 
+@auth.requires_login()
+def contract_type_create():
+    form=crud.create(db.t_contract_type,next='contract_type_read/[id]')
+    return dict(form=form)
+
+@auth.requires_login()
+def contract_type_read():
+    record = db.t_contract_type(request.args(0)) or redirect(URL('error'))
+    form=crud.read(db.t_contract_type,record)
+    return dict(form=form)
+
+@auth.requires_login()
+def contract_type_update():
+    record = db.t_contract_type(request.args(0),active=True) or redirect(URL('error'))
+    form=crud.update(db.t_contract_type,record,next='contract_type_read/[id]',
+                     ondelete=lambda form: redirect(URL('contract_type_select')),
+                     onaccept=crud.archive)
+    return dict(form=form)
+
+@auth.requires_login()
+def contract_type_select():
+    f,v=request.args(0),request.args(1)
+    try: query=f and db.t_contract_type[f]==v or db.t_contract_type
+    except: redirect(URL('error'))
+    rows=db(query)(db.t_contract_type.active==True).select()
+    return dict(rows=rows)
+
+@auth.requires_login()
+def contract_type_search():
+    form, rows=crud.search(db.t_contract_type,query=db.t_contract_type.active==True)
+    return dict(form=form, rows=rows)

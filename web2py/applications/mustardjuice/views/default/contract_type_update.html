@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>Update contract_type</h2>
+{{=A(T('show contract_type'),_href=URL('contract_type_read',args=request.args(0)))}}
+<br/>
+
+{{=form}}
