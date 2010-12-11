@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+
+<h2>Select membership_contract</h2>
+{{if request.args:}}<h3>{{=T('For %s #%s' % (request.args(0)[2:],request.args(1)))}}</h3>{{pass}}
+
+{{=A(T('create new membership_contract'),_href=URL('membership_contract_create'))}}
+<br/>
+
+{{=A(T('search membership_contract'),_href=URL('membership_contract_search'))}}
+<br/>
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_membership_contract)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

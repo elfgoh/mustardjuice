@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+
+<h2>Select payment</h2>
+{{if request.args:}}<h3>{{=T('For %s #%s' % (request.args(0)[2:],request.args(1)))}}</h3>{{pass}}
+
+{{=A(T('create new payment'),_href=URL('payment_create'))}}
+<br/>
+
+{{=A(T('search payment'),_href=URL('payment_search'))}}
+<br/>
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_payment)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}
