@@ -9,7 +9,13 @@ def call():
 
 @auth.requires_login()
 def index():
-    return dict(user=auth.user.username)
+    #check if user has any contracts
+    contract_rows = db(db.t_membership_contract.f_member == auth.user.id).select()
+    
+    #check if user has any payments
+    payment_rows = db(db.t_payment.f_member == auth.user.id).select()
+    
+    return dict(user=auth.user.username, contract_rows=contract_rows, payment_rows=payment_rows)
 
 def error():
     return dict()

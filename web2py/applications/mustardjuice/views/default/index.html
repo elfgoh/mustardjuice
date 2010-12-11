@@ -1,3 +1,23 @@
 {{extend 'layout.html'}}
 
 <h1>Welcome {{=user}}</h1>
+
+<h2>Your contracts</h2>
+{{if contract_rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_membership_contract)}}
+  {{=SQLTABLE(contract_rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}
+
+<h2>Your payments</h2>
+{{if payment_rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_payment)}}
+  {{=SQLTABLE(payment_rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}
+
+<h2>Your debits</h2>
+
+<h2>Net credit/debit</h2>
