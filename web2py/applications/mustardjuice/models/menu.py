@@ -12,4 +12,6 @@ response.menu = [
     (T('Membership Contract Select'),URL('membership_contract_select').xml()==URL().xml(),URL('membership_contract_select'),[]),
     (T('Payment Create'),URL('payment_create').xml()==URL().xml(),URL('payment_create'),[]),
     (T('Payment Select'),URL('payment_select').xml()==URL().xml(),URL('payment_select'),[]),
+    (T('Contract Type Create'),URL('contract_type_create').xml()==URL().xml(),URL('contract_type_create'),[]),
+    (T('Contract Type Select'),URL('contract_type_select').xml()==URL().xml(),URL('contract_type_select'),[]),
 ]
