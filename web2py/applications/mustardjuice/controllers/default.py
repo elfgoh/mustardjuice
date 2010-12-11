@@ -15,6 +15,38 @@ def error():
     return dict()
 
 @auth.requires_login()
+def member_create():
+    form=crud.create(db.auth_user,next='member_read/[id]')
+    return dict(form=form)
+
+@auth.requires_login()
+def member_read():
+    record = db.auth_user(request.args(0)) or redirect(URL('error'))
+    form=crud.read(db.auth_user,record)
+    return dict(form=form)
+ 
+@auth.requires_login()
+def member_select():
+    f,v=request.args(0),request.args(1)
+    try: query=f and db.auth_user[f]==v or db.auth_user
+    except: redirect(URL('error'))
+    rows=db(query)(db.auth_user.id>0).select()
+    return dict(rows=rows)
+
+@auth.requires_login()
+def member_search():
+    form, rows=crud.search(db.auth_user)
+    return dict(form=form, rows=rows)
+
+@auth.requires_login()
+def member_update():
+    record = db.auth_user(request.args(0)) or redirect(URL('error'))
+    form=crud.update(db.auth_user,record,next='member_read/[id]',
+                     ondelete=lambda form: redirect(URL('member_select'))
+                     )
+    return dict(form=form)
+   
+@auth.requires_login()
 def membership_contract_create():
     form=crud.create(db.t_membership_contract,next='membership_contract_read/[id]')
     return dict(form=form)
