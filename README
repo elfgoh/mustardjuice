@@ -1,0 +1,13 @@
+Features:
+
+This membership system hopes to enable the following:
+- Addition of different contract types: eg. membership tiers and premium services
+- Addition of payment data
+- Members login to view their membership records
+- Generation of reports 
+
+This program is based on the python web framework web2py (http://www.web2py.com) and the default setup runs on sqlite.
+
+Development:
+
+And oh, we use tabs. But lets' not argue about tabs and spaces and spend time coding instead.
